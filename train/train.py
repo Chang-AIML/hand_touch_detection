@@ -10,7 +10,6 @@ import sys
 import numpy as np
 
 from torchvision.datasets.samplers import DistributedSampler
-from untrimmed_video_dataset import UntrimmedVideoDataset
 from frame_untrimmed_video_dataset import FrameUntrimmedVideoDataset
 from itertools import chain
 sys.path.insert(0, '..')
@@ -139,9 +138,8 @@ def main(args):
         train_dir = valid_dir = args.frames_dir
         print(f'USING FRAME DATASET (reading JPGs from {args.frames_dir})')
     else:
-        DatasetClass = UntrimmedVideoDataset
-        train_dir = os.path.join(args.root_dir, args.train_subdir)
-        valid_dir = os.path.join(args.root_dir, args.valid_subdir)
+        raise RuntimeError('mp4/ffmpeg dataset path was removed; pass --frames-dir '
+                           'to read pre-extracted JPG frames.')
 
     print('LOADING DATA')
     label_mappings = []
