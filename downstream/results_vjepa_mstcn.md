@@ -30,3 +30,39 @@ Gaussian temporal Soft-NMS (window=4, σ=0.5). mAP in %.
   training-time even/odd augmentation (`stack`) helps most.
 
 Reproduce: `PARALLEL=1 bash downstream/run_vjepa_mstcn.sh` then `python downstream/eval_nms.py --split test`.
+
+## Per-class AP (%) — touch
+
+| mode | method | @0 | @1 | @2 | @4 | Avg |
+|---|---|---|---|---|---|---|
+| interleave | without NMS | 18.10 | 44.03 | 62.57 | 79.68 | 51.09 |
+| interleave | NMS (w=1) | 6.23 | 40.79 | 64.28 | 85.43 | 49.18 |
+| interleave | Soft-NMS | 15.41 | 47.29 | 67.63 | 86.11 | 54.11 |
+| even | without NMS | 16.53 | 44.57 | 63.14 | 79.92 | 51.04 |
+| even | NMS (w=1) | 5.44 | 39.68 | 65.05 | 85.39 | 48.89 |
+| even | Soft-NMS | 14.57 | 47.00 | 67.88 | 85.54 | 53.75 |
+| odd | without NMS | 17.86 | 45.03 | 65.95 | 82.35 | 52.80 |
+| odd | NMS (w=1) | 6.76 | 39.21 | 67.05 | 85.96 | 49.74 |
+| odd | Soft-NMS | 15.68 | 47.34 | 69.94 | 86.75 | 54.93 |
+| stack | without NMS | 17.83 | 46.34 | 67.11 | 80.93 | 53.05 |
+| stack | NMS (w=1) | 5.54 | 39.56 | 67.66 | 88.08 | 50.21 |
+| stack | Soft-NMS | 15.95 | 49.52 | 72.46 | 88.47 | **56.60** |
+
+## Per-class AP (%) — untouch
+
+| mode | method | @0 | @1 | @2 | @4 | Avg |
+|---|---|---|---|---|---|---|
+| interleave | without NMS | 21.22 | 55.62 | 73.11 | 82.88 | 58.21 |
+| interleave | NMS (w=1) | 8.56 | 51.10 | 74.75 | 87.01 | 55.36 |
+| interleave | Soft-NMS | 20.12 | 57.89 | 76.65 | 86.86 | 60.38 |
+| even | without NMS | 21.50 | 59.54 | 75.93 | 83.27 | 60.06 |
+| even | NMS (w=1) | 10.08 | 53.72 | 76.31 | 87.38 | 56.87 |
+| even | Soft-NMS | 21.01 | 60.98 | 78.66 | 87.03 | 61.92 |
+| odd | without NMS | 21.93 | 53.38 | 71.84 | 81.73 | 57.22 |
+| odd | NMS (w=1) | 9.25 | 47.70 | 72.28 | 86.40 | 53.91 |
+| odd | Soft-NMS | 21.20 | 55.36 | 75.24 | 85.99 | 59.45 |
+| stack | without NMS | 22.65 | 57.73 | 75.01 | 82.37 | 59.44 |
+| stack | NMS (w=1) | 9.31 | 51.42 | 76.60 | 88.59 | 56.48 |
+| stack | Soft-NMS | 21.78 | 60.32 | 79.88 | 88.29 | **62.57** |
+
+**untouch > touch by ~5–8 AP across all modes/methods** (touch — contact onset — is harder to spot than untouch — release). Run `python downstream/eval_nms.py --split test --per-class`.

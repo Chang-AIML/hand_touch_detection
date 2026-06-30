@@ -29,9 +29,18 @@ sys.path.insert(0, os.path.dirname(HERE))            # repo root for config
 import config                                                         # noqa: E402
 from util.io import load_json, load_gz_json                           # noqa: E402
 from util.eval import non_maximum_supression                          # noqa: E402
-from util.score import compute_mAPs                                   # noqa: E402
+from util.score import (compute_mAPs, parse_ground_truth,             # noqa: E402
+                        get_predictions, compute_average_precision)
 
 TOLS = [0, 1, 2, 4]
+
+
+def per_class_aps(truth, pred):
+    """Return {label: [AP@0, AP@1, AP@2, AP@4]} in % (touch / untouch separately)."""
+    tbl = parse_ground_truth(truth)
+    return {label: [compute_average_precision(get_predictions(pred, label=label), tfl,
+                                              tolerance=t) * 100 for t in TOLS]
+            for label, tfl in tbl.items()}
 
 
 def soft_nms(pred, window, sigma, score_thresh=1e-3):
@@ -88,13 +97,21 @@ def main():
     ap.add_argument('--nms-window', type=int, default=1, help='hard-NMS window (E2E-Spot default 1)')
     ap.add_argument('--snms-window', type=int, default=4, help='soft-NMS suppression window (frames)')
     ap.add_argument('--snms-sigma', type=float, default=0.5, help='Gaussian soft-NMS sigma')
+    ap.add_argument('--per-class', action='store_true', help='also print touch/untouch AP separately')
     args = ap.parse_args()
 
     truth = load_json(os.path.join(args.label_dir, f'{args.split}.json'))
 
     methods = ['without NMS', f'NMS (w={args.nms_window})',
                f'Soft-NMS (w={args.snms_window},σ={args.snms_sigma})']
+
+    def variants(pred_hr):
+        return [pred_hr,
+                non_maximum_supression(pred_hr, args.nms_window),
+                soft_nms(pred_hr, args.snms_window, args.snms_sigma)]
+
     results = {}                                  # (mode, method) -> [mAP@0,1,2,4]
+    cls_results = {}                              # (mode, method, label) -> [AP@0,1,2,4]
     for mode in args.modes:
         mdir = os.path.join(args.ds_dir, f'{args.prefix}{mode}')
         rp = find_recall_pred(mdir, args.split)
@@ -102,26 +119,33 @@ def main():
             print(f'[skip] {mode}: no pred-{args.split}.*.recall.json.gz in {mdir}', flush=True)
             continue
         pred_hr = load_gz_json(rp)
-        results[(mode, methods[0])] = maps_quiet(truth, pred_hr)
-        results[(mode, methods[1])] = maps_quiet(truth, non_maximum_supression(pred_hr, args.nms_window))
-        results[(mode, methods[2])] = maps_quiet(truth, soft_nms(pred_hr, args.snms_window, args.snms_sigma))
+        for meth, pv in zip(methods, variants(pred_hr)):
+            results[(mode, meth)] = maps_quiet(truth, pv)
+            if args.per_class:
+                for label, aps in per_class_aps(truth, pv).items():
+                    cls_results[(mode, meth, label)] = aps
         print(f'[done] {mode}  <- {os.path.basename(rp)}', flush=True)
 
-    # combined table
-    hdr = f'{"mode":<11} {"method":<18} ' + ' '.join(f'mAP@{t:<5}' for t in TOLS) + 'Avg'
-    print('\n' + '=' * len(hdr))
-    print(f'V-JEPA MS-TCN — {args.split} set mAP (%)')
-    print('=' * len(hdr))
-    print(hdr)
-    print('-' * len(hdr))
-    for mode in args.modes:
-        for meth in methods:
-            v = results.get((mode, meth))
-            if v is None:
-                continue
-            avg = sum(v) / len(v)
-            print(f'{mode:<11} {meth:<18} ' + ' '.join(f'{x:<7.2f}' for x in v) + f'{avg:.2f}')
-        print('-' * len(hdr))
+    def table(title, getrow):
+        hdr = f'{"mode":<11} {"method":<22} ' + ' '.join(f'@{t:<6}' for t in TOLS) + 'Avg'
+        print('\n' + '=' * len(hdr)); print(title); print('=' * len(hdr)); print(hdr); print('-' * len(hdr))
+        for mode in args.modes:
+            any_row = False
+            for meth in methods:
+                v = getrow(mode, meth)
+                if v is None:
+                    continue
+                any_row = True
+                print(f'{mode:<11} {meth:<22} ' + ' '.join(f'{x:<7.2f}' for x in v) + f'{sum(v)/len(v):.2f}')
+            if any_row:
+                print('-' * len(hdr))
+
+    table(f'V-JEPA MS-TCN — {args.split} set  mAP (%) [touch & untouch averaged]',
+          lambda m, me: results.get((m, me)))
+    if args.per_class:
+        for label in ['touch', 'untouch']:
+            table(f'V-JEPA MS-TCN — {args.split} set  AP (%) — class: {label}',
+                  lambda m, me, _l=label: cls_results.get((m, me, _l)))
 
 
 if __name__ == '__main__':
