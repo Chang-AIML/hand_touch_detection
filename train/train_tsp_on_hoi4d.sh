@@ -46,7 +46,7 @@ BATCH_SIZE=$(bc <<< $BATCH_SIZE/$DOWNSCALE_FACTOR)
 BACKBONE_LR=$(bc -l <<< $BACKBONE_LR/$DOWNSCALE_FACTOR)
 FC_LR=$(bc -l <<< $FC_LR/$DOWNSCALE_FACTOR)
 
-source activate base
+source activate ${CONDA_ENV:-base}
 mkdir -p "$OUTDIR"
 export OMP_NUM_THREADS=6
 cd "$HERE"
