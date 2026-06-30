@@ -19,8 +19,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, 'lib'))     # vendored model/ dataset/ util/
 sys.path.insert(0, os.path.dirname(HERE))         # touch_tsp/ for config
 import config                                                     # noqa: E402
-from model.feature import GRU, TCN, GCN, ASFormer                 # noqa: E402
-from dataset.feature import FeatureDataset                        # noqa: E402
+from model.feature_heads import GRU, TCN, GCN, ASFormer           # noqa: E402
+from dataset.feature_dataset import FeatureDataset                # noqa: E402
 from util.io import store_json, store_gz_json                     # noqa: E402
 from util.eval import ForegroundF1, ErrorStat                     # noqa: E402
 from util.dataset import load_classes                             # noqa: E402
