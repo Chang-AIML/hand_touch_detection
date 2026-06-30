@@ -14,6 +14,10 @@ REPO="$(cd "$(dirname "$0")/.." && pwd)"
 PY=${PY:-/data/dong/miniconda3/envs/vjepa21/bin/python}
 RAW=${VJEPA_RAW:-$REPO/../feature_extraction/VJEPA_feature}
 GPU=${GPU:-0}
+# MS-TCN is tiny; cap torch intra-op threads so 4 concurrent jobs don't oversubscribe the
+# CPU (the real bottleneck — uncapped, torch grabs ~all cores per process and thrashes).
+export OMP_NUM_THREADS=${OMP_NUM_THREADS:-6}
+export MKL_NUM_THREADS=${MKL_NUM_THREADS:-6}
 cd "$REPO"
 LOG="$REPO/outputs/vjepa_mstcn_logs"; mkdir -p "$LOG"
 MODES="interleave even odd stack"
@@ -33,8 +37,7 @@ train(){ local gpu=$1 m=$2
 
 echo "== training MS-TCN per mode =="
 if [ "${PARALLEL:-0}" = "1" ]; then
-  train 1 interleave & train 0 even & wait
-  train 1 odd        & train 0 stack & wait
+  train 1 interleave & train 0 even & train 1 odd & train 0 stack & wait   # thread-capped, no thrash
 else
   for m in $MODES; do train "$GPU" "$m"; done
 fi
