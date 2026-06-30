@@ -75,11 +75,12 @@ def main():
     if not todo:
         print('nothing to do'); return
 
-    # backbone only (GVF/head irrelevant for feature extraction)
-    model = Model(backbone='r2plus1d_34', num_classes=[2], num_heads=1,
-                  concat_gvf=True, gvf_size=768, progress=False)
+    # backbone only (GVF/heads irrelevant for feature extraction). Build the dual-head
+    # arch so the checkpoint's keys line up; strict=False tolerates head differences.
+    model = Model(backbone='r2plus1d_34', num_classes=[2, 2], num_heads=2,
+                  concat_gvf=True, gvf_size=config.GVF_DIM, progress=False)
     sd = torch.load(args.ckpt, map_location='cpu', weights_only=False); sd = sd.get('model', sd)
-    model.load_state_dict(sd)
+    model.load_state_dict(sd, strict=False)
     backbone = model.features.to(args.device).eval()
     print(f'loaded backbone from {args.ckpt}', flush=True)
 

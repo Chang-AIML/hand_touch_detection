@@ -58,7 +58,7 @@ def run(model, loader, device):
         gvf = sample['gvf'].to(device, non_blocking=True) if 'gvf' in sample else None
         t = sample[LABEL_COL]
         with torch.autocast('cuda', dtype=torch.float16):
-            out = model(clip, gvf=gvf)[0]            # [B,2]
+            out = model(clip, gvf=gvf)[1]            # region head (fc2, GVF-fed); [B,2]
         preds.append(out.float().argmax(1).cpu().numpy())
         tgts.append(t.numpy())
     return np.concatenate(preds), np.concatenate(tgts)
@@ -88,8 +88,10 @@ def main():
     print(f'found {len(ckpts)} checkpoints')
 
     loader = build_val_loader(args.batch_size, args.workers)
-    model = Model(backbone='r2plus1d_34', num_classes=[2], num_heads=1,
-                  concat_gvf=True, gvf_size=768, progress=False).to(args.device)
+    # dual-head checkpoint: head0=action (touch/untouch), head1=region (FG/BG)+GVF.
+    # We evaluate the region head for Foreground/Background F1 (see infer(): out[1]).
+    model = Model(backbone='r2plus1d_34', num_classes=[2, 2], num_heads=2,
+                  concat_gvf=True, gvf_size=config.GVF_DIM, progress=False).to(args.device)
 
     rows, best = [], None
     print(f'\n{"epoch":>6} {"FG-P":>7} {"FG-R":>7} {"FG-F1":>7} {"acc":>7}')

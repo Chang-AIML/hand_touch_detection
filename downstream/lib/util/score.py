@@ -2,7 +2,7 @@ import sys
 from collections import defaultdict
 from tabulate import tabulate
 import numpy as np
-import matplotlib.pyplot as plt
+# matplotlib is imported lazily inside the plot_pr branch (default eval needs no GUI dep)
 
 
 def parse_ground_truth(truth):
@@ -86,6 +86,7 @@ def compute_mAPs(
 
     fig, axes = None, None
     if plot_pr:
+        import matplotlib.pyplot as plt
         fig, axes = plt.subplots(
             len(truth_by_label), len(tolerances), sharex=True, sharey=True,
             figsize=(16, 16))
