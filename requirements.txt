@@ -7,3 +7,5 @@ h5py
 pillow
 pandas
 tqdm
+matplotlib      # downstream PR-curve plots (lazy-imported in util/score.py)
+tabulate        # downstream eval tables (train_head, util/score, util/eval)

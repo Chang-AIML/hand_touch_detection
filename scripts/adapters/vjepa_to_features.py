@@ -24,10 +24,10 @@ and the output length always equals `num_frames` (perfect alignment for event['f
 
 Usage
 -----
-    python scripts/vjepa_to_features.py \
+    python scripts/adapters/vjepa_to_features.py \
         --raw-dir   ../feature_extraction/VJEPA_feature \
-        --out-dir   /path/to/vjepa_features \
-        --label-dir /data/dong/project/Workspace/dataset/hoi4d \
+        --out-dir   outputs/VJEPA_features \
+        --label-dir data/HOI4D-v3 \
         --mode      interleave
 
 Then train the head directly on it (no model code changes; feat dim auto-detected):

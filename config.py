@@ -5,10 +5,10 @@ import os
 PROJ = os.path.dirname(os.path.abspath(__file__))
 
 # ---- EXTERNAL inputs (large; not shipped with the code) ----
-# JPG frames, one dir per video: <FRAMES_DIR>/<video>/000000.jpg ...
-FRAMES_DIR = os.environ.get('TOUCH_FRAMES_DIR', '/home/huyanh/TouchMoment/Frames')
-# dir holding the E2E-Spot label splits train.json / val.json / test.json
-LABEL_DIR  = os.environ.get('TOUCH_LABEL_DIR',  '/home/huyanh/Workspace/dataset/hoi4d')
+# JPG frames, one dir per video: <FRAMES_DIR>/<video>/000000.jpg ... (override per machine)
+FRAMES_DIR = os.environ.get('TOUCH_FRAMES_DIR', '/data/dong/project/Workspace/dataset/hoi4d/frames')
+# label splits train.json / val.json / test.json (+ class.txt). Default: the copy shipped in-repo.
+LABEL_DIR  = os.environ.get('TOUCH_LABEL_DIR',  os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'HOI4D-v3'))
 
 # ---- INTERNAL (shipped) ----
 DATA_DIR   = os.path.join(PROJ, 'data')                       # CSVs + label mappings
@@ -24,13 +24,9 @@ GVF_PATH   = os.environ.get('TOUCH_GVF_PATH',
                             os.path.join(OUT_DIR, 'global_video_features/mvit_v1_b-max_gvf.h5'))
 TRAIN_OUT  = os.environ.get('TOUCH_TRAIN_OUT',
                             os.path.join(OUT_DIR, 'r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12'))
-FEATURES_OUT = os.environ.get('TOUCH_FEATURES_OUT',
-                              '/home/huyanh/Workspace/repos/feature_extraction/TSP_features')
+FEATURES_OUT = os.environ.get('TOUCH_FEATURES_OUT', os.path.join(OUT_DIR, 'TSP_features'))
 
-# ---- DOWNSTREAM (spotting heads on TSP features; reuses the spot repo) ----
-# clone: https://github.com/jhong93/spot  (E2E-Spot). Used for MS-TCN / ASFormer + mAP eval.
-SPOT_REPO          = os.environ.get('TOUCH_SPOT_REPO', '/home/huyanh/Workspace/repos/spot')
-DOWNSTREAM_DATASET = os.environ.get('TOUCH_DS_NAME', 'hoi4d_touch')   # registered into spot
+# ---- DOWNSTREAM (spotting heads on TSP / V-JEPA features) ----
 DOWNSTREAM_OUT     = os.environ.get('TOUCH_DS_OUT', os.path.join(OUT_DIR, 'downstream'))
 DS_CLIP_LEN        = int(os.environ.get('TOUCH_DS_CLIP_LEN', 100))     # head temporal window
 DS_NUM_EPOCHS      = int(os.environ.get('TOUCH_DS_EPOCHS', 50))
