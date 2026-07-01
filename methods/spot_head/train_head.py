@@ -2,7 +2,7 @@
 """Self-contained downstream trainer: precise-spotting head (MS-TCN / ASFormer /
 GRU / GCN) on top of the per-frame TSP features. Adapted from spot/baseline.py
 but reads class.txt + train/val/test.json + feature dir from config (no external
-spot repo needed; the head/eval code is vendored under methods/downstream/ + common/).
+spot repo needed; the head/eval code is vendored under methods/spot_head/ + common/).
 
 Usage:
   python downstream/train_head.py -m mstcn

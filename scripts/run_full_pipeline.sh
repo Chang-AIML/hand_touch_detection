@@ -29,7 +29,7 @@ say "STAGE 4/5: extract per-frame TSP features [N,512] (dense window-12, replica
 python methods/tsp/step4_extract_features.py --ckpt "$BEST" 2>&1 | tee "$LOG/4_extract.log"
 
 say "STAGE 5/5: downstream MS-TCN then ASFormer on TSP features"
-python methods/downstream/train_head.py -m mstcn    2>&1 | tee "$LOG/5_mstcn.log"
-python methods/downstream/train_head.py -m asformer 2>&1 | tee "$LOG/6_asformer.log"
+python methods/spot_head/train_head.py -m mstcn    2>&1 | tee "$LOG/5_mstcn.log"
+python methods/spot_head/train_head.py -m asformer 2>&1 | tee "$LOG/6_asformer.log"
 
 say "ALL DONE"

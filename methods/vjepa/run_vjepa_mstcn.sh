@@ -29,7 +29,7 @@ for m in $MODES; do
 done
 
 train(){ local gpu=$1 m=$2
-  CUDA_VISIBLE_DEVICES=$gpu $PY methods/downstream/train_head.py -m mstcn \
+  CUDA_VISIBLE_DEVICES=$gpu $PY methods/spot_head/train_head.py -m mstcn \
     --feat_dir "outputs/VJEPA_feat_$m" --label_dir data/HOI4D-v3 \
     --save_dir "outputs/downstream/vjepa_mstcn_$m" > "$LOG/mstcn_$m.log" 2>&1
   echo "  trained $m"
@@ -43,4 +43,4 @@ else
 fi
 
 echo "== test-set mAP under no-NMS / NMS / Soft-NMS =="
-$PY methods/downstream/eval_nms.py --modes $MODES --split test | tee "$LOG/results_test.txt"
+$PY methods/spot_head/eval_nms.py --modes $MODES --split test | tee "$LOG/results_test.txt"

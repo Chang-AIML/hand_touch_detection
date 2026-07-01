@@ -112,8 +112,8 @@ python methods/tsp/step3_select_best_f1.py
 # (4) dense per-frame features [N,512]  -> outputs/TSP_features/<video>.npy
 python methods/tsp/step4_extract_features.py --ckpt <outputs/.../epoch_*.pth from step3>
 # (B) downstream heads on TSP features  -> outputs/downstream/{mstcn,asformer}/
-python methods/downstream/train_head.py -m mstcn    --feat_dir outputs/TSP_features
-python methods/downstream/train_head.py -m asformer --feat_dir outputs/TSP_features
+python methods/spot_head/train_head.py -m mstcn    --feat_dir outputs/TSP_features
+python methods/spot_head/train_head.py -m asformer --feat_dir outputs/TSP_features
 ```
 
 ---
@@ -130,7 +130,7 @@ python hand_touch_detection/methods/vjepa/adapters/vjepa_to_features.py \
     --label-dir data/HOI4D-v3 \
     --mode      interleave        # | even | odd | stack  (see §6)
 # downstream on V-JEPA features (feature_dim auto-detected = 768; same code as TSP)
-python methods/downstream/train_head.py -m mstcn --feat_dir outputs/VJEPA_features
+python methods/spot_head/train_head.py -m mstcn --feat_dir outputs/VJEPA_features
 ```
 
 To **re-extract** V-JEPA instead (needs vjepa2 repo + ckpts + frames; uses `dev/vjepa21` env;

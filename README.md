@@ -92,15 +92,15 @@ python methods/vjepa/adapters/vjepa_to_features.py \
 ## Pipeline B — downstream spotting heads (MS-TCN / ASFormer)
 
 Self-contained — head models, `FeatureDataset`, and mAP eval are **vendored** under
-`common/` + `methods/downstream/`. The feature dim is auto-detected, so the same code trains on TSP
+`common/` + `methods/spot_head/`. The feature dim is auto-detected, so the same code trains on TSP
 (512-d) or V-JEPA (768-d) features — just point `--feat_dir` at the right directory.
 
 ```bash
 # MS-TCN then ASFormer, evals mAP @ delta=[0,1,2,4]  -> outputs/downstream/{mstcn,asformer}/
-bash methods/downstream/train_downstream.sh
+bash methods/spot_head/train_downstream.sh
 # or one arch on a chosen feature set:
-python methods/downstream/train_head.py -m mstcn    --feat_dir outputs/TSP_features
-python methods/downstream/train_head.py -m asformer --feat_dir outputs/VJEPA_features
+python methods/spot_head/train_head.py -m mstcn    --feat_dir outputs/TSP_features
+python methods/spot_head/train_head.py -m asformer --feat_dir outputs/VJEPA_features
 ```
 
 - Spotting classes come from `class.txt` (`touch` / `untouch`); +1 implicit background.

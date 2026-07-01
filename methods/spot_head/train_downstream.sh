@@ -1,6 +1,6 @@
 #!/bin/bash -i
 # Train downstream precise-spotting heads (MS-TCN + ASFormer) on the TSP features.
-# SELF-CONTAINED: uses the vendored trainer methods/downstream/train_head.py + common/
+# SELF-CONTAINED: uses the vendored trainer methods/spot_head/train_head.py + common/
 # (no external spot repo needed). Paths/epochs come from config.py.
 #
 # Usage:  bash downstream/train_downstream.sh ["mstcn asformer"]

@@ -35,7 +35,7 @@ The E2E-Spot–derived evaluation infra, plus TSP training helpers. Import as
 | method | paradigm | entrypoints |
 |---|---|---|
 | `methods/tsp/` | **Stage A** — pretrain R(2+1)D-34 (dual-head + GVF), extract dense `[N,512]` per-frame features | `train.py` / `train_tsp_on_hoi4d.sh`, then `step0/1/3/4_*.py` |
-| `methods/downstream/` | **Stage B** — MS-TCN / ASFormer / GRU / GCN heads on per-frame features (TSP **or** V-JEPA) | `train_head.py -m <arch> --feat_dir <...>`, `eval_nms.py` |
+| `methods/spot_head/` | **Stage B** — MS-TCN / ASFormer / GRU / GCN heads on per-frame features (TSP **or** V-JEPA) | `train_head.py -m <arch> --feat_dir <...>`, `eval_nms.py` |
 | `methods/vjepa/` | V-JEPA 2.1 per-frame feature extraction + adapter (alt features that feed Stage B) | `extract_*.py`, `adapters/vjepa_to_features.py`, `run_vjepa_mstcn.sh` |
 | `methods/astrm/` | **end-to-end** RGB spotter (RegNetY-200MF + ASTRM module + Bi-GRU + BCE/Soft-IC) | `train_astrm.py`, `eval.py`, `run_train.sh` |
 
