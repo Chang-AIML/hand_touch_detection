@@ -1,0 +1,76 @@
+{
+  "best_by_f1": {
+    "epoch": 7,
+    "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/epoch_7.pth",
+    "fg_precision": 0.9658948685857321,
+    "fg_recall": 0.9557275541795666,
+    "fg_f1": 0.9607843137254901,
+    "accuracy": 0.9617312072892938
+  },
+  "all": [
+    {
+      "epoch": 0,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/epoch_0.pth",
+      "fg_precision": 0.871830593480078,
+      "fg_recall": 0.9687306501547988,
+      "fg_f1": 0.91772987241531,
+      "accuracy": 0.9148063781321184
+    },
+    {
+      "epoch": 1,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/epoch_1.pth",
+      "fg_precision": 0.9530412858493539,
+      "fg_recall": 0.9362229102167182,
+      "fg_f1": 0.9445572387943151,
+      "accuracy": 0.9460895975702354
+    },
+    {
+      "epoch": 2,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/epoch_2.pth",
+      "fg_precision": 0.9482866043613707,
+      "fg_recall": 0.9424148606811146,
+      "fg_f1": 0.9453416149068322,
+      "accuracy": 0.9465451784358391
+    },
+    {
+      "epoch": 3,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/epoch_3.pth",
+      "fg_precision": 0.9626138862708137,
+      "fg_recall": 0.9486068111455108,
+      "fg_f1": 0.9555590207391237,
+      "accuracy": 0.9567198177676538
+    },
+    {
+      "epoch": 4,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/epoch_4.pth",
+      "fg_precision": 0.9651819322459222,
+      "fg_recall": 0.9526315789473684,
+      "fg_f1": 0.9588656902461825,
+      "accuracy": 0.9599088838268792
+    },
+    {
+      "epoch": 5,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/epoch_5.pth",
+      "fg_precision": 0.9685414680648237,
+      "fg_recall": 0.9436532507739938,
+      "fg_f1": 0.9559353928179395,
+      "accuracy": 0.9573272589217919
+    },
+    {
+      "epoch": 6,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/epoch_6.pth",
+      "fg_precision": 0.9649012848636791,
+      "fg_recall": 0.9532507739938081,
+      "fg_f1": 0.959040647874163,
+      "accuracy": 0.9600607441154139
+    },
+    {
+      "epoch": 7,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/epoch_7.pth",
+      "fg_precision": 0.9658948685857321,
+      "fg_recall": 0.9557275541795666,
+      "fg_f1": 0.9607843137254901,
+      "accuracy": 0.9617312072892938
+    }
+  ]
+}

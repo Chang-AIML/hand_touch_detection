@@ -1,0 +1,17 @@
+found 8 checkpoints
+<FrameUntrimmedVideoDataset>: removed 70=5.05% from the 1387 segments because they are shorter than clip_length=12 frames at frame_rate=15 fps.
+<Model>: backbone r2plus1d_34 num_classes [2, 2] num_heads 2 gvf_size 768 kwargs {}
+
+ epoch    FG-P    FG-R   FG-F1     acc
+     0  0.8718  0.9687  0.9177  0.9148
+     1  0.9530  0.9362  0.9446  0.9461
+     2  0.9483  0.9424  0.9453  0.9465
+     3  0.9626  0.9486  0.9556  0.9567
+     4  0.9652  0.9526  0.9589  0.9599
+     5  0.9685  0.9437  0.9559  0.9573
+     6  0.9649  0.9533  0.9590  0.9601
+     7  0.9659  0.9557  0.9608  0.9617
+
+BEST by Foreground-F1: epoch 7 (F1=0.9608, P=0.9659, R=0.9557)
+-> /home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/epoch_7.pth
+written /home/huyanh/Workspace/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/best_by_f1.json

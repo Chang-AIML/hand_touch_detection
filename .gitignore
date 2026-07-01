@@ -14,13 +14,9 @@ __MACOSX/
 *.pt
 *.pth
 
-# large regenerable feature arrays (TSP [N,512], V-JEPA per-frame)
+# large regenerable feature arrays (TSP [N,512], V-JEPA per-frame) + MViT GVF
 *.npy
+*.h5
 
-
-# pipeline outputs are regenerable; only curated deliverables under
-# outputs/spot_head/best/ are version-controlled.
-outputs/*
-!outputs/spot_head
-outputs/spot_head/*
-!outputs/spot_head/best
+# everything else under outputs/ (predictions, eval tables, logs, GVF, loss curves)
+# IS version-controlled -- only the weights/features above are excluded.
