@@ -20,3 +20,7 @@ outputs/VJEPA_feat_*/
 # large regenerable per-frame TSP features (~1.7GB; regenerate via scripts/step4_extract_features.py)
 outputs/TSP_features/
 *.npy
+
+# ASTRM end-to-end training outputs (checkpoints + per-epoch preds; regenerate via astrm/run_train.sh)
+astrm/runs/
+astrm/**/__pycache__/
