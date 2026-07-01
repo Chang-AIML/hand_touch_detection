@@ -1,0 +1,17 @@
+Namespace(root_dir=None, frames_dir='/data/dong/project/Workspace/dataset/hoi4d/frames', train_subdir='train', valid_subdir='valid', train_csv_filename='/data/dong/project/Workspace/repos/hand_touch_detection/data/hoi4d_train_tsp.csv', valid_csv_filename='/data/dong/project/Workspace/repos/hand_touch_detection/data/hoi4d_val_tsp.csv', label_columns=['action-label', 'temporal-region-label'], label_mapping_jsons=['/data/dong/project/Workspace/repos/hand_touch_detection/data/action_label_mapping.json', '/data/dong/project/Workspace/repos/hand_touch_detection/data/temporal_region_label_mapping.json'], loss_alphas=[1.0, 1.0], global_video_features='/data/dong/project/Workspace/repos/hand_touch_detection/outputs/global_video_features/mvit_v1_b-max_gvf.h5', backbone='r2plus1d_34', device='cuda', clip_len=12, frame_rate=15, clips_per_segment=5, batch_size=16, workers=6, epochs=8, backbone_lr=0.0001, fc_lr=0.004, lr_warmup_epochs=2, lr_milestones=[4, 6], lr_gamma=0.01, momentum=0.9, weight_decay=0.005, valid_only=False, train_only_one_epoch=False, print_freq=100, output_dir='/data/dong/project/Workspace/repos/hand_touch_detection/outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12', resume='', start_epoch=0, dist_url='env://', sync_bn=False, debug=False)
+Not using distributed mode
+TORCH VERSION:  2.10.0+cu128
+TORCHVISION VERSION:  0.25.0+cu128
+USING FRAME DATASET (reading JPGs from /data/dong/project/Workspace/dataset/hoi4d/frames)
+LOADING DATA
+<FrameUntrimmedVideoDataset>: removed 751=3.41% from the 22034 segments because they are shorter than clip_length=12 frames at frame_rate=15 fps.
+<FrameUntrimmedVideoDataset>: removed 70=5.05% from the 1387 segments because they are shorter than clip_length=12 frames at frame_rate=15 fps.
+CREATING DATA LOADERS
+CREATING MODEL
+GVF size inferred from /data/dong/project/Workspace/repos/hand_touch_detection/outputs/global_video_features/mvit_v1_b-max_gvf.h5: 768
+<Model>: backbone r2plus1d_34 num_classes [2, 2] num_heads 2 gvf_size 768 kwargs {}
+START TRAINING
+Train Epoch 0: [   0/6651] eta: 1 day, 6:28:11 stem_lr: 0.00e+00 backbone_lr: 1.00e-09 fc_lr: 4.00e-08 clips/s: 1.17 acc_action-label: 40.00 loss_action-label: 0.79 acc_temporal-region-label: 25.00 loss_temporal-region-label: 0.75 loss: 1.54 time: 16.49 data: 2.85 max_mem: 30.12GB
+Train Epoch 0: [ 100/6651] eta: 1:11:08 stem_lr: 0.00e+00 backbone_lr: 7.53e-07 fc_lr: 3.01e-05 clips/s: 30.94 acc_action-label: 52.99 loss_action-label: 0.69 acc_temporal-region-label: 49.26 loss_temporal-region-label: 0.70 loss: 1.39 time: 0.50 data: 0.00 max_mem: 30.12GB
+Train Epoch 0: [ 200/6651] eta: 1:01:35 stem_lr: 0.00e+00 backbone_lr: 1.50e-06 fc_lr: 6.02e-05 clips/s: 34.84 acc_action-label: 54.60 loss_action-label: 0.69 acc_temporal-region-label: 51.12 loss_temporal-region-label: 0.69 loss: 1.38 time: 0.50 data: 0.00 max_mem: 30.12GB
+Train Epoch 0: [ 300/6651] eta: 0:57:50 stem_lr: 0.00e+00 backbone_lr: 2.26e-06 fc_lr: 9.03e-05 clips/s: 33.74 acc_action-label: 55.09 loss_action-label: 0.69 acc_temporal-region-label: 51.91 loss_temporal-region-label: 0.69 loss: 1.38 time: 0.49 data: 0.00 max_mem: 30.12GB

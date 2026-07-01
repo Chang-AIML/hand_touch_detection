@@ -1,0 +1,6 @@
+===== [2026-07-01 01:10:53] features ready: interleave=2850 even=2850 odd=2850 stack=2850  =====
+===== [2026-07-01 01:10:53] launching all 4 MS-TCN trainings concurrently =====
+Terminated
+DONE mode=odd
+/tmp/claude-1000/-data-dong-project-Workspace/69a22fff-606b-461a-ad44-1d31cae1c1d7/scratchpad/run_vjepa_mstcn_parallel.sh: line 18: 926384 Killed                  CUDA_VISIBLE_DEVICES=$gpu python downstream/train_head.py -m mstcn --feat_dir "outputs/VJEPA_feat_$m" --label_dir data/HOI4D-v3 --save_dir "outputs/downstream/vjepa_mstcn_$m" > "$LOG/mstcn_$m.log" 2>&1
+DONE mode=stack
