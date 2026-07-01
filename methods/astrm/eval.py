@@ -6,9 +6,9 @@ chosen split for all three post-processings: no-NMS / hard-NMS / soft-NMS.
 The model config is read back from <save_dir>/config.json.
 
 Examples:
-    python eval.py runs/astrm_hoi4d_v3 --split test            # best epoch
-    python eval.py runs/astrm_hoi4d_v3 --split test --checkpoint 37
-    python eval.py runs/astrm_hoi4d_v3 --split test --nms_window 12
+    python eval.py ../../outputs/astrm/astrm_hoi4d_v3 --split test            # best epoch
+    python eval.py ../../outputs/astrm/astrm_hoi4d_v3 --split test --checkpoint 37
+    python eval.py ../../outputs/astrm/astrm_hoi4d_v3 --split test --nms_window 12
 """
 import argparse
 import os

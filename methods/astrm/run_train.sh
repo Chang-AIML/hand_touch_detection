@@ -1,16 +1,14 @@
 #!/bin/bash
 # Supervisor: (re)launch ASTRM training, auto-resuming from the last checkpoint
-# if the process dies (e.g. transient OOM-kill while co-tenant jobs run).
+# if the process dies (e.g. transient OOM-kill). Writes to the shared outputs/
+# tree like the other methods (outputs/astrm/), not inside the code dir.
 set -u
-cd /data/chang/data2/huyanh/Workspace/repos/astrm
-PY=/home/chang_noroot/miniconda3/envs/astrm/bin/python
-# Paper-faithful run on the real HOI4D-v3 dataset (2 classes: touch + untouch,
-# everything else background). Fresh dir so we never resume stale checkpoints.
-SD=runs/astrm_hoi4d_v3
-FRAMES=/data/chang/data2/huyanh/Workspace/dataset/hoi4d/frames
-# Single GPU. Measured bottleneck is the per-step GPU pipeline (per-clip
-# augmentation loop + ASAM's 2x fwd/bwd), NOT data loading -- more workers did
-# not speed it up and blew up RAM, so keep workers small.
+HERE="$(cd "$(dirname "$0")" && pwd)"          # methods/astrm (astrm resolves data/hoi4d_v3 relative to here)
+REPO="$(cd "$HERE/../.." && pwd)"              # repo root
+cd "$HERE"
+PY=${PY:-python}
+SD="$REPO/outputs/astrm/astrm_hoi4d_v3"        # parallel with outputs/{TSP_features,spot_head,...}
+FRAMES=${TOUCH_FRAMES_DIR:-/home/huyanh/Workspace/dataset/hoi4d/frames}
 export CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0}
 
 # HOI4D events are ~1.5% of frames; with fg_weight=1 & dilate_len=0 the model
@@ -24,7 +22,7 @@ COMMON="hoi4d_v3 $FRAMES -m rny002_astrm --clip_len 128 --batch_size 16 \
 
 for attempt in $(seq 1 40); do
   RESUME=""
-  if ls $SD/checkpoint_*.pt >/dev/null 2>&1; then RESUME="--resume"; fi
+  if ls "$SD"/checkpoint_*.pt >/dev/null 2>&1; then RESUME="--resume"; fi
   echo "===== [supervisor] attempt $attempt $(date) resume='$RESUME' ====="
   $PY -u train_astrm.py $COMMON $RESUME
   code=$?

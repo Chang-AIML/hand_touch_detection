@@ -17,8 +17,6 @@ __MACOSX/
 # large regenerable feature arrays (TSP [N,512], V-JEPA per-frame)
 *.npy
 
-# ASTRM end-to-end training outputs (checkpoints + per-epoch preds)
-methods/astrm/runs/
 
 # pipeline outputs are regenerable; only curated deliverables under
 # outputs/spot_head/best/ are version-controlled.

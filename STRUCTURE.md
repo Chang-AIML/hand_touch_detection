@@ -63,6 +63,6 @@ Each method keeps its own `model/` and `dataset/` (method-specific; import names
 ## `outputs/` (gitignored)
 
 Regenerable: TSP checkpoints (`*.pth`), features (`*.npy`), per-epoch predictions,
-logs, ASTRM `runs/`. **Only `outputs/spot_head/best/`** (curated raw test predictions
+logs, ASTRM `outputs/astrm/`. **Only `outputs/spot_head/best/`** (curated raw test predictions
 + comparison tables) is version-controlled. Trained weights are backed up separately
 outside the repo.
