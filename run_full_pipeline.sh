@@ -3,12 +3,12 @@
 #   1) MViT-B GVF  2) train TSP dual-head  3) select best Foreground-F1
 #   4) extract per-frame [N,512] features  5) downstream MS-TCN + ASFormer
 # Env: vjepa21. GPU: $GPU (default 0). Logs: outputs/pipeline_logs/.
-REPO=/data/dong/project/Workspace/repos/hand_touch_detection
-source /data/dong/miniconda3/etc/profile.d/conda.sh
-conda activate vjepa21
+REPO=/home/huyanh/Workspace/hand_touch_detection
+source /home/huyanh/miniconda/etc/profile.d/conda.sh
+conda activate base
 set -eo pipefail
-export CONDA_ENV=vjepa21
-export TOUCH_FRAMES_DIR=${TOUCH_FRAMES_DIR:-/data/dong/project/Workspace/dataset/hoi4d/frames}
+export CONDA_ENV=base
+export TOUCH_FRAMES_DIR=${TOUCH_FRAMES_DIR:-/home/huyanh/Workspace/dataset/hoi4d/frames}
 export CUDA_VISIBLE_DEVICES=${GPU:-0}
 cd "$REPO"
 LOG="$REPO/outputs/pipeline_logs"; mkdir -p "$LOG"

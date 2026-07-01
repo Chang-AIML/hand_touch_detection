@@ -113,27 +113,82 @@ def process_frame_predictions(
     return err, f1, pred_events, pred_events_high_recall, pred_scores
 
 
-def non_maximum_supression(pred, window):
+def non_maximum_supression(pred, window, threshold=0.0):
+    """Hard NMS (greedy), per video per label -- matches bbvisual/hice util/eval.py.
+
+    Repeatedly takes the highest-scoring event, keeps it, and DELETES every
+    same-label event within +-window frames of it; repeats until the pool is
+    empty or the top score falls below `threshold`. Kept events are therefore
+    at least `window`+1 frames apart. `window` may be a scalar or a per-label
+    list."""
+    preds = copy.deepcopy(pred)
     new_pred = []
-    for video_pred in pred:
+    for video_pred in preds:
         events_by_label = defaultdict(list)
         for e in video_pred['events']:
             events_by_label[e['label']].append(e)
 
         events = []
+        i = 0
         for v in events_by_label.values():
-            for e1 in v:
-                for e2 in v:
-                    if (
-                            e1['frame'] != e2['frame']
-                            and abs(e1['frame'] - e2['frame']) <= window
-                            and e1['score'] < e2['score']
-                    ):
-                        # Found another prediction in the window that has a
-                        # higher score
-                        break
-                else:
-                    events.append(e1)
+            class_window = window if not isinstance(window, list) else window[i]
+            i += 1
+            while len(v) > 0:
+                e1 = max(v, key=lambda x: x['score'])
+                if e1['score'] < threshold:
+                    break
+                pos1 = [p for p, e in enumerate(v) if e['frame'] == e1['frame']][0]
+                events.append(copy.deepcopy(e1))
+                v.pop(pos1)
+                list_pos = [p for p, e in enumerate(v)
+                            if (e['frame'] >= e1['frame'] - class_window)
+                            and (e['frame'] <= e1['frame'] + class_window)]
+                for p in list_pos[::-1]:
+                    v.pop(p)
+        events.sort(key=lambda x: x['frame'])
+        new_video_pred = copy.deepcopy(video_pred)
+        new_video_pred['events'] = events
+        new_video_pred['num_events'] = len(events)
+        new_pred.append(new_video_pred)
+    return new_pred
+
+
+def soft_non_maximum_supression(pred, window, threshold=0.01):
+    """Soft-NMS (parabolic), per video per label -- matches bbvisual/hice util/eval.py.
+
+    Repeatedly takes the highest-scoring event M and keeps it, then decays every
+    same-label event within +-window of M by a parabolic penalty:
+        score *= (|frame - M.frame|)^2 / window^2
+    i.e. immediate neighbours (small distance) are strongly suppressed
+    (penalty -> 0), window-edge neighbours are barely touched (penalty -> 1),
+    and events beyond +-window are untouched. Stops when the top remaining
+    score falls below `threshold`; the rest are dropped. `window` may be a
+    scalar or a per-label list."""
+    preds = copy.deepcopy(pred)
+    new_pred = []
+    for video_pred in preds:
+        events_by_label = defaultdict(list)
+        for e in video_pred['events']:
+            events_by_label[e['label']].append(e)
+
+        events = []
+        i = 0
+        for v in events_by_label.values():
+            class_window = window if not isinstance(window, list) else window[i]
+            i += 1
+            while len(v) > 0:
+                e1 = max(v, key=lambda x: x['score'])
+                if e1['score'] < threshold:
+                    break
+                pos1 = [p for p, e in enumerate(v) if e['frame'] == e1['frame']][0]
+                events.append(copy.deepcopy(e1))
+                list_pos = [p for p, e in enumerate(v)
+                            if (e['frame'] >= e1['frame'] - class_window)
+                            and (e['frame'] <= e1['frame'] + class_window)]
+                for p in list_pos:
+                    v[p]['score'] = v[p]['score'] * \
+                        (np.abs(e1['frame'] - v[p]['frame'])) ** 2 / (class_window ** 2)
+                v.pop(pos1)
         events.sort(key=lambda x: x['frame'])
         new_video_pred = copy.deepcopy(video_pred)
         new_video_pred['events'] = events
