@@ -62,16 +62,16 @@ class FrameUntrimmedVideoDataset(Dataset):
         row = self.df.iloc[idx % len(self.df)]
         video_name, fps, t_start, t_end = row['video-name'], row['fps'], row['t-start'], row['t-end']
 
-        # same clip-start logic as UntrimmedVideoDataset
-        clip_length_in_sec = self.clip_length / self.frame_rate
+        # NATIVE-FRAME sampling: clip = clip_length CONSECUTIVE native frames of this
+        # video (step=1, no fps resampling). Mixed-fps datasets just work -- a 15fps
+        # clip spans 0.8s, a 30fps clip 0.4s, but the model only sees clip_length frames.
+        clip_length_in_sec = self.clip_length / fps
         ratio = self.rng.uniform() if self.temporal_jittering else self.uniform_sampling[idx // len(self.df)]
         clip_t_start = t_start + ratio * (t_end - t_start - clip_length_in_sec)
 
-        # map seconds -> frame indices, resampling original fps to frame_rate
         n = self._num_frames[video_name]
         start_f = int(round(clip_t_start * fps))
-        step = float(fps) / self.frame_rate
-        frame_idxs = [min(max(int(round(start_f + k * step)), 0), n - 1) for k in range(self.clip_length)]
+        frame_idxs = [min(max(start_f + k, 0), n - 1) for k in range(self.clip_length)]
 
         d = os.path.join(self.root_dir, video_name)
         frames = [np.asarray(Image.open(os.path.join(d, self.IMG_NAME.format(j))).convert('RGB'))
@@ -98,7 +98,9 @@ class FrameUntrimmedVideoDataset(Dataset):
         df['t-end'] = np.minimum(df['t-end'], df['video-duration'])
         df['t-start'] = np.maximum(df['t-start'], 0)
 
-        segment_length = (df['t-end'] - df['t-start']) * frame_rate
+        # NATIVE frames: a segment is long enough if it spans >= clip_length of its
+        # OWN frames (per-row fps), so mixed-fps videos are judged consistently.
+        segment_length = (df['t-end'] - df['t-start']) * df['fps']
         mask = segment_length >= clip_length
         num_segments = len(df)
         num_segments_to_keep = sum(mask)
@@ -106,8 +108,7 @@ class FrameUntrimmedVideoDataset(Dataset):
             df = df[mask].reset_index(drop=True)
             print(f'<FrameUntrimmedVideoDataset>: removed {num_segments - num_segments_to_keep}='
                   f'{100 * (1 - num_segments_to_keep / num_segments):.2f}% from the {num_segments} '
-                  f'segments because they are shorter than clip_length={clip_length} frames '
-                  f'at frame_rate={frame_rate} fps.')
+                  f'segments shorter than clip_length={clip_length} native frames.')
         return df
 
     @staticmethod

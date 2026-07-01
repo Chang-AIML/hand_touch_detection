@@ -48,31 +48,32 @@ def complement(union, n):
     return out
 
 
+from collections import Counter
 for split in ['train', 'val', 'test']:
     data = json.load(open(os.path.join(SRC, f'{split}.json')))
     rows = []
-    n_touch = n_untouch = n_bg = 0
+    fg_labels = Counter(); n_bg = 0     # per-action-class tally (dataset-agnostic)
     for v in data:
         name, fps, n = v['video'], float(v['fps']), v['num_frames']
         dur = round(n / fps, 4)
         fg = []                                              # (s_frame, e_frame, action)
         for ev in v['events']:
-            f, lab = ev['frame'], ev['label']                # 'touch' / 'untouch'
+            f, lab = ev['frame'], ev['label']                # event class (touch/untouch, jump_takeoff, ...)
             s, e = max(0, f - FG_RADIUS), min(n, f + FG_RADIUS)
             if e > s:
                 fg.append((s, e, lab))
-        for s, e, lab in fg:                                 # Foreground rows (action = touch/untouch)
+        for s, e, lab in fg:                                 # Foreground rows (action = the event class)
             rows.append([name, fps, round(s / fps, 4), round(e / fps, 4), lab, 'Foreground', dur])
-            n_touch += (lab == 'touch'); n_untouch += (lab == 'untouch')
+            fg_labels[lab] += 1
         for s, e in complement(merge([(s, e) for s, e, _ in fg]), n):   # Background rows (no action)
             if e - s < 1:
                 continue
             rows.append([name, fps, round(s / fps, 4), round(e / fps, 4), '', 'Background', dur])
             n_bg += 1
-    with open(os.path.join(OUT, f'hoi4d_{split}_tsp.csv'), 'w', newline='') as fp:
+    with open(os.path.join(OUT, f'{config.DATASET}_{split}_tsp.csv'), 'w', newline='') as fp:
         w = csv.writer(fp)
         w.writerow(['filename', 'fps', 't-start', 't-end',
                     'action-label', 'temporal-region-label', 'video-duration'])
         w.writerows(rows)
     print(f'{split:5s}: {len(data):4d} videos -> {len(rows):5d} rows '
-          f'(FG touch {n_touch}, FG untouch {n_untouch}, BG {n_bg})')
+          f'(FG {dict(fg_labels)}, BG {n_bg})')

@@ -77,7 +77,7 @@ def main():
 
     # backbone only (GVF/heads irrelevant for feature extraction). Build the dual-head
     # arch so the checkpoint's keys line up; strict=False tolerates head differences.
-    model = Model(backbone='r2plus1d_34', num_classes=[2, 2], num_heads=2,
+    model = Model(backbone='r2plus1d_34', num_classes=[len(json.load(open(config.ACTION_LABEL_MAP))), 2], num_heads=2,
                   concat_gvf=True, gvf_size=config.GVF_DIM, progress=False)
     sd = torch.load(args.ckpt, map_location='cpu', weights_only=False); sd = sd.get('model', sd)
     model.load_state_dict(sd, strict=False)

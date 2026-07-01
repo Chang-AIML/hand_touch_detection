@@ -6,6 +6,8 @@ from common.io import load_text
 DATASETS = [
     'hoi4d_touch',   # TSP two-stage pipeline (methods/spot_head/train_head.py)
     'hoi4d_v3',      # ASTRM end-to-end pipeline (astrm/train_astrm.py)
+    'fs_perf',       # figure-skating precise spotting (code-quality smoke)
+    'touchmoment',   # larger touch/untouch set, mixed 15/30 fps (native-frame)
 ]
 
 

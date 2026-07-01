@@ -25,6 +25,7 @@ GVF        = config.GVF_PATH
 VAL_CSV    = config.VAL_CSV
 LABEL_COL  = 'temporal-region-label'
 LABEL_MAP  = json.load(open(config.TR_LABEL_MAP))        # {'Background':0,'Foreground':1}
+ACTION_MAP = json.load(open(config.ACTION_LABEL_MAP))    # action classes (2 hoi4d / 4 fs_perf)
 FG = LABEL_MAP['Foreground']
 
 
@@ -90,7 +91,7 @@ def main():
     loader = build_val_loader(args.batch_size, args.workers)
     # dual-head checkpoint: head0=action (touch/untouch), head1=region (FG/BG)+GVF.
     # We evaluate the region head for Foreground/Background F1 (see infer(): out[1]).
-    model = Model(backbone='r2plus1d_34', num_classes=[2, 2], num_heads=2,
+    model = Model(backbone='r2plus1d_34', num_classes=[len(ACTION_MAP), len(LABEL_MAP)], num_heads=2,
                   concat_gvf=True, gvf_size=config.GVF_DIM, progress=False).to(args.device)
 
     rows, best = [], None
