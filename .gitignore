@@ -10,5 +10,9 @@ __pycache__/
 __MACOSX/
 *.zip
 
-# pipeline outputs (checkpoints, features, logs)
-outputs/
+# model weights / checkpoints (excluded from git per request; regenerate by training)
+*.pt
+*.pth
+
+# large regenerable V-JEPA feature arrays (~6.4GB; regenerate via scripts/adapters/vjepa_to_features.py)
+outputs/VJEPA_feat_*/

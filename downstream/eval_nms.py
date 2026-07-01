@@ -98,7 +98,11 @@ def main():
     ap.add_argument('--snms-window', type=int, default=4, help='soft-NMS suppression window (frames)')
     ap.add_argument('--snms-sigma', type=float, default=0.5, help='Gaussian soft-NMS sigma')
     ap.add_argument('--per-class', action='store_true', help='also print touch/untouch AP separately')
+    ap.add_argument('--tolerances', nargs='+', type=int, default=[0, 1, 2, 4],
+                    help='tolerances to report; the Avg column is their mean (e.g. 0 1 2 for @0/1/2 mAP)')
     args = ap.parse_args()
+    global TOLS
+    TOLS = args.tolerances
 
     truth = load_json(os.path.join(args.label_dir, f'{args.split}.json'))
 
