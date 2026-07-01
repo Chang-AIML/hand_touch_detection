@@ -1,0 +1,7 @@
+videos: 149; already done: 0; to do: 149
+<Model>: backbone r2plus1d_34 num_classes [4, 2] num_heads 2 gvf_size 768 kwargs {}
+loaded backbone from /home/huyanh/Workspace/hand_touch_detection/outputs/fs_perf/encoders/tsp/train/epoch_3.pth
+  [1/149] men_olympic_short_program_2010_02_00021650_00025875: (4225, 512)
+  [50/149] women_olympic_short_program_2018_16_00192800_00197075: (4275, 512)
+  [100/149] women_world_short_program_2017_08_00106000_00110300: (4300, 512)
+DONE. wrote 149 feature files -> /home/huyanh/Workspace/hand_touch_detection/outputs/fs_perf/encoders/tsp/features

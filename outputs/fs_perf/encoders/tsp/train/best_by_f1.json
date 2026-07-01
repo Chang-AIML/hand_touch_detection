@@ -1,0 +1,44 @@
+{
+  "best_by_f1": {
+    "epoch": 3,
+    "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/fs_perf/encoders/tsp/train/epoch_3.pth",
+    "fg_precision": 0.9949579831932773,
+    "fg_recall": 0.9921787709497206,
+    "fg_f1": 0.9935664335664336,
+    "accuracy": 0.9914814814814815
+  },
+  "all": [
+    {
+      "epoch": 0,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/fs_perf/encoders/tsp/train/epoch_0.pth",
+      "fg_precision": 0.9813628421665695,
+      "fg_recall": 0.9413407821229051,
+      "fg_f1": 0.9609352723125177,
+      "accuracy": 0.9492592592592592
+    },
+    {
+      "epoch": 1,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/fs_perf/encoders/tsp/train/epoch_1.pth",
+      "fg_precision": 0.9505844845908608,
+      "fg_recall": 0.9994413407821229,
+      "fg_f1": 0.9744008714596949,
+      "accuracy": 0.9651851851851851
+    },
+    {
+      "epoch": 2,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/fs_perf/encoders/tsp/train/epoch_2.pth",
+      "fg_precision": 0.9921918572225321,
+      "fg_recall": 0.993854748603352,
+      "fg_f1": 0.9930226067541168,
+      "accuracy": 0.9907407407407407
+    },
+    {
+      "epoch": 3,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/fs_perf/encoders/tsp/train/epoch_3.pth",
+      "fg_precision": 0.9949579831932773,
+      "fg_recall": 0.9921787709497206,
+      "fg_f1": 0.9935664335664336,
+      "accuracy": 0.9914814814814815
+    }
+  ]
+}
