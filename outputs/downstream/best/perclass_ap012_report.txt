@@ -1,0 +1,80 @@
+Per-class AP@{0,1,2} and mAP(0-2) — test set (424 videos), hice NMS w=1 / SoftNMS w=4
+
+### TSP-MSTCN
+method        class      AP@0    AP@1    AP@2    mean(0-2)
+------------  -------  ------  ------  ------  -----------
+none          touch     21.17   43.06   54.66        39.63
+none          untouch   28.75   58.63   69.80        52.39
+none          mAP       24.96   50.84   62.23        46.01
+NMS(w=1)      touch     10.98   55.13   73.86        46.66
+NMS(w=1)      untouch   17.08   68.80   85.32        57.07
+NMS(w=1)      mAP       14.03   61.97   79.59        51.86
+SoftNMS(w=4)  touch      9.51   55.86   76.26        47.21
+SoftNMS(w=4)  untouch   16.43   68.87   86.14        57.15
+SoftNMS(w=4)  mAP       12.97   62.36   81.20        52.18
+
+### TSP-ASFormer
+method        class      AP@0    AP@1    AP@2    mean(0-2)
+------------  -------  ------  ------  ------  -----------
+none          touch     20.74   40.09   51.31        37.38
+none          untouch   27.58   54.06   64.45        48.70
+none          mAP       24.16   47.07   57.88        43.04
+NMS(w=1)      touch     11.80   53.09   73.89        46.26
+NMS(w=1)      untouch   15.52   68.35   85.63        56.50
+NMS(w=1)      mAP       13.66   60.72   79.76        51.38
+SoftNMS(w=4)  touch      9.51   53.40   77.25        46.72
+SoftNMS(w=4)  untouch   13.43   68.24   86.54        56.07
+SoftNMS(w=4)  mAP       11.47   60.82   81.89        51.40
+
+### VJEPA-interleave
+method        class      AP@0    AP@1    AP@2    mean(0-2)
+------------  -------  ------  ------  ------  -----------
+none          touch     18.10   44.03   62.57        41.56
+none          untouch   21.22   55.62   73.11        49.99
+none          mAP       19.66   49.83   67.84        45.77
+NMS(w=1)      touch      8.54   48.41   67.60        41.52
+NMS(w=1)      untouch   10.69   57.81   76.66        48.39
+NMS(w=1)      mAP        9.61   53.11   72.13        44.95
+SoftNMS(w=4)  touch      9.05   45.53   68.09        40.89
+SoftNMS(w=4)  untouch   12.98   56.36   76.66        48.67
+SoftNMS(w=4)  mAP       11.02   50.95   72.37        44.78
+
+### VJEPA-even
+method        class      AP@0    AP@1    AP@2    mean(0-2)
+------------  -------  ------  ------  ------  -----------
+none          touch     16.53   44.57   63.14        41.41
+none          untouch   21.50   59.54   75.93        52.33
+none          mAP       19.02   52.05   69.54        46.87
+NMS(w=1)      touch      7.75   47.93   68.57        41.42
+NMS(w=1)      untouch   11.80   59.84   79.37        50.34
+NMS(w=1)      mAP        9.78   53.88   73.97        45.88
+SoftNMS(w=4)  touch      8.60   45.05   68.92        40.86
+SoftNMS(w=4)  untouch   14.92   58.52   78.51        50.65
+SoftNMS(w=4)  mAP       11.76   51.79   73.71        45.75
+
+### VJEPA-odd
+method        class      AP@0    AP@1    AP@2    mean(0-2)
+------------  -------  ------  ------  ------  -----------
+none          touch     17.86   45.03   65.95        42.95
+none          untouch   21.93   53.38   71.84        49.05
+none          mAP       19.90   49.21   68.90        46.00
+NMS(w=1)      touch      9.70   48.15   70.84        42.90
+NMS(w=1)      untouch   11.73   55.85   75.81        47.80
+NMS(w=1)      mAP       10.71   52.00   73.33        45.35
+SoftNMS(w=4)  touch      9.86   45.60   70.94        42.14
+SoftNMS(w=4)  untouch   14.90   53.27   75.32        47.83
+SoftNMS(w=4)  mAP       12.38   49.44   73.13        44.98
+
+### VJEPA-stack
+method        class      AP@0    AP@1    AP@2    mean(0-2)
+------------  -------  ------  ------  ------  -----------
+none          touch     17.83   46.34   67.11        43.76
+none          untouch   22.65   57.73   75.01        51.80
+none          mAP       20.24   52.03   71.06        47.78
+NMS(w=1)      touch      8.80   50.73   73.23        44.25
+NMS(w=1)      untouch   12.32   60.57   80.33        51.08
+NMS(w=1)      mAP       10.56   55.65   76.78        47.66
+SoftNMS(w=4)  touch      9.49   47.86   73.24        43.53
+SoftNMS(w=4)  untouch   14.75   58.27   79.74        50.92
+SoftNMS(w=4)  mAP       12.12   53.06   76.49        47.22
+

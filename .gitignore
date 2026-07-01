@@ -16,3 +16,7 @@ __MACOSX/
 
 # large regenerable V-JEPA feature arrays (~6.4GB; regenerate via scripts/adapters/vjepa_to_features.py)
 outputs/VJEPA_feat_*/
+
+# large regenerable per-frame TSP features (~1.7GB; regenerate via scripts/step4_extract_features.py)
+outputs/TSP_features/
+*.npy
