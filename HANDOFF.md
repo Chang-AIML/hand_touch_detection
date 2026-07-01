@@ -14,7 +14,7 @@ Source machine paths are all under `/data/dong/project/Workspace/` (`repos/`, `d
 |---|---|---|---|
 | Label splits (train/val/test.json + class.txt) | ✅ done, in-repo | `hand_touch_detection/data/HOI4D-v3/` | small |
 | Dual-head TSP segment CSVs | ✅ done, in-repo | `hand_touch_detection/data/hoi4d_*_tsp.csv` | small |
-| MViT-B GVF (768-d/video) | ✅ computed | `hand_touch_detection/outputs/global_video_features/mvit_v1_b-max_gvf.h5` | 9.4 MB |
+| MViT-B GVF (768-d/video) | ✅ computed | `hand_touch_detection/outputs/encoders/tsp/gvf/mvit_v1_b-max_gvf.h5` | 9.4 MB |
 | V-JEPA 2.1 raw per-frame features (even/odd) | ✅ computed (2850 vids ×2) | `feature_extraction/VJEPA_feature/` | 1.6 GB |
 | V-JEPA 2.1 checkpoints (vitb 1.6G + vitl 4.8G) | ✅ downloaded | `feature_extraction/ckpts/` | 6.4 GB |
 | HOI4D JPG frames (2850 H-videos + 1171 unused C) | ✅ exist | `dataset/hoi4d/frames/` | 49 GB |
@@ -45,7 +45,7 @@ Data / artifacts:
 dataset/hoi4d/frames/                       # 49 GB — REQUIRED for TSP train + extract (pipeline A)
 feature_extraction/VJEPA_feature/           # 1.6 GB — V-JEPA raw even/odd; copy to SKIP V-JEPA re-extraction
 feature_extraction/ckpts/*.pt               # 6.4 GB — only if you re-extract V-JEPA (else skip)
-hand_touch_detection/outputs/global_video_features/mvit_v1_b-max_gvf.h5   # 9.4 MB — optional (recompute in ~4 min)
+hand_touch_detection/outputs/encoders/tsp/gvf/mvit_v1_b-max_gvf.h5   # 9.4 MB — optional (recompute in ~4 min)
 ```
 
 **Minimal sets:**
@@ -102,18 +102,18 @@ Stages (also runnable individually, all resumable/skip-existing):
 
 ```bash
 # (0) CSVs already in data/; regenerate only if labels change:
-python methods/tsp/step0_make_tsp_csv.py
-# (1) MViT-B GVF -> outputs/global_video_features/mvit_v1_b-max_gvf.h5   (~4 min, downloads MViT weights)
-python methods/tsp/step1_extract_mvit_gvf.py
+python methods/encoders/tsp/step0_make_tsp_csv.py
+# (1) MViT-B GVF -> outputs/encoders/tsp/gvf/mvit_v1_b-max_gvf.h5   (~4 min, downloads MViT weights)
+python methods/encoders/tsp/step1_extract_mvit_gvf.py
 # (2) train TSP DUAL-head (action touch/untouch + GVF-fed FG/BG, 8 ep)   (~1 h/epoch on a free L40S; downloads R(2+1)D ig65m init)
-CONDA_ENV=vjepa21 bash methods/tsp/train_tsp_on_hoi4d.sh
+CONDA_ENV=vjepa21 bash methods/encoders/tsp/train_tsp_on_hoi4d.sh
 # (3) pick best epoch by Foreground-F1 (region head)  -> best_by_f1.json
-python methods/tsp/step3_select_best_f1.py
-# (4) dense per-frame features [N,512]  -> outputs/TSP_features/<video>.npy
-python methods/tsp/step4_extract_features.py --ckpt <outputs/.../epoch_*.pth from step3>
+python methods/encoders/tsp/step3_select_best_f1.py
+# (4) dense per-frame features [N,512]  -> outputs/encoders/tsp/features/<video>.npy
+python methods/encoders/tsp/step4_extract_features.py --ckpt <outputs/.../epoch_*.pth from step3>
 # (B) spot_head heads on TSP features  -> outputs/spot_head/{mstcn,asformer}/
-python methods/spot_head/train_head.py -m mstcn    --feat_dir outputs/TSP_features
-python methods/spot_head/train_head.py -m asformer --feat_dir outputs/TSP_features
+python methods/spot_head/train_head.py -m mstcn    --feat_dir outputs/encoders/tsp/features
+python methods/spot_head/train_head.py -m asformer --feat_dir outputs/encoders/tsp/features
 ```
 
 ---
@@ -124,13 +124,13 @@ If you copied `VJEPA_feature/` (the even/odd raw), **skip extraction** and go st
 
 ```bash
 # adapter: even/odd half-rate streams -> per-video frame-aligned [N,768]
-python hand_touch_detection/methods/vjepa/adapters/vjepa_to_features.py \
+python hand_touch_detection/methods/encoders/vjepa/adapters/vjepa_to_features.py \
     --raw-dir   ../feature_extraction/VJEPA_feature \
-    --out-dir   outputs/VJEPA_features \
+    --out-dir   outputs/encoders/vjepa/features \
     --label-dir data/HOI4D-v3 \
     --mode      interleave        # | even | odd | stack  (see §6)
 # spot_head on V-JEPA features (feature_dim auto-detected = 768; same code as TSP)
-python methods/spot_head/train_head.py -m mstcn --feat_dir outputs/VJEPA_features
+python methods/spot_head/train_head.py -m mstcn --feat_dir outputs/encoders/vjepa/features
 ```
 
 To **re-extract** V-JEPA instead (needs vjepa2 repo + ckpts + frames; uses `dev/vjepa21` env;

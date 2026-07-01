@@ -28,25 +28,29 @@ hand_touch_detection/                 # see STRUCTURE.md for the full per-direct
 │   ├── hoi4d_{train,val,test}_tsp.csv                # TSP dual-head segment CSVs (touch/untouch + FG/BG)
 │   └── {temporal_region,action}_label_mapping.json
 ├── methods/
-│   ├── tsp/                         # Stage A — TSP two-stage feature pipeline
-│   │   ├── train.py opts.py frame_untrimmed_video_dataset.py train_tsp_on_hoi4d.sh
-│   │   ├── models/{model,backbone}.py           # R(2+1)D-34 dual-head Model w/ GVF
-│   │   └── step0_make_tsp_csv.py step1_extract_mvit_gvf.py step3_select_best_f1.py step4_extract_features.py
-│   ├── spot_head/                  # Stage B — spotting heads on per-frame features
+│   ├── encoders/                   # feature-extraction front-ends (parallel) — feed spot_head
+│   │   ├── tsp/                     # R(2+1)D-34 dual-head + GVF -> dense [N,512] features
+│   │   │   ├── train.py opts.py frame_untrimmed_video_dataset.py train_tsp_on_hoi4d.sh
+│   │   │   ├── models/{model,backbone}.py
+│   │   │   └── step0_make_tsp_csv.py step1_extract_mvit_gvf.py step3_select_best_f1.py step4_extract_features.py
+│   │   └── vjepa/                   # V-JEPA 2.1 extraction + adapter -> [N,768] features
+│   │       ├── extract_*.py frame_io.py run_dual_gpu.sh run_vjepa_mstcn.sh
+│   │       └── adapters/vjepa_to_features.py
+│   ├── spot_head/                  # SHARED head: features (TSP or V-JEPA) -> per-frame preds
 │   │   ├── train_head.py eval_nms.py train_spot_head.sh
 │   │   ├── model/{common,feature_heads}.py + model/impl/{asformer,gtad,calf}.py
 │   │   └── dataset/feature_dataset.py
-│   ├── vjepa/                       # V-JEPA 2.1 extraction + adapter (alt features for spot_head)
-│   │   ├── extract_*.py frame_io.py run_dual_gpu.sh
-│   │   └── adapters/vjepa_to_features.py        # even/odd half-rate streams -> per-video [N,768]
-│   └── astrm/                       # end-to-end ASTRM spotter (RegNetY+ASTRM, Bi-GRU, Soft-IC)
+│   └── astrm/                       # end-to-end RGB spotter (self-contained front+back)
 │       ├── train_astrm.py eval.py run_train.sh  model/  dataset/
-│       └── data/hoi4d_v3 -> ../../../data/HOI4D-v3   (imports common/ directly; no util symlink)
-├── scripts/                         # cross-method drivers
-│   ├── step6_eval_nms.py            # unified test mAP@{0,1,2,4} x {none,NMS,SoftNMS}
-│   ├── run_full_pipeline.sh         # TSP stages 1-5 end to end
+│       └── data/hoi4d_v3 -> ../../../data/HOI4D-v3
+├── scripts/                        # cross-method drivers
+│   ├── step6_eval_nms.py           # unified test mAP@{0,1,2,4} x {none,NMS,SoftNMS}
+│   ├── run_full_pipeline.sh        # TSP encoder -> spot_head, stages 1-5
 │   └── run_stage6_after_spot_head.sh
-└── outputs/                         # gitignored (regenerable); only outputs/spot_head/best/ tracked
+└── outputs/                        # mirrors methods/: encoders/{tsp,vjepa}, spot_head, astrm
+    ├── encoders/{tsp,vjepa}/       # features + checkpoints + gvf (gitignored, regenerable)
+    ├── spot_head/                  # head runs + preds; only spot_head/best/ tracked
+    └── astrm/                      # astrm run
 ```
 
 ## External input (NOT shipped — set in config.py)
@@ -60,19 +64,19 @@ to `outputs/` (override via `TOUCH_OUT_DIR` etc.).
 
 ```bash
 # (0) regenerate the dual-head segment CSVs from HOI4D json   [optional; CSVs already in data/]
-python methods/tsp/step0_make_tsp_csv.py
+python methods/encoders/tsp/step0_make_tsp_csv.py
 
-# (1) extract MViT-B GVF  -> outputs/global_video_features/mvit_v1_b-max_gvf.h5
-python methods/tsp/step1_extract_mvit_gvf.py
+# (1) extract MViT-B GVF  -> outputs/encoders/tsp/gvf/mvit_v1_b-max_gvf.h5
+python methods/encoders/tsp/step1_extract_mvit_gvf.py
 
 # (2) train TSP (clip-12, DUAL head: action + GVF-fed region)
-bash methods/tsp/train_tsp_on_hoi4d.sh          # -> outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/
+bash methods/encoders/tsp/train_tsp_on_hoi4d.sh          # -> outputs/encoders/tsp/train/
 
 # (3) pick best checkpoint by Foreground-F1 (region head; classes imbalanced)
-python methods/tsp/step3_select_best_f1.py    # writes best_by_f1.json in the train output dir
+python methods/encoders/tsp/step3_select_best_f1.py    # writes best_by_f1.json in the train output dir
 
-# (4) extract dense per-frame features  -> outputs/TSP_features/<video>.npy  [T,512]
-python methods/tsp/step4_extract_features.py --ckpt <best epoch_*.pth>
+# (4) extract dense per-frame features  -> outputs/encoders/tsp/features/<video>.npy  [T,512]
+python methods/encoders/tsp/step4_extract_features.py --ckpt <best epoch_*.pth>
 ```
 
 ## Pipeline C — V-JEPA 2.1 features
@@ -82,9 +86,9 @@ half-rate `even`/`odd` streams per clip). The adapter merges them into frame-ali
 per-video arrays the spot_head consumes:
 
 ```bash
-python methods/vjepa/adapters/vjepa_to_features.py \
+python methods/encoders/vjepa/adapters/vjepa_to_features.py \
     --raw-dir   ../feature_extraction/VJEPA_feature \
-    --out-dir   outputs/VJEPA_features \
+    --out-dir   outputs/encoders/vjepa/features \
     --label-dir data/HOI4D-v3 \
     --mode      interleave        # or: even | odd (interpolated) | stack ([N,2,D])
 ```
@@ -99,8 +103,8 @@ Self-contained — head models, `FeatureDataset`, and mAP eval are **vendored** 
 # MS-TCN then ASFormer, evals mAP @ delta=[0,1,2,4]  -> outputs/spot_head/{mstcn,asformer}/
 bash methods/spot_head/train_spot_head.sh
 # or one arch on a chosen feature set:
-python methods/spot_head/train_head.py -m mstcn    --feat_dir outputs/TSP_features
-python methods/spot_head/train_head.py -m asformer --feat_dir outputs/VJEPA_features
+python methods/spot_head/train_head.py -m mstcn    --feat_dir outputs/encoders/tsp/features
+python methods/spot_head/train_head.py -m asformer --feat_dir outputs/encoders/vjepa/features
 ```
 
 - Spotting classes come from `class.txt` (`touch` / `untouch`); +1 implicit background.

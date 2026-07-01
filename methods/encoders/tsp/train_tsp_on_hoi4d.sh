@@ -8,8 +8,8 @@
 # Reads JPG frames directly (no ffmpeg/mp4). Run from the project's train/ dir.
 
 set -e
-HERE="$(cd "$(dirname "$0")" && pwd)"           # .../methods/tsp
-PROJ="$(dirname "$(dirname "$HERE")")"           # repo root
+HERE="$(cd "$(dirname "$0")" && pwd)"           # .../methods/encoders/tsp
+PROJ="$(dirname "$(dirname "$(dirname "$HERE")")")"           # repo root
 
 # paths come from config.py (env-overridable) so this stays in sync with the python steps
 eval "$(python - <<PY

@@ -24,7 +24,7 @@ import torchvision.transforms.functional as TF
 from torch.utils.data import Dataset, DataLoader
 from torchvision.models.video import mvit_v1_b, MViT_V1_B_Weights
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
 import config                                   # noqa: E402
 FRAMES_DIR = config.FRAMES_DIR
 LABEL_DIR  = config.LABEL_DIR                    # train/val/test.json live here

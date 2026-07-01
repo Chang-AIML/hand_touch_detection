@@ -19,12 +19,13 @@ TR_LABEL_MAP = os.path.join(DATA_DIR, 'temporal_region_label_mapping.json')
 ACTION_LABEL_MAP = os.path.join(DATA_DIR, 'action_label_mapping.json')   # dual-head: touch/untouch
 
 # ---- OUTPUTS (produced by the pipeline; default project-local) ----
+# Mirrors methods/: encoders/{tsp,vjepa} front-ends, spot_head, astrm.
 OUT_DIR    = os.environ.get('TOUCH_OUT_DIR', os.path.join(PROJ, 'outputs'))
+TSP_OUT    = os.path.join(OUT_DIR, 'encoders', 'tsp')        # TSP encoder artifacts
 GVF_PATH   = os.environ.get('TOUCH_GVF_PATH',
-                            os.path.join(OUT_DIR, 'global_video_features/mvit_v1_b-max_gvf.h5'))
-TRAIN_OUT  = os.environ.get('TOUCH_TRAIN_OUT',
-                            os.path.join(OUT_DIR, 'r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12'))
-FEATURES_OUT = os.environ.get('TOUCH_FEATURES_OUT', os.path.join(OUT_DIR, 'TSP_features'))
+                            os.path.join(TSP_OUT, 'gvf', 'mvit_v1_b-max_gvf.h5'))
+TRAIN_OUT  = os.environ.get('TOUCH_TRAIN_OUT', os.path.join(TSP_OUT, 'train'))
+FEATURES_OUT = os.environ.get('TOUCH_FEATURES_OUT', os.path.join(TSP_OUT, 'features'))
 
 # ---- SPOT_HEAD (spotting heads on TSP / V-JEPA features) ----
 SPOT_HEAD_OUT     = os.environ.get('TOUCH_SPOT_HEAD_OUT', os.path.join(OUT_DIR, 'spot_head'))
@@ -40,8 +41,8 @@ FEAT_DIM   = 512         # R(2+1)D-34 backbone output (spot_head feature dim)
 
 def add_proj_to_path():
     """Make the vendored TSP code importable: `common`, `models`, and the
-    dataset modules under methods/tsp/."""
+    dataset modules under methods/encoders/tsp/."""
     import sys
-    for p in (PROJ, os.path.join(PROJ, 'methods', 'tsp')):
+    for p in (PROJ, os.path.join(PROJ, 'methods', 'encoders', 'tsp')):
         if p not in sys.path:
             sys.path.insert(0, p)

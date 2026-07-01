@@ -18,7 +18,7 @@ maps it to -1 so CrossEntropyLoss(ignore_index=-1) skips the action loss there.
 Times in seconds (frame/fps)."""
 import json, csv, os, sys
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
 import config                       # noqa: E402
 SRC = config.LABEL_DIR   # train.json/val.json/test.json live here
 OUT = config.DATA_DIR    # write hoi4d_<split>_tsp.csv here

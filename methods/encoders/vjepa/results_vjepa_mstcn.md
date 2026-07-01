@@ -29,7 +29,7 @@ Gaussian temporal Soft-NMS (window=4, σ=0.5). mAP in %.
   are competitive or slightly better, suggesting the half-rate streams already carry the signal and the
   training-time even/odd augmentation (`stack`) helps most.
 
-Reproduce: `PARALLEL=1 bash methods/vjepa/run_vjepa_mstcn.sh` then `python methods/spot_head/eval_nms.py --split test`.
+Reproduce: `PARALLEL=1 bash methods/encoders/vjepa/run_vjepa_mstcn.sh` then `python methods/spot_head/eval_nms.py --split test`.
 
 ## Per-class AP (%) — touch
 

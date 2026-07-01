@@ -7,8 +7,8 @@
 #   GPUs:   sequential by default (spot_head is CPU-bound, so 4-way parallel oversubscribes
 #           the CPU and is SLOWER per-job); set PARALLEL=1 to run 2-per-GPU concurrently.
 #
-# Usage:  GPU=0 bash methods/vjepa/run_vjepa_mstcn.sh
-#         PARALLEL=1 bash methods/vjepa/run_vjepa_mstcn.sh
+# Usage:  GPU=0 bash methods/encoders/vjepa/run_vjepa_mstcn.sh
+#         PARALLEL=1 bash methods/encoders/vjepa/run_vjepa_mstcn.sh
 set -eo pipefail
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 PY=${PY:-/data/dong/miniconda3/envs/vjepa21/bin/python}
@@ -19,18 +19,18 @@ GPU=${GPU:-0}
 export OMP_NUM_THREADS=${OMP_NUM_THREADS:-6}
 export MKL_NUM_THREADS=${MKL_NUM_THREADS:-6}
 cd "$REPO"
-LOG="$REPO/outputs/vjepa_mstcn_logs"; mkdir -p "$LOG"
+LOG="$REPO/outputs/encoders/vjepa/logs"; mkdir -p "$LOG"
 MODES="interleave even odd stack"
 
 echo "== generating feature sets (adapter, resumable) =="
 for m in $MODES; do
-  $PY methods/vjepa/adapters/vjepa_to_features.py --raw-dir "$RAW" \
-    --out-dir "outputs/VJEPA_feat_$m" --label-dir data/HOI4D-v3 --mode "$m" > "$LOG/adapter_$m.log" 2>&1
+  $PY methods/encoders/vjepa/adapters/vjepa_to_features.py --raw-dir "$RAW" \
+    --out-dir "outputs/encoders/vjepa/feat_$m" --label-dir data/HOI4D-v3 --mode "$m" > "$LOG/adapter_$m.log" 2>&1
 done
 
 train(){ local gpu=$1 m=$2
   CUDA_VISIBLE_DEVICES=$gpu $PY methods/spot_head/train_head.py -m mstcn \
-    --feat_dir "outputs/VJEPA_feat_$m" --label_dir data/HOI4D-v3 \
+    --feat_dir "outputs/encoders/vjepa/feat_$m" --label_dir data/HOI4D-v3 \
     --save_dir "outputs/spot_head/vjepa_mstcn_$m" > "$LOG/mstcn_$m.log" 2>&1
   echo "  trained $m"
 }

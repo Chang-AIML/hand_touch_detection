@@ -9,9 +9,23 @@ hand_touch_detection/
 ├── config.py            # central paths + hyperparams (TOUCH_* env vars override)
 ├── common/              # SHARED library — imported by every method
 ├── data/                # HOI4D-v3 labels + TSP segment CSVs (single source of truth)
-├── methods/             # the four methods (see below)
+├── methods/
+│   ├── encoders/        # feature-extraction front-ends (parallel): tsp, vjepa
+│   ├── spot_head/       # SHARED head: features -> per-frame preds
+│   └── astrm/           # end-to-end RGB spotter (self-contained)
 ├── scripts/             # cross-method drivers (unified eval + pipeline runners)
-└── outputs/             # gitignored, regenerable; only outputs/spot_head/best/ is tracked
+└── outputs/             # mirrors methods/ (encoders/{tsp,vjepa}, spot_head, astrm);
+                         #   gitignored/regenerable except outputs/spot_head/best/
+```
+
+Data flow (why the hierarchy is shaped this way):
+
+```
+ encoders (parallel front-ends)     shared head        preds       unified eval
+   ┌─ tsp/   (R2+1D  -> [N,512]) ─┐
+   ├─ vjepa/ (V-JEPA -> [N,768]) ─┴─► spot_head ──► preds ─┐
+   └──────────────────────────────                         ├─► common/ (same NMS/mAP)
+      astrm/ (end-to-end RGB, own front+back) ──► preds ───┘
 ```
 
 ## `common/` — the shared library
@@ -34,9 +48,9 @@ The E2E-Spot–derived evaluation infra, plus TSP training helpers. Import as
 
 | method | paradigm | entrypoints |
 |---|---|---|
-| `methods/tsp/` | **Stage A** — pretrain R(2+1)D-34 (dual-head + GVF), extract dense `[N,512]` per-frame features | `train.py` / `train_tsp_on_hoi4d.sh`, then `step0/1/3/4_*.py` |
+| `methods/encoders/tsp/` | **Stage A** — pretrain R(2+1)D-34 (dual-head + GVF), extract dense `[N,512]` per-frame features | `train.py` / `train_tsp_on_hoi4d.sh`, then `step0/1/3/4_*.py` |
 | `methods/spot_head/` | **Stage B** — MS-TCN / ASFormer / GRU / GCN heads on per-frame features (TSP **or** V-JEPA) | `train_head.py -m <arch> --feat_dir <...>`, `eval_nms.py` |
-| `methods/vjepa/` | V-JEPA 2.1 per-frame feature extraction + adapter (alt features that feed Stage B) | `extract_*.py`, `adapters/vjepa_to_features.py`, `run_vjepa_mstcn.sh` |
+| `methods/encoders/vjepa/` | V-JEPA 2.1 per-frame feature extraction + adapter (alt features that feed Stage B) | `extract_*.py`, `adapters/vjepa_to_features.py`, `run_vjepa_mstcn.sh` |
 | `methods/astrm/` | **end-to-end** RGB spotter (RegNetY-200MF + ASTRM module + Bi-GRU + BCE/Soft-IC) | `train_astrm.py`, `eval.py`, `run_train.sh` |
 
 Each method keeps its own `model/` and `dataset/` (method-specific; import names
@@ -58,7 +72,7 @@ Each method keeps its own `model/` and `dataset/` (method-specific; import names
 - **Method-local code**: `from model...`, `from dataset...`, `from models...` resolve
   to the running script's own directory (`sys.path[0]`).
 - **Central config**: `import config` (repo-root `config.py`); `config.add_proj_to_path()`
-  adds `methods/tsp/` for the TSP `models`/dataset modules.
+  adds `methods/encoders/tsp/` for the TSP `models`/dataset modules.
 
 ## `outputs/` (gitignored)
 

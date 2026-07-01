@@ -12,7 +12,7 @@ import numpy as np
 import torch
 import torchvision
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
 import config                                            # noqa: E402
 config.add_proj_to_path()
 from common import transforms as T                       # noqa: E402

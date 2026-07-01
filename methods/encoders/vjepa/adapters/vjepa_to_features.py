@@ -26,7 +26,7 @@ Usage
 -----
     python scripts/adapters/vjepa_to_features.py \
         --raw-dir   ../feature_extraction/VJEPA_feature \
-        --out-dir   outputs/VJEPA_features \
+        --out-dir   outputs/encoders/vjepa/features \
         --label-dir data/HOI4D-v3 \
         --mode      interleave
 

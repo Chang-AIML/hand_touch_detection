@@ -12,7 +12,7 @@ import numpy as np
 from torchvision.datasets.samplers import DistributedSampler
 from frame_untrimmed_video_dataset import FrameUntrimmedVideoDataset
 from itertools import chain
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))  # repo root
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))  # repo root
 from common import utils
 from common import transforms as T
 from common.scheduler import WarmupMultiStepLR
