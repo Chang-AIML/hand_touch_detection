@@ -1,2 +1,0 @@
-[vjepa-adapter] mode=interleave interp=linear | 2850 videos | raw=/data/dong/project/Workspace/repos/hand_touch_detection/../feature_extraction/VJEPA_feature -> out=outputs/VJEPA_feat_interleave
-[vjepa-adapter] wrote/kept 2850 | missing-raw 0 | shape example [N,D]

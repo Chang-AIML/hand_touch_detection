@@ -10,17 +10,19 @@ __pycache__/
 __MACOSX/
 *.zip
 
-# model weights / checkpoints (excluded from git per request; regenerate by training)
+# model weights / checkpoints (regenerate by training)
 *.pt
 *.pth
 
-# large regenerable V-JEPA feature arrays (~6.4GB; regenerate via scripts/adapters/vjepa_to_features.py)
-outputs/VJEPA_feat_*/
-
-# large regenerable per-frame TSP features (~1.7GB; regenerate via scripts/step4_extract_features.py)
-outputs/TSP_features/
+# large regenerable feature arrays (TSP [N,512], V-JEPA per-frame)
 *.npy
 
-# ASTRM end-to-end training outputs (checkpoints + per-epoch preds; regenerate via astrm/run_train.sh)
-astrm/runs/
-astrm/**/__pycache__/
+# ASTRM end-to-end training outputs (checkpoints + per-epoch preds)
+methods/astrm/runs/
+
+# pipeline outputs are regenerable; only curated deliverables under
+# outputs/downstream/best/ are version-controlled.
+outputs/*
+!outputs/downstream
+outputs/downstream/*
+!outputs/downstream/best

@@ -102,18 +102,18 @@ Stages (also runnable individually, all resumable/skip-existing):
 
 ```bash
 # (0) CSVs already in data/; regenerate only if labels change:
-python scripts/step0_make_tsp_csv.py
+python methods/tsp/step0_make_tsp_csv.py
 # (1) MViT-B GVF -> outputs/global_video_features/mvit_v1_b-max_gvf.h5   (~4 min, downloads MViT weights)
-python scripts/step1_extract_mvit_gvf.py
+python methods/tsp/step1_extract_mvit_gvf.py
 # (2) train TSP DUAL-head (action touch/untouch + GVF-fed FG/BG, 8 ep)   (~1 h/epoch on a free L40S; downloads R(2+1)D ig65m init)
-CONDA_ENV=vjepa21 bash train/train_tsp_on_hoi4d.sh
+CONDA_ENV=vjepa21 bash methods/tsp/train_tsp_on_hoi4d.sh
 # (3) pick best epoch by Foreground-F1 (region head)  -> best_by_f1.json
-python scripts/step3_select_best_f1.py
+python methods/tsp/step3_select_best_f1.py
 # (4) dense per-frame features [N,512]  -> outputs/TSP_features/<video>.npy
-python scripts/step4_extract_features.py --ckpt <outputs/.../epoch_*.pth from step3>
+python methods/tsp/step4_extract_features.py --ckpt <outputs/.../epoch_*.pth from step3>
 # (B) downstream heads on TSP features  -> outputs/downstream/{mstcn,asformer}/
-python downstream/train_head.py -m mstcn    --feat_dir outputs/TSP_features
-python downstream/train_head.py -m asformer --feat_dir outputs/TSP_features
+python methods/downstream/train_head.py -m mstcn    --feat_dir outputs/TSP_features
+python methods/downstream/train_head.py -m asformer --feat_dir outputs/TSP_features
 ```
 
 ---
@@ -124,13 +124,13 @@ If you copied `VJEPA_feature/` (the even/odd raw), **skip extraction** and go st
 
 ```bash
 # adapter: even/odd half-rate streams -> per-video frame-aligned [N,768]
-python hand_touch_detection/scripts/adapters/vjepa_to_features.py \
+python hand_touch_detection/methods/vjepa/adapters/vjepa_to_features.py \
     --raw-dir   ../feature_extraction/VJEPA_feature \
     --out-dir   outputs/VJEPA_features \
     --label-dir data/HOI4D-v3 \
     --mode      interleave        # | even | odd | stack  (see §6)
 # downstream on V-JEPA features (feature_dim auto-detected = 768; same code as TSP)
-python downstream/train_head.py -m mstcn --feat_dir outputs/VJEPA_features
+python methods/downstream/train_head.py -m mstcn --feat_dir outputs/VJEPA_features
 ```
 
 To **re-extract** V-JEPA instead (needs vjepa2 repo + ckpts + frames; uses `dev/vjepa21` env;

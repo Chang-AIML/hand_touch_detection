@@ -16,13 +16,12 @@ import numpy as np
 from tabulate import tabulate
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, '..', 'downstream', 'lib'))
 sys.path.insert(0, os.path.join(HERE, '..'))
 import config                                                       # noqa: E402
-from util.io import load_json, load_gz_json                        # noqa: E402
-from util.eval import (non_maximum_supression,                     # noqa: E402
+from common.io import load_json, load_gz_json                        # noqa: E402
+from common.eval import (non_maximum_supression,                     # noqa: E402
                        soft_non_maximum_supression)
-from util.score import (parse_ground_truth, get_predictions,       # noqa: E402
+from common.score import (parse_ground_truth, get_predictions,       # noqa: E402
                         compute_average_precision)
 
 TOLS = [0, 1, 2, 4]
@@ -146,7 +145,7 @@ def main():
         report['models'][arch] = {'pred_file': pf, 'headline': march}
 
     os.makedirs(args.ds_out, exist_ok=True)
-    from util.io import store_json
+    from common.io import store_json
     store_json(os.path.join(args.ds_out, 'nms_eval_results.json'), report, pretty=True)
     with open(os.path.join(args.ds_out, 'nms_eval_results.txt'), 'w') as f:
         f.write('\n'.join(lines) + '\n')

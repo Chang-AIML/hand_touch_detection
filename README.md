@@ -17,33 +17,36 @@ It also plugs in **V-JEPA 2.1** per-frame features (extracted in the sibling
 ## Layout
 
 ```
-hand_touch_detection/
+hand_touch_detection/                 # see STRUCTURE.md for the full per-directory guide
 ├── config.py            # ALL paths/hyperparams (edit here or set TOUCH_* env vars)
 ├── requirements.txt
-├── common/  models/     # vendored TSP code (transforms, R(2+1)D-34, dual-head Model w/ GVF)
-├── train/
-│   ├── train.py opts.py                         # TSP trainer (requires --frames-dir; reads JPGs)
-│   ├── frame_untrimmed_video_dataset.py         # JPG clip dataset
-│   └── train_tsp_on_hoi4d.sh                     # step (2) launcher (pulls paths from config.py)
-├── scripts/
-│   ├── step0_make_tsp_csv.py        # HOI4D json -> dual-head segment CSVs (touch/untouch + FG/BG)
-│   ├── step1_extract_mvit_gvf.py    # MViT-B (16x4, Kinetics) GVF -> 768-d/video h5
-│   ├── step3_select_best_f1.py      # eval every epoch on val, pick best Foreground-F1
-│   ├── step4_extract_features.py    # dense stride-1, window-12 -> [T,512] npy per video
-│   └── adapters/
-│       └── vjepa_to_features.py     # V-JEPA even/odd half-rate streams -> per-video [N,768] npy
-├── downstream/                      # spotting heads on per-frame features (self-contained)
-│   ├── train_head.py                # MS-TCN / ASFormer / GRU / GCN trainer + mAP eval
-│   ├── train_downstream.sh          # trains mstcn + asformer
-│   └── lib/                         # vendored from spot (numpy-2 patched)
-│       ├── dataset/feature_dataset.py
-│       ├── model/{common,feature_heads}.py  model/impl/{asformer,gtad,calf}.py
-│       └── util/{io,eval,dataset,score}.py
-└── data/
-    ├── hoi4d_{train,val,test}_tsp.csv
-    ├── temporal_region_label_mapping.json   # {"Background":0,"Foreground":1}
-    ├── action_label_mapping.json            # {"touch":0,"untouch":1}
-    └── HOI4D-v3/{train,val,test}.json + class.txt   # shipped label splits (default LABEL_DIR)
+├── common/                          # SHARED library imported by every method
+│   ├── eval.py score.py io.py spot_dataset.py   # E2E-Spot eval infra (hice NMS/Soft-NMS, mAP@tol)
+│   └── transforms.py scheduler.py utils.py       # TSP training helpers (R(2+1)D transforms etc.)
+├── data/
+│   ├── HOI4D-v3/{train,val,test}.json + class.txt   # label splits (default LABEL_DIR)
+│   ├── hoi4d_{train,val,test}_tsp.csv                # TSP dual-head segment CSVs (touch/untouch + FG/BG)
+│   └── {temporal_region,action}_label_mapping.json
+├── methods/
+│   ├── tsp/                         # Stage A — TSP two-stage feature pipeline
+│   │   ├── train.py opts.py frame_untrimmed_video_dataset.py train_tsp_on_hoi4d.sh
+│   │   ├── models/{model,backbone}.py           # R(2+1)D-34 dual-head Model w/ GVF
+│   │   └── step0_make_tsp_csv.py step1_extract_mvit_gvf.py step3_select_best_f1.py step4_extract_features.py
+│   ├── downstream/                  # Stage B — spotting heads on per-frame features
+│   │   ├── train_head.py eval_nms.py train_downstream.sh
+│   │   ├── model/{common,feature_heads}.py + model/impl/{asformer,gtad,calf}.py
+│   │   └── dataset/feature_dataset.py
+│   ├── vjepa/                       # V-JEPA 2.1 extraction + adapter (alt features for downstream)
+│   │   ├── extract_*.py frame_io.py run_dual_gpu.sh
+│   │   └── adapters/vjepa_to_features.py        # even/odd half-rate streams -> per-video [N,768]
+│   └── astrm/                       # end-to-end ASTRM spotter (RegNetY+ASTRM, Bi-GRU, Soft-IC)
+│       ├── train_astrm.py eval.py run_train.sh  model/  dataset/
+│       └── data/hoi4d_v3 -> ../../../data/HOI4D-v3   (imports common/ directly; no util symlink)
+├── scripts/                         # cross-method drivers
+│   ├── step6_eval_nms.py            # unified test mAP@{0,1,2,4} x {none,NMS,SoftNMS}
+│   ├── run_full_pipeline.sh         # TSP stages 1-5 end to end
+│   └── run_stage6_after_downstream.sh
+└── outputs/                         # gitignored (regenerable); only outputs/downstream/best/ tracked
 ```
 
 ## External input (NOT shipped — set in config.py)
@@ -57,19 +60,19 @@ to `outputs/` (override via `TOUCH_OUT_DIR` etc.).
 
 ```bash
 # (0) regenerate the dual-head segment CSVs from HOI4D json   [optional; CSVs already in data/]
-python scripts/step0_make_tsp_csv.py
+python methods/tsp/step0_make_tsp_csv.py
 
 # (1) extract MViT-B GVF  -> outputs/global_video_features/mvit_v1_b-max_gvf.h5
-python scripts/step1_extract_mvit_gvf.py
+python methods/tsp/step1_extract_mvit_gvf.py
 
 # (2) train TSP (clip-12, DUAL head: action + GVF-fed region)
-bash train/train_tsp_on_hoi4d.sh          # -> outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/
+bash methods/tsp/train_tsp_on_hoi4d.sh          # -> outputs/r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12/
 
 # (3) pick best checkpoint by Foreground-F1 (region head; classes imbalanced)
-python scripts/step3_select_best_f1.py    # writes best_by_f1.json in the train output dir
+python methods/tsp/step3_select_best_f1.py    # writes best_by_f1.json in the train output dir
 
 # (4) extract dense per-frame features  -> outputs/TSP_features/<video>.npy  [T,512]
-python scripts/step4_extract_features.py --ckpt <best epoch_*.pth>
+python methods/tsp/step4_extract_features.py --ckpt <best epoch_*.pth>
 ```
 
 ## Pipeline C — V-JEPA 2.1 features
@@ -79,7 +82,7 @@ half-rate `even`/`odd` streams per clip). The adapter merges them into frame-ali
 per-video arrays the downstream consumes:
 
 ```bash
-python scripts/adapters/vjepa_to_features.py \
+python methods/vjepa/adapters/vjepa_to_features.py \
     --raw-dir   ../feature_extraction/VJEPA_feature \
     --out-dir   outputs/VJEPA_features \
     --label-dir data/HOI4D-v3 \
@@ -89,15 +92,15 @@ python scripts/adapters/vjepa_to_features.py \
 ## Pipeline B — downstream spotting heads (MS-TCN / ASFormer)
 
 Self-contained — head models, `FeatureDataset`, and mAP eval are **vendored** under
-`downstream/lib/`. The feature dim is auto-detected, so the same code trains on TSP
+`common/` + `methods/downstream/`. The feature dim is auto-detected, so the same code trains on TSP
 (512-d) or V-JEPA (768-d) features — just point `--feat_dir` at the right directory.
 
 ```bash
 # MS-TCN then ASFormer, evals mAP @ delta=[0,1,2,4]  -> outputs/downstream/{mstcn,asformer}/
-bash downstream/train_downstream.sh
+bash methods/downstream/train_downstream.sh
 # or one arch on a chosen feature set:
-python downstream/train_head.py -m mstcn    --feat_dir outputs/TSP_features
-python downstream/train_head.py -m asformer --feat_dir outputs/VJEPA_features
+python methods/downstream/train_head.py -m mstcn    --feat_dir outputs/TSP_features
+python methods/downstream/train_head.py -m asformer --feat_dir outputs/VJEPA_features
 ```
 
 - Spotting classes come from `class.txt` (`touch` / `untouch`); +1 implicit background.

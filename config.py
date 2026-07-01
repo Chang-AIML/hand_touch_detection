@@ -40,8 +40,8 @@ FEAT_DIM   = 512         # R(2+1)D-34 backbone output (downstream feature dim)
 
 def add_proj_to_path():
     """Make the vendored TSP code importable: `common`, `models`, and the
-    dataset modules under train/."""
+    dataset modules under methods/tsp/."""
     import sys
-    for p in (PROJ, os.path.join(PROJ, 'train')):
+    for p in (PROJ, os.path.join(PROJ, 'methods', 'tsp')):
         if p not in sys.path:
             sys.path.insert(0, p)
