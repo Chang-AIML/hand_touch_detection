@@ -7,5 +7,5 @@ h5py
 pillow
 pandas
 tqdm
-matplotlib      # downstream PR-curve plots (lazy-imported in util/score.py)
-tabulate        # downstream eval tables (train_head, util/score, util/eval)
+matplotlib      # spot_head PR-curve plots (lazy-imported in common/score.py)
+tabulate        # spot_head eval tables (train_head, common/score, common/eval)

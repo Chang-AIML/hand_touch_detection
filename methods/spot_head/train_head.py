@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Self-contained downstream trainer: precise-spotting head (MS-TCN / ASFormer /
+"""Self-contained spot_head trainer: precise-spotting head (MS-TCN / ASFormer /
 GRU / GCN) on top of the per-frame TSP features. Adapted from spot/baseline.py
 but reads class.txt + train/val/test.json + feature dir from config (no external
 spot repo needed; the head/eval code is vendored under methods/spot_head/ + common/).
 
 Usage:
-  python downstream/train_head.py -m mstcn
-  python downstream/train_head.py -m asformer --num_epochs 50 --clip_len 100
+  python methods/spot_head/train_head.py -m mstcn
+  python methods/spot_head/train_head.py -m asformer --num_epochs 50 --clip_len 100
 """
 import os, sys, copy, random, argparse
 import numpy as np
@@ -33,15 +33,15 @@ def get_args():
     p = argparse.ArgumentParser()
     p.add_argument('-m', '--model_arch', required=True,
                    choices=['gru', 'tcn', 'mstcn', 'gcn', 'asformer'])
-    p.add_argument('--clip_len', type=int, default=config.DS_CLIP_LEN)
+    p.add_argument('--clip_len', type=int, default=config.SPOT_HEAD_CLIP_LEN)
     p.add_argument('--batch_size', type=int, default=16)
-    p.add_argument('--num_epochs', type=int, default=config.DS_NUM_EPOCHS)
+    p.add_argument('--num_epochs', type=int, default=config.SPOT_HEAD_NUM_EPOCHS)
     p.add_argument('--warm_up_epochs', type=int, default=3)
     p.add_argument('-lr', '--learning_rate', type=float, default=0.001)
     p.add_argument('--feat_dir', default=config.FEATURES_OUT)
     p.add_argument('--label_dir', default=config.LABEL_DIR)
     p.add_argument('--save_dir', default=None,
-                   help='default: <DOWNSTREAM_OUT>/<arch>')
+                   help='default: <SPOT_HEAD_OUT>/<arch>')
     p.add_argument('--feat_dims', type=int, nargs=2)
     p.add_argument('--dilate_len', type=int, default=0)
     return p.parse_args()
@@ -100,7 +100,7 @@ def evaluate(model, dataset, classes, save_pred=None, clip_len=None):
 
 def main(args):
     if args.save_dir is None:
-        args.save_dir = os.path.join(config.DOWNSTREAM_OUT, args.model_arch)
+        args.save_dir = os.path.join(config.SPOT_HEAD_OUT, args.model_arch)
     os.makedirs(args.save_dir, exist_ok=True)
 
     classes = load_classes(os.path.join(args.label_dir, 'class.txt'))

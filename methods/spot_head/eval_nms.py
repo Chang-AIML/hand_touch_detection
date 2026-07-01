@@ -4,12 +4,12 @@
   - with NMS      : hard temporal NMS (E2E-Spot util.eval.non_maximum_supression), window=1 default
   - with Soft-NMS : Gaussian temporal soft-NMS (decay nearby same-class scores, keep all)
 
-Reads each mode's pred-test.<best>.recall.json.gz (saved by downstream/train_head.py) and the
+Reads each mode's pred-test.<best>.recall.json.gz (saved by methods/spot_head/train_head.py) and the
 test.json labels. Produces one combined table across modes x methods.
 
 Usage:
-  python downstream/eval_nms.py --modes interleave even odd stack \
-      --ds-dir outputs/downstream --prefix vjepa_mstcn_ --split test
+  python methods/spot_head/eval_nms.py --modes interleave even odd stack \
+      --spot-head-dir outputs/spot_head --prefix vjepa_mstcn_ --split test
 """
 from __future__ import annotations
 
@@ -90,7 +90,7 @@ def find_recall_pred(mode_dir, split):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--modes', nargs='+', default=['interleave', 'even', 'odd', 'stack'])
-    ap.add_argument('--ds-dir', default=config.DOWNSTREAM_OUT)
+    ap.add_argument('--spot-head-dir', default=config.SPOT_HEAD_OUT)
     ap.add_argument('--prefix', default='vjepa_mstcn_')
     ap.add_argument('--split', default='test')
     ap.add_argument('--label-dir', default=config.LABEL_DIR)
@@ -117,7 +117,7 @@ def main():
     results = {}                                  # (mode, method) -> [mAP@0,1,2,4]
     cls_results = {}                              # (mode, method, label) -> [AP@0,1,2,4]
     for mode in args.modes:
-        mdir = os.path.join(args.ds_dir, f'{args.prefix}{mode}')
+        mdir = os.path.join(args.spot_head_dir, f'{args.prefix}{mode}')
         rp = find_recall_pred(mdir, args.split)
         if rp is None:
             print(f'[skip] {mode}: no pred-{args.split}.*.recall.json.gz in {mdir}', flush=True)

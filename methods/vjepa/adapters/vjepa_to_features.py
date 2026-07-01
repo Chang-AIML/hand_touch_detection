@@ -1,5 +1,5 @@
 """Convert raw V-JEPA 2.1 even/odd per-frame features into the per-video, frame-aligned
-`<video>.npy` format consumed by the touch downstream (FeatureDataset / MS-TCN / ASFormer).
+`<video>.npy` format consumed by the touch spot_head (FeatureDataset / MS-TCN / ASFormer).
 
 Background
 ----------
@@ -9,7 +9,7 @@ V-JEPA uses tubelet_size=2, so we extract two complementary half-rate streams
     <clip>_even.npy  (Ne, D)   rows align to frames 0,2,4,...   Ne = ceil(N/2)
     <clip>_odd.npy   (No, D)   rows align to frames 1,3,5,...   No = floor(N/2)
 
-The downstream head needs ONE frame-aligned array `<video>.npy` of shape [N, D]
+The spot_head head needs ONE frame-aligned array `<video>.npy` of shape [N, D]
 (or [N, V, D] for the multi-version path). This adapter is the bridge, with modes:
 
     interleave : out[0::2]=even, out[1::2]=odd            -> [N, D]   (exact per-frame; default)
@@ -31,7 +31,7 @@ Usage
         --mode      interleave
 
 Then train the head directly on it (no model code changes; feat dim auto-detected):
-    python downstream/train_head.py -m mstcn --feat_dir /path/to/vjepa_features
+    python methods/spot_head/train_head.py -m mstcn --feat_dir /path/to/vjepa_features
 """
 from __future__ import annotations
 

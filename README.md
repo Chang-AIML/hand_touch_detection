@@ -1,7 +1,7 @@
 # hand_touch_detection
 
 Self-contained pipeline to pretrain a **TSP** R(2+1)D-34 encoder on the HOI4D-touch
-dataset and extract **per-frame features** for downstream precise-spotting heads
+dataset and extract **per-frame features** for spot_head precise-spotting heads
 (MS-TCN / ASFormer / GRU / GCN). Aligned to the **E2E-Spot paper §B.3** (clip-len 12,
 MViT-B GVF). Reads JPG frames directly — no mp4.
 
@@ -12,7 +12,7 @@ trained with **two heads / two losses** (TSP-native):
 - **temporal-region** head — `Foreground` vs `Background`, fed the GVF
 
 It also plugs in **V-JEPA 2.1** per-frame features (extracted in the sibling
-`../feature_extraction` repo) through an adapter, feeding the same downstream heads.
+`../feature_extraction` repo) through an adapter, feeding the same spot_head heads.
 
 ## Layout
 
@@ -32,11 +32,11 @@ hand_touch_detection/                 # see STRUCTURE.md for the full per-direct
 │   │   ├── train.py opts.py frame_untrimmed_video_dataset.py train_tsp_on_hoi4d.sh
 │   │   ├── models/{model,backbone}.py           # R(2+1)D-34 dual-head Model w/ GVF
 │   │   └── step0_make_tsp_csv.py step1_extract_mvit_gvf.py step3_select_best_f1.py step4_extract_features.py
-│   ├── downstream/                  # Stage B — spotting heads on per-frame features
-│   │   ├── train_head.py eval_nms.py train_downstream.sh
+│   ├── spot_head/                  # Stage B — spotting heads on per-frame features
+│   │   ├── train_head.py eval_nms.py train_spot_head.sh
 │   │   ├── model/{common,feature_heads}.py + model/impl/{asformer,gtad,calf}.py
 │   │   └── dataset/feature_dataset.py
-│   ├── vjepa/                       # V-JEPA 2.1 extraction + adapter (alt features for downstream)
+│   ├── vjepa/                       # V-JEPA 2.1 extraction + adapter (alt features for spot_head)
 │   │   ├── extract_*.py frame_io.py run_dual_gpu.sh
 │   │   └── adapters/vjepa_to_features.py        # even/odd half-rate streams -> per-video [N,768]
 │   └── astrm/                       # end-to-end ASTRM spotter (RegNetY+ASTRM, Bi-GRU, Soft-IC)
@@ -45,8 +45,8 @@ hand_touch_detection/                 # see STRUCTURE.md for the full per-direct
 ├── scripts/                         # cross-method drivers
 │   ├── step6_eval_nms.py            # unified test mAP@{0,1,2,4} x {none,NMS,SoftNMS}
 │   ├── run_full_pipeline.sh         # TSP stages 1-5 end to end
-│   └── run_stage6_after_downstream.sh
-└── outputs/                         # gitignored (regenerable); only outputs/downstream/best/ tracked
+│   └── run_stage6_after_spot_head.sh
+└── outputs/                         # gitignored (regenerable); only outputs/spot_head/best/ tracked
 ```
 
 ## External input (NOT shipped — set in config.py)
@@ -79,7 +79,7 @@ python methods/tsp/step4_extract_features.py --ckpt <best epoch_*.pth>
 
 V-JEPA is extracted in the sibling repo `../feature_extraction` (tubelet=2 → two
 half-rate `even`/`odd` streams per clip). The adapter merges them into frame-aligned
-per-video arrays the downstream consumes:
+per-video arrays the spot_head consumes:
 
 ```bash
 python methods/vjepa/adapters/vjepa_to_features.py \
@@ -89,15 +89,15 @@ python methods/vjepa/adapters/vjepa_to_features.py \
     --mode      interleave        # or: even | odd (interpolated) | stack ([N,2,D])
 ```
 
-## Pipeline B — downstream spotting heads (MS-TCN / ASFormer)
+## Pipeline B — spot_head spotting heads (MS-TCN / ASFormer)
 
 Self-contained — head models, `FeatureDataset`, and mAP eval are **vendored** under
 `common/` + `methods/spot_head/`. The feature dim is auto-detected, so the same code trains on TSP
 (512-d) or V-JEPA (768-d) features — just point `--feat_dir` at the right directory.
 
 ```bash
-# MS-TCN then ASFormer, evals mAP @ delta=[0,1,2,4]  -> outputs/downstream/{mstcn,asformer}/
-bash methods/spot_head/train_downstream.sh
+# MS-TCN then ASFormer, evals mAP @ delta=[0,1,2,4]  -> outputs/spot_head/{mstcn,asformer}/
+bash methods/spot_head/train_spot_head.sh
 # or one arch on a chosen feature set:
 python methods/spot_head/train_head.py -m mstcn    --feat_dir outputs/TSP_features
 python methods/spot_head/train_head.py -m asformer --feat_dir outputs/VJEPA_features
@@ -110,7 +110,7 @@ python methods/spot_head/train_head.py -m asformer --feat_dir outputs/VJEPA_feat
 ## Notes
 
 - **GVF (768-d)** feeds the region head during *training only*; it is NOT part of the
-  extracted downstream feature. TSP downstream feature = R(2+1)D-34 backbone = **512-d**.
+  extracted spot_head feature. TSP spot_head feature = R(2+1)D-34 backbone = **512-d**.
 - **TSP feature extraction is dense stride-1, window=12** (= training clip-len): one
   feature per frame, `[num_frames, 512]`, frame-aligned (the spotting loader pads).
 - **V-JEPA per-frame**: tubelet=2 halves the temporal rate, so we run two 1-frame-offset

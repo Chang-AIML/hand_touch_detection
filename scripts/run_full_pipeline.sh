@@ -1,7 +1,7 @@
 #!/bin/bash
 # Full TSP pipeline on HOI4D-touch (E2E-Spot §B.3 aligned):
 #   1) MViT-B GVF  2) train TSP dual-head  3) select best Foreground-F1
-#   4) extract per-frame [N,512] features  5) downstream MS-TCN + ASFormer
+#   4) extract per-frame [N,512] features  5) spot_head MS-TCN + ASFormer
 # Env: vjepa21. GPU: $GPU (default 0). Logs: outputs/pipeline_logs/.
 REPO=/home/huyanh/Workspace/hand_touch_detection
 source /home/huyanh/miniconda/etc/profile.d/conda.sh
@@ -28,7 +28,7 @@ say "best checkpoint = $BEST"
 say "STAGE 4/5: extract per-frame TSP features [N,512] (dense window-12, replicate-pad)"
 python methods/tsp/step4_extract_features.py --ckpt "$BEST" 2>&1 | tee "$LOG/4_extract.log"
 
-say "STAGE 5/5: downstream MS-TCN then ASFormer on TSP features"
+say "STAGE 5/5: spot_head MS-TCN then ASFormer on TSP features"
 python methods/spot_head/train_head.py -m mstcn    2>&1 | tee "$LOG/5_mstcn.log"
 python methods/spot_head/train_head.py -m asformer 2>&1 | tee "$LOG/6_asformer.log"
 

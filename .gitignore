@@ -21,8 +21,8 @@ __MACOSX/
 methods/astrm/runs/
 
 # pipeline outputs are regenerable; only curated deliverables under
-# outputs/downstream/best/ are version-controlled.
+# outputs/spot_head/best/ are version-controlled.
 outputs/*
-!outputs/downstream
-outputs/downstream/*
-!outputs/downstream/best
+!outputs/spot_head
+outputs/spot_head/*
+!outputs/spot_head/best

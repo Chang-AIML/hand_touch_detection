@@ -1,10 +1,10 @@
 #!/bin/bash
 # V-JEPA -> MS-TCN ablation across the 4 adapter modes, then score test mAP under
-# {no-NMS, NMS, Soft-NMS}. Reproduces the V-JEPA downstream results.
+# {no-NMS, NMS, Soft-NMS}. Reproduces the V-JEPA spot_head results.
 #
 #   modes:  interleave (even/odd merged, exact per-frame) | even | odd | stack ([N,2,D])
 #   env:    vjepa21 (set CONDA_ENV / PY to override)
-#   GPUs:   sequential by default (downstream is CPU-bound, so 4-way parallel oversubscribes
+#   GPUs:   sequential by default (spot_head is CPU-bound, so 4-way parallel oversubscribes
 #           the CPU and is SLOWER per-job); set PARALLEL=1 to run 2-per-GPU concurrently.
 #
 # Usage:  GPU=0 bash methods/vjepa/run_vjepa_mstcn.sh
@@ -31,7 +31,7 @@ done
 train(){ local gpu=$1 m=$2
   CUDA_VISIBLE_DEVICES=$gpu $PY methods/spot_head/train_head.py -m mstcn \
     --feat_dir "outputs/VJEPA_feat_$m" --label_dir data/HOI4D-v3 \
-    --save_dir "outputs/downstream/vjepa_mstcn_$m" > "$LOG/mstcn_$m.log" 2>&1
+    --save_dir "outputs/spot_head/vjepa_mstcn_$m" > "$LOG/mstcn_$m.log" 2>&1
   echo "  trained $m"
 }
 

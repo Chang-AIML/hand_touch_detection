@@ -26,16 +26,16 @@ TRAIN_OUT  = os.environ.get('TOUCH_TRAIN_OUT',
                             os.path.join(OUT_DIR, 'r2plus1d_34-tsp_on_hoi4d-mvitgvf_clip12'))
 FEATURES_OUT = os.environ.get('TOUCH_FEATURES_OUT', os.path.join(OUT_DIR, 'TSP_features'))
 
-# ---- DOWNSTREAM (spotting heads on TSP / V-JEPA features) ----
-DOWNSTREAM_OUT     = os.environ.get('TOUCH_DS_OUT', os.path.join(OUT_DIR, 'downstream'))
-DS_CLIP_LEN        = int(os.environ.get('TOUCH_DS_CLIP_LEN', 100))     # head temporal window
-DS_NUM_EPOCHS      = int(os.environ.get('TOUCH_DS_EPOCHS', 50))
+# ---- SPOT_HEAD (spotting heads on TSP / V-JEPA features) ----
+SPOT_HEAD_OUT     = os.environ.get('TOUCH_SPOT_HEAD_OUT', os.path.join(OUT_DIR, 'spot_head'))
+SPOT_HEAD_CLIP_LEN        = int(os.environ.get('TOUCH_SPOT_HEAD_CLIP_LEN', 100))     # head temporal window
+SPOT_HEAD_NUM_EPOCHS      = int(os.environ.get('TOUCH_SPOT_HEAD_EPOCHS', 50))
 
 # ---- hyperparams (paper-aligned: E2E-Spot B.3) ----
 CLIP_LEN   = 12          # training clip length AND feature-extraction window
 FRAME_RATE = 15
 GVF_DIM    = 768         # MViT-B feature dim
-FEAT_DIM   = 512         # R(2+1)D-34 backbone output (downstream feature dim)
+FEAT_DIM   = 512         # R(2+1)D-34 backbone output (spot_head feature dim)
 
 
 def add_proj_to_path():

@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Stage 6: test-set mAP@{0,1,2,4} for each downstream head (TSP-MSTCN /
+"""Stage 6: test-set mAP@{0,1,2,4} for each spot_head head (TSP-MSTCN /
 TSP-ASFormer) under three post-processings of the per-frame predictions:
   - none : raw dense high-recall predictions (no suppression)
   - NMS  : hard non-maximum suppression (peak picking) within +-window frames
   - SNMS : Gaussian Soft-NMS (decay near-duplicates by exp(-d^2/sigma))
 
-It reuses the predictions already saved by downstream/train_head.py
+It reuses the predictions already saved by methods/spot_head/train_head.py
 (<save_dir>/pred-test.<best_epoch>.recall.json.gz) -- no retraining needed.
 For each model it prints a headline table (chosen window/sigma) plus a sweep
 over window and sigma so the full picture is visible, and writes everything to
-<DOWNSTREAM_OUT>/nms_eval_results.{json,txt}.
+<SPOT_HEAD_OUT>/nms_eval_results.{json,txt}.
 """
 import os, sys, glob, argparse
 import numpy as np
@@ -77,7 +77,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--models', nargs='+', default=['mstcn', 'asformer'])
     ap.add_argument('--label_dir', default=config.LABEL_DIR)
-    ap.add_argument('--ds_out', default=config.DOWNSTREAM_OUT)
+    ap.add_argument('--spot_head_out', default=config.SPOT_HEAD_OUT)
     ap.add_argument('--nms_window', type=int, default=1,
                     help='hard-NMS window in frames (hice/E2E-Spot default 1)')
     ap.add_argument('--snms_window', type=int, default=4,
@@ -95,14 +95,14 @@ def main():
         print(s); lines.append(s)
 
     for arch in args.models:
-        save_dir = os.path.join(args.ds_out, arch)
+        save_dir = os.path.join(args.spot_head_out, arch)
         pf = find_recall_pred(save_dir)
         out('\n' + '=' * 72)
         out(f'MODEL: TSP-{arch.upper()}   (test set, {len(truth)} videos)')
         out('=' * 72)
         if pf is None:
             out(f'  [skip] no pred-test.*.recall.json.gz under {save_dir} '
-                f'(run downstream/train_head.py -m {arch} first)')
+                f'(run methods/spot_head/train_head.py -m {arch} first)')
             continue
         out(f'  predictions: {os.path.relpath(pf)}')
         pred = load_gz_json(pf)
@@ -144,12 +144,12 @@ def main():
 
         report['models'][arch] = {'pred_file': pf, 'headline': march}
 
-    os.makedirs(args.ds_out, exist_ok=True)
+    os.makedirs(args.spot_head_out, exist_ok=True)
     from common.io import store_json
-    store_json(os.path.join(args.ds_out, 'nms_eval_results.json'), report, pretty=True)
-    with open(os.path.join(args.ds_out, 'nms_eval_results.txt'), 'w') as f:
+    store_json(os.path.join(args.spot_head_out, 'nms_eval_results.json'), report, pretty=True)
+    with open(os.path.join(args.spot_head_out, 'nms_eval_results.txt'), 'w') as f:
         f.write('\n'.join(lines) + '\n')
-    out(f'\nsaved -> {os.path.join(args.ds_out, "nms_eval_results.json")} (+ .txt)')
+    out(f'\nsaved -> {os.path.join(args.spot_head_out, "nms_eval_results.json")} (+ .txt)')
 
 
 if __name__ == '__main__':

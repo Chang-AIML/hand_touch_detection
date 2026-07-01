@@ -2,7 +2,7 @@
 
 Everything needed to reproduce the full project on another server. Three pipelines:
 **A** = TSP pretrain + feature extraction, **C** = V-JEPA 2.1 feature extraction + adapter,
-**B** = downstream spotting heads (shared by A and C).
+**B** = spot_head spotting heads (shared by A and C).
 
 Source machine paths are all under `/data/dong/project/Workspace/` (`repos/`, `dataset/`).
 
@@ -20,7 +20,7 @@ Source machine paths are all under `/data/dong/project/Workspace/` (`repos/`, `d
 | HOI4D JPG frames (2850 H-videos + 1171 unused C) | ✅ exist | `dataset/hoi4d/frames/` | 49 GB |
 | **TSP checkpoint (dual-head, 8 ep)** | ❌ **TODO — train on new server** | — | — |
 | **TSP per-frame features [N,512]** | ❌ TODO (needs TSP ckpt) | — | — |
-| **Downstream MS-TCN / ASFormer** | ❌ TODO | — | — |
+| **Spot-head MS-TCN / ASFormer** | ❌ TODO | — | — |
 
 A 1-epoch local smoke confirmed Stage 2 trains correctly: dual head
 (`num_classes [2,2] num_heads 2`), both `loss_action-label` + `loss_temporal-region-label`
@@ -34,7 +34,7 @@ GPU was shared with another user).
 Repos (git or rsync). `hand_touch_detection` is the main repo; the others are dependencies:
 
 ```
-repos/hand_touch_detection/     # TSP train/extract + downstream + V-JEPA adapter (this repo)
+repos/hand_touch_detection/     # TSP train/extract + spot_head + V-JEPA adapter (this repo)
 repos/feature_extraction/       # V-JEPA extraction (extract_vjepa21.py) + frame_io.py
 repos/vjepa2/                    # V-JEPA 2.1 model code (imported by extract_vjepa21.py)
 ```
@@ -49,7 +49,7 @@ hand_touch_detection/outputs/global_video_features/mvit_v1_b-max_gvf.h5   # 9.4 
 ```
 
 **Minimal sets:**
-- Downstream on V-JEPA only → `hand_touch_detection` + `VJEPA_feature/` (1.6 G). No frames, no big ckpts.
+- Spot-head on V-JEPA only → `hand_touch_detection` + `VJEPA_feature/` (1.6 G). No frames, no big ckpts.
 - Full TSP pipeline → `hand_touch_detection` + `frames/` (49 G). GVF recomputes itself.
 
 ---
@@ -71,7 +71,7 @@ Versions used on source: python 3.11.15, torch 2.10.0+cu128, torchvision 0.25.0+
 timm 1.0.27, transformers 4.57.3, h5py 3.16.0, pandas 3.0.1, numpy 2.4.3.
 
 > `transformers`/`timm` are only needed for the V-JEPA path (`extract_vjepa21.py`); the TSP +
-> downstream path needs just torch/torchvision/h5py/pandas/tqdm/matplotlib/tabulate/pillow/numpy + bc.
+> spot_head path needs just torch/torchvision/h5py/pandas/tqdm/matplotlib/tabulate/pillow/numpy + bc.
 
 ---
 
@@ -88,7 +88,7 @@ These are absolute and must be repointed (env var or edit):
 
 ---
 
-## 4. Run — Pipeline A (TSP) + B (downstream)
+## 4. Run — Pipeline A (TSP) + B (spot_head)
 
 One driver does all 5 stages; **edit the conda/repo paths at the top of `run_full_pipeline.sh` first**:
 
@@ -111,14 +111,14 @@ CONDA_ENV=vjepa21 bash methods/tsp/train_tsp_on_hoi4d.sh
 python methods/tsp/step3_select_best_f1.py
 # (4) dense per-frame features [N,512]  -> outputs/TSP_features/<video>.npy
 python methods/tsp/step4_extract_features.py --ckpt <outputs/.../epoch_*.pth from step3>
-# (B) downstream heads on TSP features  -> outputs/downstream/{mstcn,asformer}/
+# (B) spot_head heads on TSP features  -> outputs/spot_head/{mstcn,asformer}/
 python methods/spot_head/train_head.py -m mstcn    --feat_dir outputs/TSP_features
 python methods/spot_head/train_head.py -m asformer --feat_dir outputs/TSP_features
 ```
 
 ---
 
-## 5. Run — Pipeline C (V-JEPA) + B (downstream)
+## 5. Run — Pipeline C (V-JEPA) + B (spot_head)
 
 If you copied `VJEPA_feature/` (the even/odd raw), **skip extraction** and go straight to the adapter:
 
@@ -129,7 +129,7 @@ python hand_touch_detection/methods/vjepa/adapters/vjepa_to_features.py \
     --out-dir   outputs/VJEPA_features \
     --label-dir data/HOI4D-v3 \
     --mode      interleave        # | even | odd | stack  (see §6)
-# downstream on V-JEPA features (feature_dim auto-detected = 768; same code as TSP)
+# spot_head on V-JEPA features (feature_dim auto-detected = 768; same code as TSP)
 python methods/spot_head/train_head.py -m mstcn --feat_dir outputs/VJEPA_features
 ```
 

@@ -1,7 +1,7 @@
 # Repository structure
 
 Four spotting **methods** share one **evaluation library** and one **dataset**.
-Training is per-method (different paradigms); everything downstream of predictions
+Training is per-method (different paradigms); everything after predictions
 (NMS, Soft-NMS, mAP) is unified in `common/` so all methods are scored identically.
 
 ```
@@ -11,7 +11,7 @@ hand_touch_detection/
 ├── data/                # HOI4D-v3 labels + TSP segment CSVs (single source of truth)
 ├── methods/             # the four methods (see below)
 ├── scripts/             # cross-method drivers (unified eval + pipeline runners)
-└── outputs/             # gitignored, regenerable; only outputs/downstream/best/ is tracked
+└── outputs/             # gitignored, regenerable; only outputs/spot_head/best/ is tracked
 ```
 
 ## `common/` — the shared library
@@ -47,9 +47,9 @@ Each method keeps its own `model/` and `dataset/` (method-specific; import names
 
 | file | purpose |
 |---|---|
-| `step6_eval_nms.py` | unified test **mAP@{0,1,2,4} × {none, NMS, SoftNMS}** for the downstream heads |
+| `step6_eval_nms.py` | unified test **mAP@{0,1,2,4} × {none, NMS, SoftNMS}** for the spot_head heads |
 | `run_full_pipeline.sh` | TSP stages 1→5 end to end |
-| `run_stage6_after_downstream.sh` | waits for downstream preds, then runs `step6_eval_nms.py` |
+| `run_stage6_after_spot_head.sh` | waits for spot_head preds, then runs `step6_eval_nms.py` |
 
 ## Imports & paths (how it stays wired after the move)
 
@@ -63,6 +63,6 @@ Each method keeps its own `model/` and `dataset/` (method-specific; import names
 ## `outputs/` (gitignored)
 
 Regenerable: TSP checkpoints (`*.pth`), features (`*.npy`), per-epoch predictions,
-logs, ASTRM `runs/`. **Only `outputs/downstream/best/`** (curated raw test predictions
+logs, ASTRM `runs/`. **Only `outputs/spot_head/best/`** (curated raw test predictions
 + comparison tables) is version-controlled. Trained weights are backed up separately
 outside the repo.

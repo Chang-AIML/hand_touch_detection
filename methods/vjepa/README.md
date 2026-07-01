@@ -3,7 +3,7 @@
 Extracts per-frame V-JEPA 2.1 features from the HOI4D JPG frames. tubelet_size=2 halves the
 temporal rate, so we run two 1-frame-offset passes (`even`/`odd`) and save both streams; the
 adapter (`../scripts/adapters/vjepa_to_features.py`) then merges/interpolates them into the
-per-video `[N, D]` arrays the downstream head consumes.
+per-video `[N, D]` arrays the spot_head consumes.
 
 ## Files
 

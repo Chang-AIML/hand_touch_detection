@@ -1,5 +1,5 @@
 #!/bin/bash
-# Waits for Stage 5 (downstream MS-TCN + ASFormer) to finish producing their
+# Waits for Stage 5 (spot_head MS-TCN + ASFormer) to finish producing their
 # test predictions, then runs Stage 6 (NMS/SNMS test-mAP eval). Robust to the
 # main pipeline dying: if no relevant process is alive AND the artifacts never
 # appeared for several consecutive checks, it bails with an error.
@@ -11,13 +11,13 @@ export CUDA_VISIBLE_DEVICES=${GPU:-0}
 cd "$REPO"
 LOG="$REPO/outputs/pipeline_logs"; mkdir -p "$LOG"
 
-MSTCN=outputs/downstream/mstcn
-ASF=outputs/downstream/asformer
+MSTCN=outputs/spot_head/mstcn
+ASF=outputs/spot_head/asformer
 have_preds(){ ls "$MSTCN"/pred-test.*.recall.json.gz >/dev/null 2>&1 && \
               ls "$ASF"/pred-test.*.recall.json.gz   >/dev/null 2>&1; }
 pipeline_alive(){ pgrep -f "run_full_pipeline.sh|train.py|step4_extract_features|train_head.py" >/dev/null 2>&1; }
 
-echo "[stage6-waiter] waiting for downstream test predictions..."
+echo "[stage6-waiter] waiting for spot_head test predictions..."
 dead=0
 until have_preds; do
     if pipeline_alive; then dead=0; else dead=$((dead+1)); fi
