@@ -8,14 +8,14 @@ Training is per-method (different paradigms); everything after predictions
 hand_touch_detection/
 ├── config.py            # central paths + hyperparams (TOUCH_* env vars override)
 ├── common/              # SHARED library — imported by every method
-├── data/                # HOI4D-v3 labels + TSP segment CSVs (single source of truth)
+├── data/                # per-dataset labels + TSP CSVs: HOI4D-v3/, touchmoment/, fs_perf*
 ├── methods/
 │   ├── encoders/        # feature-extraction front-ends (parallel): tsp, vjepa
 │   ├── spot_head/       # SHARED head: features -> per-frame preds
 │   └── astrm/           # end-to-end RGB spotter (self-contained)
-├── scripts/             # cross-method drivers (unified eval + pipeline runners)
-└── outputs/             # mirrors methods/ (encoders/{tsp,vjepa}, spot_head, astrm);
-                         #   gitignored/regenerable except outputs/spot_head/best/
+├── scripts/             # cross-method driver: run_full_pipeline.sh (TSP stages 1→5)
+└── outputs/<DATASET>/   # per-dataset subtree: encoders/{tsp,vjepa}, spot_head, astrm, logs
+                         #   results (preds/tables/logs) tracked; weights/features/GVF ignored
 ```
 
 Data flow (why the hierarchy is shaped this way):
@@ -61,9 +61,10 @@ Each method keeps its own `model/` and `dataset/` (method-specific; import names
 
 | file | purpose |
 |---|---|
-| `step6_eval_nms.py` | unified test **mAP@{0,1,2,4} × {none, NMS, SoftNMS}** for the spot_head heads |
-| `run_full_pipeline.sh` | TSP stages 1→5 end to end |
-| `run_stage6_after_spot_head.sh` | waits for spot_head preds, then runs `step6_eval_nms.py` |
+| `run_full_pipeline.sh` | TSP stages 1→5 end to end (GVF → train → select → extract → MS-TCN + ASFormer), dataset-parameterized via `TOUCH_DATASET` |
+
+Unified test scoring (**mAP@{0,1,2,4} × {none, NMS, Soft-NMS}**, per-class) lives in
+`methods/spot_head/eval_nms.py` and is used identically by every model.
 
 ## Imports & paths (how it stays wired after the move)
 
@@ -74,9 +75,11 @@ Each method keeps its own `model/` and `dataset/` (method-specific; import names
 - **Central config**: `import config` (repo-root `config.py`); `config.add_proj_to_path()`
   adds `methods/encoders/tsp/` for the TSP `models`/dataset modules.
 
-## `outputs/` (gitignored)
+## `outputs/<DATASET>/`
 
-Regenerable: TSP checkpoints (`*.pth`), features (`*.npy`), per-epoch predictions,
-logs, ASTRM `outputs/astrm/`. **Only `outputs/spot_head/best/`** (curated raw test predictions
-+ comparison tables) is version-controlled. Trained weights are backed up separately
-outside the repo.
+Each dataset gets its own subtree (`outputs/hoi4d/`, `outputs/touchmoment/`, `outputs/fs_perf/`)
+that mirrors `methods/`: `encoders/{tsp,vjepa}/`, `spot_head/<head>/`, `astrm/`, `logs/`.
+
+Version-controlled: predictions (`pred-*.json` / `*.recall.json.gz`), eval tables, loss
+curves, logs. **Ignored** (`.gitignore`, regenerable): weights (`*.pt`/`*.pth`), features
+(`*.npy`), and MViT GVF (`*.h5`). Trained weights are backed up separately outside the repo.

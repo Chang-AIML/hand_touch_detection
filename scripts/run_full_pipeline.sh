@@ -1,8 +1,12 @@
 #!/bin/bash
-# Full TSP pipeline on HOI4D-touch (E2E-Spot §B.3 aligned):
+# Full TSP -> spot_head pipeline (E2E-Spot §B.3 aligned):
 #   1) MViT-B GVF  2) train TSP dual-head  3) select best Foreground-F1
 #   4) extract per-frame [N,512] features  5) spot_head MS-TCN + ASFormer
-# Env: vjepa21. GPU: $GPU (default 0). Logs: outputs/pipeline_logs/.
+# Env: base. GPU: $GPU (default 0). Logs: outputs/<DATASET>/logs/.
+#
+# Dataset-parameterized via config's env (defaults to hoi4d). Example touchmoment:
+#   TOUCH_DATASET=touchmoment TOUCH_LABEL_DIR=data/touchmoment \
+#   TOUCH_FRAMES_DIR=/path/to/frames  GPU=0  bash scripts/run_full_pipeline.sh
 REPO=/home/huyanh/Workspace/hand_touch_detection
 source /home/huyanh/miniconda/etc/profile.d/conda.sh
 conda activate base
@@ -11,7 +15,7 @@ export CONDA_ENV=base
 export TOUCH_FRAMES_DIR=${TOUCH_FRAMES_DIR:-/home/huyanh/Workspace/dataset/hoi4d/frames}
 export CUDA_VISIBLE_DEVICES=${GPU:-0}
 cd "$REPO"
-LOG="$REPO/outputs/pipeline_logs"; mkdir -p "$LOG"
+LOG="$REPO/outputs/${TOUCH_DATASET:-hoi4d}/logs"; mkdir -p "$LOG"
 say(){ echo "===== [$(date '+%F %T')] $* ====="; }
 
 say "STAGE 1/5: MViT-B GVF extraction"
