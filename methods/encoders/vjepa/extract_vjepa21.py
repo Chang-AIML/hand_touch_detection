@@ -35,8 +35,8 @@ from torchvision import transforms as TT
 
 import frame_io
 
-VJEPA_REPO = "/data/dong/project/Workspace/repos/vjepa2"
-CKPT_DIR = "/data/dong/project/Workspace/repos/feature_extraction/ckpts"
+VJEPA_REPO = os.environ.get("TOUCH_VJEPA_REPO", "/data/dong/project/Workspace/repos/vjepa2")
+CKPT_DIR = os.environ.get("TOUCH_VJEPA_CKPT_DIR", "/data/dong/project/Workspace/repos/feature_extraction/ckpts")
 
 # model_name -> (hub builder, checkpoint filename). "base" is the lightest V-JEPA 2.1.
 MODELS = {

@@ -13,20 +13,35 @@ per-video `[N, D]` arrays the spot_head consumes.
 - `extract_tsp.py` — R(2+1)D-34 TSP per-frame feature extractor (dense stride-1).
 - `frame_io.py` — shared frame IO + pooling helpers.
 
-## Paths to set on a new machine (top of `extract_vjepa21.py`)
+## Paths to set on a new machine (env-overridable; defaults point at the Pro6000 setup)
 
-- `VJEPA_REPO` → the `facebookresearch/vjepa2` clone (provides `src.hub.backbones`).
-- `CKPT_DIR`   → dir with `vjepa2_1_vit{b,l}_dist_vitG_384.pt` (download from
+- `TOUCH_VJEPA_REPO` → the `facebookresearch/vjepa2` clone (provides `src.hub.backbones`).
+- `TOUCH_VJEPA_CKPT_DIR` → dir with `vjepa2_1_vit{b,l}_dist_vitG_384.pt` (download from
   `dl.fbaipublicfiles.com/vjepa2/…`; NOT in git — they are weights).
 
 ## Run
 
 ```bash
-# conda env: dev/ifpv/kv/vjepa21 (torch 2.10 + transformers + timm)
-GPU pair -> even/odd streams:
-bash vjepa_extraction/run_dual_gpu.sh        # writes <clip>_even.npy / <clip>_odd.npy
+# conda env: vjepa21 (torch 2.10 + transformers + timm). Extraction is dataset-agnostic
+# (keyed by frame folders) — extract ONCE per frame set, reuse across datasets.
+PY=/path/to/envs/vjepa21/bin/python \
+TOUCH_FRAMES_DIR=/path/to/frames  VJEPA_RAW=/path/to/VJEPA_feature \
+TOUCH_VJEPA_REPO=/path/to/vjepa2  TOUCH_VJEPA_CKPT_DIR=/path/to/ckpts \
+  bash methods/encoders/vjepa/run_dual_gpu.sh     # writes <clip>_even.npy / <clip>_odd.npy
 ```
 
-Output raw features (`VJEPA_feature/`, ~1.6 GB) and the checkpoints (`ckpts/`, ~6.4 GB) are
-**NOT tracked** (regenerable / weights). This directory is the version-controlled *code*; run it
-against whatever data path you set.
+## touchmoment on Pro6000 (end-to-end V-JEPA -> MS-TCN)
+
+```bash
+# 1) extract raw even/odd features (all frame folders; resumable). Skip if already done.
+PY=.../vjepa21/bin/python TOUCH_FRAMES_DIR=/path/to/hoi4d/frames \
+VJEPA_RAW=/path/to/VJEPA_feature bash methods/encoders/vjepa/run_dual_gpu.sh
+
+# 2) adapt -> train MS-TCN -> score test mAP, writing under outputs/touchmoment/...
+TOUCH_DATASET=touchmoment TOUCH_LABEL_DIR=data/touchmoment \
+VJEPA_RAW=/path/to/VJEPA_feature GPU=0 MODES="interleave even odd stack" \
+  bash methods/encoders/vjepa/run_vjepa_mstcn.sh
+```
+
+Output raw features (`VJEPA_feature/`) and checkpoints (`ckpts/`) are **NOT tracked** (regenerable /
+weights). This directory is the version-controlled *code*; run it against whatever data path you set.

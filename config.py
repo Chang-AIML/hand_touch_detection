@@ -28,6 +28,7 @@ TSP_OUT     = os.path.join(DATASET_OUT, 'encoders', 'tsp')   # TSP encoder artif
 GVF_PATH    = os.environ.get('TOUCH_GVF_PATH', os.path.join(TSP_OUT, 'gvf', 'mvit_v1_b-max_gvf.h5'))
 TRAIN_OUT   = os.environ.get('TOUCH_TRAIN_OUT', os.path.join(TSP_OUT, 'train'))
 FEATURES_OUT = os.environ.get('TOUCH_FEATURES_OUT', os.path.join(TSP_OUT, 'features'))
+VJEPA_OUT   = os.path.join(DATASET_OUT, 'encoders', 'vjepa')  # V-JEPA encoder artifacts (feat_<mode>/)
 
 # ---- SPOT_HEAD (spotting heads on TSP / V-JEPA features) ----
 SPOT_HEAD_OUT     = os.environ.get('TOUCH_SPOT_HEAD_OUT', os.path.join(DATASET_OUT, 'spot_head'))
