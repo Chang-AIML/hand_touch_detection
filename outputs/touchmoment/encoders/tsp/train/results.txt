@@ -1,0 +1,6 @@
+** Valid Epoch 0:  <action-label> Accuracy 98.421 Loss 0.052; <temporal-region-label> Accuracy 89.947 Loss 0.364; Total Loss 0.416 Avg Accuracy 94.184
+** Valid Epoch 1:  <action-label> Accuracy 97.554 Loss 0.110; <temporal-region-label> Accuracy 78.390 Loss 0.581; Total Loss 0.691 Avg Accuracy 87.972
+** Valid Epoch 2:  <action-label> Accuracy 98.390 Loss 0.050; <temporal-region-label> Accuracy 92.255 Loss 0.227; Total Loss 0.277 Avg Accuracy 95.323
+** Valid Epoch 3:  <action-label> Accuracy 98.607 Loss 0.046; <temporal-region-label> Accuracy 95.262 Loss 0.154; Total Loss 0.200 Avg Accuracy 96.934
+** Valid Epoch 4:  <action-label> Accuracy 98.359 Loss 0.046; <temporal-region-label> Accuracy 95.292 Loss 0.155; Total Loss 0.201 Avg Accuracy 96.826
+** Valid Epoch 5:  <action-label> Accuracy 98.266 Loss 0.055; <temporal-region-label> Accuracy 95.429 Loss 0.154; Total Loss 0.208 Avg Accuracy 96.848

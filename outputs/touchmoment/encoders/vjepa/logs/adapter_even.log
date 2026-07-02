@@ -1,0 +1,2 @@
+[vjepa-adapter] mode=even interp=linear | 4021 videos | raw=/home/huyanh/Workspace/repos/feature_extraction/VJEPA_features -> out=outputs/touchmoment/encoders/vjepa/feat_even
+[vjepa-adapter] wrote/kept 4021 | missing-raw 0 | shape example [N,D]

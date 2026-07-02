@@ -1,0 +1,60 @@
+{
+  "best_by_f1": {
+    "epoch": 5,
+    "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/touchmoment/encoders/tsp/train/epoch_5.pth",
+    "fg_precision": 0.9653638385764219,
+    "fg_recall": 0.9405572755417957,
+    "fg_f1": 0.9527991218441272,
+    "accuracy": 0.9542900531511009
+  },
+  "all": [
+    {
+      "epoch": 0,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/touchmoment/encoders/tsp/train/epoch_0.pth",
+      "fg_precision": 0.8433155080213903,
+      "fg_recall": 0.9764705882352941,
+      "fg_f1": 0.9050215208034432,
+      "accuracy": 0.8994684889901291
+    },
+    {
+      "epoch": 1,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/touchmoment/encoders/tsp/train/epoch_1.pth",
+      "fg_precision": 0.9767932489451476,
+      "fg_recall": 0.573374613003096,
+      "fg_f1": 0.7225907140070231,
+      "accuracy": 0.7840546697038724
+    },
+    {
+      "epoch": 2,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/touchmoment/encoders/tsp/train/epoch_2.pth",
+      "fg_precision": 0.9765241765942537,
+      "fg_recall": 0.8628482972136223,
+      "fg_f1": 0.9161735700197239,
+      "accuracy": 0.9225512528473804
+    },
+    {
+      "epoch": 3,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/touchmoment/encoders/tsp/train/epoch_3.pth",
+      "fg_precision": 0.9407854984894259,
+      "fg_recall": 0.9640866873065016,
+      "fg_f1": 0.9522935779816513,
+      "accuracy": 0.952619589977221
+    },
+    {
+      "epoch": 4,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/touchmoment/encoders/tsp/train/epoch_4.pth",
+      "fg_precision": 0.9599747872675701,
+      "fg_recall": 0.9430340557275542,
+      "fg_f1": 0.9514290176479775,
+      "accuracy": 0.9527714502657555
+    },
+    {
+      "epoch": 5,
+      "ckpt": "/home/huyanh/Workspace/hand_touch_detection/outputs/touchmoment/encoders/tsp/train/epoch_5.pth",
+      "fg_precision": 0.9653638385764219,
+      "fg_recall": 0.9405572755417957,
+      "fg_f1": 0.9527991218441272,
+      "accuracy": 0.9542900531511009
+    }
+  ]
+}

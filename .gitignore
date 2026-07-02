@@ -18,6 +18,11 @@ __MACOSX/
 *.npy
 *.h5
 
+# per-epoch intermediate VAL predictions (selection artifacts, regenerable+bulky);
+# final pred-test.* + eval tables + loss curves + logs are kept.
+outputs/**/pred-val.*.recall.json.gz
+outputs/**/pred-val.*.json
+
 # everything else under outputs/ (predictions, eval tables, logs, GVF, loss curves)
 # IS version-controlled -- only the weights/features above are excluded.
 
