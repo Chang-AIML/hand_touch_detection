@@ -20,3 +20,8 @@ __MACOSX/
 
 # everything else under outputs/ (predictions, eval tables, logs, GVF, loss curves)
 # IS version-controlled -- only the weights/features above are excluded.
+
+# local-only scratch docs (README.md is the single source of truth) + stray downloads
+HANDOFF.md
+STRUCTURE.md
+val (1).json

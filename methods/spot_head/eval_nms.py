@@ -15,20 +15,18 @@ from __future__ import annotations
 
 import argparse
 import contextlib
-import copy
 import glob
 import io
-import math
 import os
 import sys
-from collections import defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.dirname(os.path.dirname(HERE)))            # repo root for config
 import config                                                         # noqa: E402
 from common.io import load_json, load_gz_json                           # noqa: E402
-from common.eval import non_maximum_supression                          # noqa: E402
+from common.eval import (non_maximum_supression,                        # noqa: E402
+                        soft_non_maximum_supression)                    # hice util/eval.py
 from common.score import (compute_mAPs, parse_ground_truth,             # noqa: E402
                         get_predictions, compute_average_precision)
 
@@ -41,38 +39,6 @@ def per_class_aps(truth, pred):
     return {label: [compute_average_precision(get_predictions(pred, label=label), tfl,
                                               tolerance=t) * 100 for t in TOLS]
             for label, tfl in tbl.items()}
-
-
-def soft_nms(pred, window, sigma, score_thresh=1e-3):
-    """Temporal Gaussian soft-NMS, per video, per label (Bodla et al. adapted to 1D points).
-    Iteratively take the highest-score event; for every other same-label event WITHIN
-    `window` frames, multiply its score by exp(-o^2 / sigma) where o = 1 - d/(window+1) is a
-    temporal-overlap proxy (1 at d=0, ->0 at d=window). Events farther than `window` are left
-    untouched (the fix: distance must only suppress NEARBY events, never far ones). Keep all
-    events above score_thresh, with their decayed scores."""
-    out_pred = []
-    for vp in pred:
-        by_label = defaultdict(list)
-        for e in vp['events']:
-            by_label[e['label']].append(dict(e))
-        kept = []
-        for evs in by_label.values():
-            work = [dict(e) for e in evs]
-            while work:
-                mi = max(range(len(work)), key=lambda k: work[k]['score'])
-                m = work.pop(mi)
-                kept.append(m)
-                for e in work:
-                    d = abs(e['frame'] - m['frame'])
-                    if d <= window:
-                        o = 1.0 - d / (window + 1.0)          # overlap proxy in (0,1]
-                        e['score'] *= math.exp(-(o * o) / sigma)
-                work = [e for e in work if e['score'] > score_thresh]
-        kept.sort(key=lambda x: x['frame'])
-        nv = copy.deepcopy(vp)
-        nv['events'] = kept
-        out_pred.append(nv)
-    return out_pred
 
 
 def maps_quiet(truth, pred):
@@ -94,9 +60,8 @@ def main():
     ap.add_argument('--prefix', default='vjepa_mstcn_')
     ap.add_argument('--split', default='test')
     ap.add_argument('--label-dir', default=config.LABEL_DIR)
-    ap.add_argument('--nms-window', type=int, default=1, help='hard-NMS window (E2E-Spot default 1)')
-    ap.add_argument('--snms-window', type=int, default=4, help='soft-NMS suppression window (frames)')
-    ap.add_argument('--snms-sigma', type=float, default=0.5, help='Gaussian soft-NMS sigma')
+    ap.add_argument('--nms-window', type=int, default=1, help='hice hard-NMS window (E2E-Spot default 1)')
+    ap.add_argument('--snms-window', type=int, default=4, help='hice soft-NMS window (frames)')
     ap.add_argument('--per-class', action='store_true', help='also print touch/untouch AP separately')
     ap.add_argument('--tolerances', nargs='+', type=int, default=[0, 1, 2, 4],
                     help='tolerances to report; the Avg column is their mean (e.g. 0 1 2 for @0/1/2 mAP)')
@@ -107,12 +72,12 @@ def main():
     truth = load_json(os.path.join(args.label_dir, f'{args.split}.json'))
 
     methods = ['without NMS', f'NMS (w={args.nms_window})',
-               f'Soft-NMS (w={args.snms_window},σ={args.snms_sigma})']
+               f'Soft-NMS (w={args.snms_window})']
 
     def variants(pred_hr):
         return [pred_hr,
                 non_maximum_supression(pred_hr, args.nms_window),
-                soft_nms(pred_hr, args.snms_window, args.snms_sigma)]
+                soft_non_maximum_supression(pred_hr, args.snms_window)]
 
     results = {}                                  # (mode, method) -> [mAP@0,1,2,4]
     cls_results = {}                              # (mode, method, label) -> [AP@0,1,2,4]
