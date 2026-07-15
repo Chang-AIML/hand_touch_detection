@@ -1,0 +1,53 @@
+# ===== Model weights / checkpoints =====
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.pb
+*.tflite
+
+# ===== Features / cached arrays / large data =====
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.pt.gz
+*.feather
+*.parquet
+*.arrow
+*.lmdb
+*.tfrecord
+
+# ===== Experiment tracking / logs =====
+wandb/
+runs/tb/
+events.out.tfevents.*
+*.wandb
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# ===== Environments =====
+.venv/
+venv/
+env/
+.env
+*.env
+
+# ===== OS / editor =====
+.DS_Store
+Thumbs.db
+*.swp

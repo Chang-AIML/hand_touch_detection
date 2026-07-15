@@ -1,0 +1,7 @@
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[even-grid] shard 1/2 | 1425 videos | out=/home/chang_noroot/data2/huyanh/Workspace/VLM_spotting/vjepa/grid_even
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+  [586/1425] H4_C1_N31_S239_s03_T1 (152, 576, 768) | 2.27s/vid | ETA 32min
+  [611/1425] H1_C8_N31_S313_s03_T1 (152, 576, 768) | 2.25s/vid | ETA 31min

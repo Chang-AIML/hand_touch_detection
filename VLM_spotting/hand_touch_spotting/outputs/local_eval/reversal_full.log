@@ -1,0 +1,22 @@
+[data] 60 paired start/end finegym windows (gap>=40)
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  2.41it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  2.33it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  2.20it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.61it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.48it/s]
+/home/chang/miniconda3/lib/python3.13/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/chang/miniconda3/lib/python3.13/contextlib.py:109: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  1/60 UB_fligh_same_bar      fs=199 fe=242 | fwd s->199 e->199 | rev s->83 e->216 (rev_s=400 rev_e=357)
+  11/60 BB_turns               fs=510 fe=572 | fwd s->510 e->575 | rev s->50 e->87 (rev_s=89 rev_e=27)
+  21/60 BB_turns               fs=349 fe=407 | fwd s->348 e->407 | rev s->193 e->250 (rev_s=250 rev_e=192)
+  31/60 BB_turns               fs=408 fe=484 | fwd s->407 e->475 | rev s->128 e->195 (rev_s=191 rev_e=115)
+  41/60 BB_turns               fs=429 fe=471 | fwd s->428 e->490 | rev s->110 e->173 (rev_s=170 rev_e=128)
+  51/60 UB_fligh_same_bar      fs=342 fe=388 | fwd s->255 e->128 | rev s->427 e->400 (rev_s=257 rev_e=211)
+
+================ RESULTS ================
+forward sanity: start localizes @66.8f err, end @127.3f err, start<end in 37% of windows  (N=60)
+REVERSED start-query -> SWAP(=near rev_e, direction) in 87%  (N=60)
+REVERSED end-query   -> SWAP(=near rev_s, direction) in 42%  (N=60)
+reversed abs-pos: start-query mean pos=0.23, end-query mean pos=0.24 (0=clip start,1=end)
+READ: swap>>50% -> direction encoded (temporal). swap~=50% or abs-pos fixed by query -> saliency/position only.
+rows -> outputs/local_eval/reversal_rows.json
+[W711 19:07:28.441172949 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

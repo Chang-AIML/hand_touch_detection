@@ -1,0 +1,23 @@
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[taco-grid] shard 1/1 | 1171 TACO videos to extract | out=/home/chang_noroot/data2/huyanh/Workspace/VLM_spotting/vjepa/grid_even
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+  [20/1171] C104_20231031_180 (56, 576, 768) | 1.61s/vid | ETA 31min
+  [40/1171] C105_20231024_255 (80, 576, 768) | 1.36s/vid | ETA 26min
+  [60/1171] C108_20231104_068 (80, 576, 768) | 1.32s/vid | ETA 24min
+  [80/1171] C115_20231013_005 (144, 576, 768) | 1.26s/vid | ETA 23min
+  [100/1171] C116_20231031_071 (88, 576, 768) | 1.24s/vid | ETA 22min
+  [120/1171] C117_20231019_074 (64, 576, 768) | 1.21s/vid | ETA 21min
+  [140/1171] C117_20231019_212 (80, 576, 768) | 1.20s/vid | ETA 21min
+  [160/1171] C119_20231024_300 (64, 576, 768) | 1.18s/vid | ETA 20min
+  [180/1171] C127_20231005_015 (88, 576, 768) | 1.19s/vid | ETA 20min
+  [200/1171] C129_20231104_103 (80, 576, 768) | 1.19s/vid | ETA 19min
+  [220/1171] C131_20231013_229 (72, 576, 768) | 1.18s/vid | ETA 19min
+  [240/1171] C131_20231019_104 (80, 576, 768) | 1.17s/vid | ETA 18min
+  [260/1171] C131_20231019_172 (80, 576, 768) | 1.17s/vid | ETA 18min
+  [280/1171] C131_20231019_236 (88, 576, 768) | 1.17s/vid | ETA 17min
+  [300/1171] C139_20231103_153 (88, 576, 768) | 1.17s/vid | ETA 17min
+  [320/1171] C141_20231102_057 (88, 576, 768) | 1.15s/vid | ETA 16min
+  [340/1171] C143_20231103_174 (72, 576, 768) | 1.16s/vid | ETA 16min
+  [360/1171] C148_20231013_073 (128, 576, 768) | 1.19s/vid | ETA 16min

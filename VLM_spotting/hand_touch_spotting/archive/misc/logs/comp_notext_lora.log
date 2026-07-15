@@ -1,0 +1,5 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 6056.76it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   7%|▋         | 54/750 [00:00<00:01, 530.70it/s]Loading weights:  14%|█▍        | 108/750 [00:00<00:01, 514.50it/s]Loading weights:  23%|██▎       | 169/750 [00:00<00:01, 549.42it/s]Loading weights:  30%|██▉       | 224/750 [00:00<00:01, 477.57it/s]Loading weights:  37%|███▋      | 277/750 [00:00<00:00, 493.88it/s]Loading weights:  45%|████▍     | 334/750 [00:00<00:00, 511.22it/s]Loading weights:  52%|█████▏    | 391/750 [00:00<00:00, 529.29it/s]Loading weights: 100%|██████████| 750/750 [00:00<00:00, 905.80it/s]
+[cfg] mode=compress stain=0 n_q=8 use_text=0 | trainable=71.20M | train 4576 | bs=2
+[ep-1 init] mAP@0/1/2=[np.float64(0.01), np.float64(0.02), np.float64(0.07)] ndet=277 ngt=647

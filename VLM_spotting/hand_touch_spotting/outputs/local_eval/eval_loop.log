@@ -1,0 +1,5 @@
+[eval_loop] every 200 steps; first eval at step >= 200; wandb run=bal_scratch_eval
+tar: Removing leading `/' from member names
+tar: /data/runs/mixed/bal_scratch_resume.pt: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+[eval_loop 17:19:25] latest ckpt step=66  next_eval>=200

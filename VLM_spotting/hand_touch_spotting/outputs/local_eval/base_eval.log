@@ -1,0 +1,19 @@
+[data] world=1 train windows=11604 in-val=50 ood-val=10
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.24s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.52s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.01s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.40it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.02it/s]
+[init] loaded base fc outputs/idx_compress/comp_notext/best.pt (missing 0 unexpected 0)
+/home/chang/miniconda3/lib/python3.13/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[cfg] trainable=27.55M window=600 bs=1 accum=8 eff_batch=8 balance=2500/ds
+[eval_only] evaluating connector outputs/idx_compress/comp_notext/best.pt @ train-step 0 (fsdp=0, world=1)
+/home/chang/miniconda3/lib/python3.13/contextlib.py:109: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[eval:in:_all              ] mAP@{0,1,2,4}=[0.76, 1.35, 5.56, 7.58] ndet=63 ngt=32
+[eval:in:finegym           ] mAP@{0,1,2,4}=[0.0, 0.0, 0.0, 0.0] ndet=17 ngt=12
+[eval:in:fs_perf           ] mAP@{0,1,2,4}=[0.0, 0.0, 0.0, 0.0] ndet=18 ngt=3
+[eval:in:soccernet_ball    ] mAP@{0,1,2,4}=[0.0, 0.0, 0.0, 0.0] ndet=14 ngt=2
+[eval:in:tennis            ] mAP@{0,1,2,4}=[0.0, 0.0, 0.0, 0.0] ndet=4 ngt=4
+[eval:in:touchmoment_hoi4d ] mAP@{0,1,2,4}=[9.09, 16.16, 66.67, 90.91] ndet=10 ngt=11
+  [ckpt] best in-mAP@2=5.56 @step0
+[eval:ood:_all              ] mAP@{0,1,2,4}=[0.0, 0.0, 35.45, 35.45] ndet=23 ngt=10
+[eval:ood:finediving        ] mAP@{0,1,2,4}=[0.0, 0.0, 35.45, 35.45] ndet=23 ngt=10

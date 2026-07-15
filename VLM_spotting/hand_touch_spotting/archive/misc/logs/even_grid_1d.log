@@ -1,0 +1,38 @@
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[even-grid] shard 2/2 | 1425 videos | out=/home/chang_noroot/data2/huyanh/Workspace/VLM_spotting/vjepa/grid_even
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+  [647/1425] H2_C13_N38_S128_s03_T1 (152, 576, 768) | 2.30s/vid | ETA 30min
+  [672/1425] H2_C2_N18_S25_s04_T3 (152, 576, 768) | 2.28s/vid | ETA 29min
+  [697/1425] H1_C14_N25_S209_s03_T2 (152, 576, 768) | 2.27s/vid | ETA 28min
+  [722/1425] H3_C14_N31_S207_s02_T2 (152, 576, 768) | 2.27s/vid | ETA 27min
+  [747/1425] H1_C20_N48_S381_s02_T2 (152, 576, 768) | 2.27s/vid | ETA 26min
+  [772/1425] H1_C14_N48_S158_s01_T1 (152, 576, 768) | 2.27s/vid | ETA 25min
+  [797/1425] H4_C14_N13_S174_s04_T1 (152, 576, 768) | 2.26s/vid | ETA 24min
+  [822/1425] H4_C20_N43_S301_s05_T3 (152, 576, 768) | 2.26s/vid | ETA 23min
+  [847/1425] H1_C12_N47_S203_s01_T2 (152, 576, 768) | 2.26s/vid | ETA 22min
+  [872/1425] H4_C12_N34_S184_s03_T2 (152, 576, 768) | 2.26s/vid | ETA 21min
+  [897/1425] H4_C20_N40_S298_s02_T1 (152, 576, 768) | 2.26s/vid | ETA 20min
+  [922/1425] H4_C3_N68_S380_s02_T1 (152, 576, 768) | 2.26s/vid | ETA 19min
+  [947/1425] H2_C1_N32_S88_s01_T3 (152, 576, 768) | 2.25s/vid | ETA 18min
+  [972/1425] H1_C20_N48_S381_s04_T4 (152, 576, 768) | 2.25s/vid | ETA 17min
+  [997/1425] H2_C9_N25_S349_s02_T1 (152, 576, 768) | 2.25s/vid | ETA 16min
+  [1022/1425] H3_C2_N28_S217_s02_T1 (152, 576, 768) | 2.26s/vid | ETA 15min
+  [1047/1425] H2_C18_N28_S183_s01_T2 (152, 576, 768) | 2.26s/vid | ETA 14min
+  [1072/1425] H1_C11_N21_S187_s01_T3 (152, 576, 768) | 2.26s/vid | ETA 13min
+  [1097/1425] H2_C5_N41_S269_s01_T6 (152, 576, 768) | 2.26s/vid | ETA 12min
+  [1122/1425] H1_C11_N59_S376_s01_T1 (152, 576, 768) | 2.26s/vid | ETA 11min
+  [1147/1425] H4_C14_N17_S174_s03_T1 (152, 576, 768) | 2.26s/vid | ETA 10min
+  [1172/1425] H1_C14_N17_S209_s02_T2 (152, 576, 768) | 2.26s/vid | ETA 10min
+  [1198/1425] H3_C1_N44_S84_s01_T2 (152, 576, 768) | 2.26s/vid | ETA 9min
+  [1223/1425] H3_C2_N30_S217_s02_T1 (152, 576, 768) | 2.26s/vid | ETA 8min
+  [1248/1425] H2_C3_N25_S353_s04_T1 (152, 576, 768) | 2.26s/vid | ETA 7min
+  [1273/1425] H2_C3_N17_S353_s02_T1 (152, 576, 768) | 2.26s/vid | ETA 6min
+  [1298/1425] H2_C17_N08_S356_s01_T1 (152, 576, 768) | 2.26s/vid | ETA 5min
+  [1323/1425] H1_C3_N01_S54_s05_T2 (152, 576, 768) | 2.26s/vid | ETA 4min
+  [1348/1425] H4_C7_N13_S57_s01_T1 (152, 576, 768) | 2.26s/vid | ETA 3min
+  [1373/1425] H3_C2_N33_S217_s03_T1 (152, 576, 768) | 2.26s/vid | ETA 2min
+  [1398/1425] H1_C3_N25_S19_s02_T2 (152, 576, 768) | 2.25s/vid | ETA 1min
+  [1423/1425] H1_C6_N09_S247_s03_T1 (152, 576, 768) | 2.25s/vid | ETA 0min
+[even-grid] shard 1 done 802 in 30.1min

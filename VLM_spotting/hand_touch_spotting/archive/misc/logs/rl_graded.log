@@ -1,0 +1,20 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 28339.89it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   7%|▋         | 53/750 [00:00<00:01, 529.88it/s]Loading weights:  14%|█▍        | 106/750 [00:00<00:01, 499.27it/s]Loading weights:  23%|██▎       | 169/750 [00:00<00:01, 547.39it/s]Loading weights:  30%|██▉       | 224/750 [00:00<00:01, 494.93it/s]Loading weights:  37%|███▋      | 275/750 [00:00<00:00, 497.98it/s]Loading weights:  44%|████▍     | 329/750 [00:00<00:00, 510.89it/s]Loading weights:  52%|█████▏    | 390/750 [00:00<00:00, 535.94it/s]Loading weights: 100%|██████████| 750/750 [00:00<00:00, 910.66it/s]
+[cfg] RLVR reward=graded K=6 temp=1.0 lr=4e-06 | init_fc=best.pt init_lora=yes | trainable=71.2M
+[init] mAP@0/1/2=[np.float64(9.42), np.float64(46.97), np.float64(72.52)]
+  [hb ep0 step10/100] rmean=0.776 0.03 step/s
+  [hb ep0 step20/100] rmean=1.220 0.03 step/s
+[ep0 step25/100] reward~1.367 | mAP@0/1/2=[np.float64(9.26), np.float64(47.78), np.float64(70.54)] | 0.03 step/s
+  [hb ep0 step30/100] rmean=1.496 0.03 step/s
+  [hb ep0 step40/100] rmean=1.635 0.03 step/s
+  [hb ep0 step50/100] rmean=1.719 0.03 step/s
+[ep0 step50/100] reward~1.719 | mAP@0/1/2=[np.float64(9.32), np.float64(48.04), np.float64(71.58)] | 0.03 step/s
+  [hb ep0 step60/100] rmean=1.789 0.03 step/s
+  [hb ep0 step70/100] rmean=1.735 0.03 step/s
+[ep0 step75/100] reward~1.720 | mAP@0/1/2=[np.float64(9.52), np.float64(47.39), np.float64(71.36)] | 0.03 step/s
+  [hb ep0 step80/100] rmean=1.767 0.03 step/s
+  [hb ep0 step90/100] rmean=1.881 0.03 step/s
+  [hb ep0 step100/100] rmean=1.966 0.03 step/s
+[ep0 step100/100] reward~1.966 | mAP@0/1/2=[np.float64(9.25), np.float64(47.4), np.float64(71.12)] | 0.03 step/s
+[ep0 END] reward~1.966 | mAP@0/1/2=[np.float64(9.25), np.float64(47.4), np.float64(71.12)] | 0.03 step/s

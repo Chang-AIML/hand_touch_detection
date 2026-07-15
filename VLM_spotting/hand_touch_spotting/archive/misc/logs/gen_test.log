@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 15563.28it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   3%|▎         | 23/750 [00:00<00:03, 228.67it/s]Loading weights:   7%|▋         | 49/750 [00:00<00:02, 246.85it/s]Loading weights:  14%|█▍        | 105/750 [00:00<00:01, 380.41it/s]Loading weights:  23%|██▎       | 169/750 [00:00<00:01, 474.60it/s]Loading weights:  29%|██▉       | 217/750 [00:00<00:01, 415.95it/s]Loading weights:  37%|███▋      | 279/750 [00:00<00:00, 476.19it/s]Loading weights:  44%|████▎     | 328/750 [00:00<00:00, 444.72it/s]Loading weights:  51%|█████     | 379/750 [00:00<00:00, 462.53it/s]Loading weights:  96%|█████████▌| 717/750 [00:00<00:00, 1304.30it/s]Loading weights: 100%|██████████| 750/750 [00:01<00:00, 740.73it/s] 
+  0/848
+  80/848
+  160/848
+  240/848
+  320/848
+  400/848
+  480/848
+  560/848
+  640/848
+  720/848
+  800/848
+[saved] /data/chang/data2/huyanh/Workspace/VLM_spotting/hand_touch_spotting/outputs/action/cache/idx_multi_test_0.pt  (848 (vid,type) entries)

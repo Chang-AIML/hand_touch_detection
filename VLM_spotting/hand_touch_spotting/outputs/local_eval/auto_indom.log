@@ -1,0 +1,10 @@
+### s900 in-domain start 01:57 ###
+### s900 DONE: [eval:in:_all              ] mAP@(0, 1, 2, 4, 8, 16)=[9.29, 30.8, 42.5, 54.67, 60.56, 64.93] ndet=1840 ngt=1772 ###
+### s1050 in-domain start 04:10 ###
+### s1050 DONE: [eval:in:_all              ] mAP@(0, 1, 2, 4, 8, 16)=[10.61, 34.06, 45.94, 57.0, 63.07, 66.64] ndet=1761 ngt=1772 ###
+tar: Removing leading `/' from member names
+### s1200 in-domain start 06:24 ###
+### s1200 DONE: [eval:in:_all              ] mAP@(0, 1, 2, 4, 8, 16)=[11.24, 37.59, 50.18, 59.13, 66.4, 70.16] ndet=1746 ngt=1772 ###
+tar: Removing leading `/' from member names
+### s1350 in-domain start 09:06 ###
+### s1350 DONE: [eval:in:_all              ] mAP@(0, 1, 2, 4, 8, 16)=[13.07, 39.13, 50.72, 61.03, 67.83, 71.41] ndet=1704 ngt=1772 ###

@@ -1,0 +1,11 @@
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+  [20/138] H4_C13_N35_S184_s03_T4 nframes=203 | 3.43s/vid
+  [40/138] H1_C12_N37_S165_s03_T1 nframes=199 | 3.51s/vid
+  [60/138] H4_C18_N17_S178_s05_T2 nframes=219 | 3.52s/vid
+  [80/138] H1_C13_N21_S136_s01_T1 nframes=202 | 3.51s/vid
+  [100/138] H2_C18_N33_S183_s02_T2 nframes=254 | 3.52s/vid
+  [120/138] H3_C1_N35_S83_s03_T1 nframes=182 | 3.52s/vid
+[done] split=val shard=0 extracted 138 videos in 8.1 min

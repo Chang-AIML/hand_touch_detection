@@ -1,0 +1,14 @@
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+  [10/90] samples=280 | 2.91s/vid
+  [20/90] samples=560 | 2.90s/vid
+  [30/90] samples=840 | 2.90s/vid
+  [40/90] samples=1120 | 2.91s/vid
+  [50/90] samples=1400 | 2.91s/vid
+  [60/90] samples=1722 | 2.91s/vid
+  [70/90] samples=2093 | 2.90s/vid
+  [80/90] samples=2457 | 2.90s/vid
+  [90/90] samples=2821 | 2.90s/vid
+[saved] /data/chang/data2/huyanh/Workspace/VLM_spotting/hand_touch_spotting/outputs/probe/grids.npz  X=(2821, 576, 768) (2.50GB) | videos=90 events-frames=2821

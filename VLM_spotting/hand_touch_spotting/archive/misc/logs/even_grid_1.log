@@ -1,0 +1,24 @@
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[even-grid] shard 2/2 | 1425 videos | out=/home/chang_noroot/data2/huyanh/Workspace/VLM_spotting/vjepa/grid_even
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+  [25/1425] H1_C2_N49_S54_s04_T2 (152, 576, 768) | 2.43s/vid | ETA 57min
+  [50/1425] H4_C6_N54_S378_s01_T1 (152, 576, 768) | 2.40s/vid | ETA 55min
+  [75/1425] H1_C11_N13_S185_s04_T2 (152, 576, 768) | 2.39s/vid | ETA 54min
+  [100/1425] H1_C8_N20_S321_s05_T2 (152, 576, 768) | 2.40s/vid | ETA 53min
+  [125/1425] H1_C8_N41_S324_s01_T2 (152, 576, 768) | 2.40s/vid | ETA 52min
+  [150/1425] H1_C7_N31_S60_s04_T1 (152, 576, 768) | 2.40s/vid | ETA 51min
+  [175/1425] H3_C3_N48_S282_s01_T2 (152, 576, 768) | 2.40s/vid | ETA 50min
+  [200/1425] H1_C9_N16_S33_s03_T2 (152, 576, 768) | 2.40s/vid | ETA 49min
+  [225/1425] H3_C9_N29_S306_s05_T2 (152, 576, 768) | 2.41s/vid | ETA 48min
+  [250/1425] H2_C13_N13_S189_s04_T4 (152, 576, 768) | 2.41s/vid | ETA 47min
+  [275/1425] H1_C4_N62_S385_s05_T1 (152, 576, 768) | 2.41s/vid | ETA 46min
+  [300/1425] H2_C11_N18_S201_s05_T4 (152, 576, 768) | 2.40s/vid | ETA 45min
+  [325/1425] H2_C5_N28_S41_s02_T2 (152, 576, 768) | 2.40s/vid | ETA 44min
+  [350/1425] H1_C7_N43_S278_s04_T4 (152, 576, 768) | 2.40s/vid | ETA 43min
+  [375/1425] H2_C6_N19_S245_s05_T2 (152, 576, 768) | 2.40s/vid | ETA 42min
+  [400/1425] H3_C17_N12_S167_s03_T2 (152, 576, 768) | 2.40s/vid | ETA 41min
+  [425/1425] H2_C18_N46_S135_s01_T1 (152, 576, 768) | 2.40s/vid | ETA 40min
+  [450/1425] H1_C12_N45_S165_s05_T1 (152, 576, 768) | 2.40s/vid | ETA 39min
+  [475/1425] H4_C12_N32_S235_s02_T1 (152, 576, 768) | 2.40s/vid | ETA 38min

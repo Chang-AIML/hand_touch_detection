@@ -1,0 +1,6 @@
+===== 2x2 START 23:00:41 =====
+### MIX3_qf1200_out750 OOD start 23:00:41 ###
+### MIX3_qf1200_out750 OOD: [eval:ood:finediving        ] mAP@(0, 1, 2, 4, 8, 16)=[0.44, 4.17, 9.32, 26.2, 43.83, 59.24] ndet=989 ngt=1063 ###
+### MIX4_qf750_out1200 OOD start 23:31:11 ###
+### MIX4_qf750_out1200 OOD: [eval:ood:finediving        ] mAP@(0, 1, 2, 4, 8, 16)=[0.14, 1.15, 3.83, 16.77, 36.87, 48.52] ndet=950 ngt=1063 ###
+### MIX3_qf1200_out750 ID start 00:01:39 ###

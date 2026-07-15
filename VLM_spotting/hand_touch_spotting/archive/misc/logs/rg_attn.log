@@ -1,0 +1,27 @@
+[cfg] refine_grid pool=attn W=24 outE=12 | videos=438 pairs=1319
+[ep0] loss 2.834 | sNMS @0/1/2=[np.float64(4.77), np.float64(18.36), np.float64(36.62)] (mean 19.92) noNMS@2=14.4 | 12 it/s
+[ep1] loss 2.360 | sNMS @0/1/2=[np.float64(5.92), np.float64(29.67), np.float64(50.52)] (mean 28.71) noNMS@2=29.8 | 24 it/s
+[ep2] loss 2.037 | sNMS @0/1/2=[np.float64(11.55), np.float64(40.43), np.float64(56.69)] (mean 36.23) noNMS@2=44.1 | 24 it/s
+[ep3] loss 1.837 | sNMS @0/1/2=[np.float64(8.78), np.float64(35.89), np.float64(52.21)] (mean 32.29) noNMS@2=37.4 | 23 it/s
+[ep4] loss 1.672 | sNMS @0/1/2=[np.float64(12.1), np.float64(41.15), np.float64(58.8)] (mean 37.35) noNMS@2=42.9 | 22 it/s
+[ep5] loss 1.586 | sNMS @0/1/2=[np.float64(10.94), np.float64(42.3), np.float64(59.73)] (mean 37.66) noNMS@2=42.4 | 22 it/s
+[ep6] loss 1.492 | sNMS @0/1/2=[np.float64(9.84), np.float64(36.88), np.float64(55.86)] (mean 34.19) noNMS@2=40.4 | 23 it/s
+[ep7] loss 1.419 | sNMS @0/1/2=[np.float64(9.22), np.float64(33.72), np.float64(52.36)] (mean 31.77) noNMS@2=40.3 | 22 it/s
+[ep8] loss 1.327 | sNMS @0/1/2=[np.float64(10.88), np.float64(41.16), np.float64(57.3)] (mean 36.44) noNMS@2=45.3 | 23 it/s
+[ep9] loss 1.259 | sNMS @0/1/2=[np.float64(13.15), np.float64(41.74), np.float64(59.77)] (mean 38.22) noNMS@2=44.7 | 22 it/s
+[ep10] loss 1.205 | sNMS @0/1/2=[np.float64(11.23), np.float64(38.98), np.float64(56.1)] (mean 35.44) noNMS@2=43.7 | 22 it/s
+[ep11] loss 1.118 | sNMS @0/1/2=[np.float64(10.68), np.float64(37.5), np.float64(55.85)] (mean 34.68) noNMS@2=43.9 | 22 it/s
+[ep12] loss 1.083 | sNMS @0/1/2=[np.float64(12.66), np.float64(37.32), np.float64(55.9)] (mean 35.29) noNMS@2=44.2 | 22 it/s
+[ep13] loss 1.005 | sNMS @0/1/2=[np.float64(10.69), np.float64(34.47), np.float64(52.28)] (mean 32.48) noNMS@2=41.7 | 22 it/s
+[ep14] loss 0.966 | sNMS @0/1/2=[np.float64(10.76), np.float64(34.86), np.float64(52.24)] (mean 32.62) noNMS@2=41.6 | 22 it/s
+[ep15] loss 0.888 | sNMS @0/1/2=[np.float64(11.17), np.float64(34.68), np.float64(52.41)] (mean 32.75) noNMS@2=43.1 | 24 it/s
+[ep16] loss 0.851 | sNMS @0/1/2=[np.float64(10.49), np.float64(31.69), np.float64(49.58)] (mean 30.59) noNMS@2=41.0 | 23 it/s
+[ep17] loss 0.797 | sNMS @0/1/2=[np.float64(9.86), np.float64(31.1), np.float64(50.28)] (mean 30.41) noNMS@2=42.2 | 22 it/s
+[ep18] loss 0.769 | sNMS @0/1/2=[np.float64(10.08), np.float64(31.3), np.float64(49.44)] (mean 30.27) noNMS@2=41.2 | 24 it/s
+[ep19] loss 0.741 | sNMS @0/1/2=[np.float64(10.41), np.float64(32.23), np.float64(48.98)] (mean 30.54) noNMS@2=42.1 | 23 it/s
+[ep20] loss 0.725 | sNMS @0/1/2=[np.float64(10.08), np.float64(31.57), np.float64(48.81)] (mean 30.15) noNMS@2=41.6 | 24 it/s
+[ep21] loss 0.719 | sNMS @0/1/2=[np.float64(10.13), np.float64(31.33), np.float64(48.89)] (mean 30.12) noNMS@2=41.6 | 25 it/s
+[ep22] loss 0.707 | sNMS @0/1/2=[np.float64(10.17), np.float64(31.43), np.float64(48.95)] (mean 30.19) noNMS@2=41.6 | 28 it/s
+[ep23] loss 0.714 | sNMS @0/1/2=[np.float64(10.18), np.float64(31.41), np.float64(48.88)] (mean 30.16) noNMS@2=41.7 | 28 it/s
+[ep24] loss 0.717 | sNMS @0/1/2=[np.float64(10.16), np.float64(31.36), np.float64(48.83)] (mean 30.11) noNMS@2=41.7 | 27 it/s
+[done] rg_attn pool=attn best(val,sNMS) @0/1/2=[np.float64(13.15), np.float64(41.74), np.float64(59.77)] | nonms [np.float64(17.18), np.float64(33.97), np.float64(44.69)]

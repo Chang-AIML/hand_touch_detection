@@ -1,0 +1,18 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 4804.47it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 2/750 [00:00<00:51, 14.46it/s]Loading weights:   5%|▌         | 38/750 [00:00<00:03, 183.95it/s]Loading weights:  11%|█         | 81/750 [00:00<00:02, 282.57it/s]Loading weights:  16%|█▌        | 121/750 [00:00<00:01, 323.49it/s]Loading weights:  23%|██▎       | 170/750 [00:00<00:01, 370.86it/s]Loading weights:  28%|██▊       | 209/750 [00:00<00:01, 364.03it/s]Loading weights:  33%|███▎      | 247/750 [00:00<00:01, 365.51it/s]Loading weights:  39%|███▊      | 289/750 [00:00<00:01, 374.11it/s]Loading weights:  45%|████▍     | 335/750 [00:00<00:01, 395.12it/s]Loading weights:  52%|█████▏    | 389/750 [00:01<00:00, 431.05it/s]Loading weights: 100%|██████████| 750/750 [00:01<00:00, 631.74it/s]
+[probe] videos: hoi_tr=300 hoi_te=138 taco_tr=295 taco_te=71 (TOL=2 GAP=15)
+
+=== M1 frozen-compress ===
+  HOI4D -> HOI4D  (reference)            AUC=0.898 acc=0.818  (test +3235/-3235)
+  TACO  -> TACO   (within new)           AUC=0.822 acc=0.749  (test +963/-947)
+  HOI4D -> TACO   (STRICT transfer)      AUC=0.799 acc=0.738  (test +963/-947)
+  TACO  -> HOI4D  (reverse)              AUC=0.654 acc=0.562  (test +3235/-3235)
+  HOI4D(shuffled) -> TACO (control)      AUC=0.162 acc=0.235  (test +963/-947)
+
+=== SFT-LoRA ===
+  HOI4D -> HOI4D  (reference)            AUC=0.898 acc=0.826  (test +3235/-3235)
+  TACO  -> TACO   (within new)           AUC=0.799 acc=0.731  (test +963/-947)
+  HOI4D -> TACO   (STRICT transfer)      AUC=0.827 acc=0.761  (test +963/-947)
+  TACO  -> HOI4D  (reverse)              AUC=0.621 acc=0.555  (test +3235/-3235)
+  HOI4D(shuffled) -> TACO (control)      AUC=0.756 acc=0.635  (test +963/-947)

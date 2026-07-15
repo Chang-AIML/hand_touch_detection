@@ -1,0 +1,4479 @@
+[
+ {
+  "video_id": "H2_C3_N14_S353_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 47,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 130,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 195,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 281,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C17_N58_S253_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 63,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 135,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 197,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 268,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C8_N44_S324_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 49,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 128,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 177,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 202,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 265,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 279,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C18_N34_S181_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 55,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 118,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 181,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 194,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 202,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 223,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 231,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 244,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C4_N27_S21_s01_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 40,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 73,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 110,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 136,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 169,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 189,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 212,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 256,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C14_N17_S174_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 58,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 118,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 190,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 242,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C3_N20_S277_s04_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 39,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 117,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 165,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 193,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 249,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C14_N25_S174_s01_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 65,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 121,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 197,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 254,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C17_N59_S253_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 61,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 130,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 200,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 266,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C9_N49_S344_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 50,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 118,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 184,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 252,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C9_N46_S344_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 47,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 115,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 186,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 249,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C4_N01_S19_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 39,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 74,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 107,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 146,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 188,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 222,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 239,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 275,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C4_N27_S21_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 46,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 92,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 119,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 150,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 182,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 219,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 243,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 275,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C3_N28_S19_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 34,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 153,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 186,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 257,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C8_N48_S324_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 51,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 128,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 178,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 200,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 234,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 260,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C7_N49_S58_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 38,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 129,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 152,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 229,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C9_N42_S344_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 54,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 120,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 174,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 242,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C9_N34_S35_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 26,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 136,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 179,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 275,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C2_N14_S215_s04_T5",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 44,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 110,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 170,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 250,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C13_N35_S184_s03_T4",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 54,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 117,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 182,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 253,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C18_N34_S162_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 57,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 113,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 190,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 259,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C2_N15_S215_s04_T5",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 44,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 112,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 172,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 248,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C7_N26_S79_s05_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 35,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 142,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 179,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 287,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C13_N21_S238_s01_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 52,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 130,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 207,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 267,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C17_N58_S264_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 48,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 112,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 178,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 265,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C4_N33_S22_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 48,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 80,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 115,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 150,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 196,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 237,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 259,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 286,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C17_N57_S264_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 51,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 114,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 170,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 241,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C13_N44_S200_s05_T4",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 49,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 143,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 202,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 264,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C9_N23_S34_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 36,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 158,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 190,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 285,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C17_N63_S253_s04_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 39,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 143,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 185,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 276,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C17_N62_S253_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 40,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 113,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 130,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 180,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 259,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 279,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C8_N43_S319_s04_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 46,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 127,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 171,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 196,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 233,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 265,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C17_N21_S194_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 39,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 152,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 192,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 281,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C9_N27_S349_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 51,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 114,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 184,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 260,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C17_N74_S262_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 46,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 134,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 184,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 270,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C12_N30_S176_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 53,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 116,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 181,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 239,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C2_N27_S13_s05_T5",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 46,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 205,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 233,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 288,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C12_N13_S186_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 47,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 135,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 190,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 256,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C18_N27_S183_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 60,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 112,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 161,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 205,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 214,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 229,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 251,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 261,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C12_N37_S165_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 57,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 155,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 210,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 275,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C9_N42_S33_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 38,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 180,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 210,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 282,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C7_N37_S57_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 37,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 144,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 175,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 277,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C18_N19_S150_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 59,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 137,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 188,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 262,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C4_N01_S19_s05_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 55,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 94,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 127,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 165,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 195,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 227,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 256,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 287,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C2_N44_S29_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 22,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 154,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 170,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 289,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C17_N22_S134_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 75,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 114,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 218,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 263,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C17_N59_S264_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 43,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 104,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 162,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 250,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C11_N50_S193_s02_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 60,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 119,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 190,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 252,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C1_N35_S94_s03_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 23,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 88,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 105,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 158,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 171,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 226,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 235,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 292,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C13_N44_S136_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 60,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 147,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 220,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 268,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C8_N44_S319_s04_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 52,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 127,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 174,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 200,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 251,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 275,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C7_N21_S79_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 33,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 128,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 168,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 275,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C12_N27_S200_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 57,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 155,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 201,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 268,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C18_N11_S139_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 41,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 105,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 166,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 236,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C17_N57_S266_s02_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 45,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 108,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 197,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 246,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C14_N17_S209_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 199,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 240,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 249,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 268,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C14_N17_S210_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 197,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 247,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 256,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 270,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C8_N46_S324_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 47,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 120,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 166,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 200,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 267,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C8_N43_S324_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 51,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 133,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 181,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 206,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 255,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 265,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C18_N17_S178_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 54,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 111,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 188,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 204,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 211,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 226,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 239,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 258,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C12_N23_S176_s01_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 52,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 112,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 193,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 251,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C18_N21_S202_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 61,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 159,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 228,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 260,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C17_N06_S190_s02_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 52,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 123,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 199,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 242,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C6_N20_S251_s05_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 98,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 130,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 191,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 259,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C5_N13_S58_s02_T4",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 35,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 123,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 155,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 290,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C18_N11_S178_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 66,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 126,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 202,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 218,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 224,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 243,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 257,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 266,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C14_N25_S211_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 180,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 229,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 240,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 253,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C14_N17_S158_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 61,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 161,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 210,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 283,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C20_N35_S307_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 51,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 107,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 150,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 228,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C17_N21_S134_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 66,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 113,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 211,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 256,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C13_N41_S200_s04_T4",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 53,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 141,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 206,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 281,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C1_N26_S94_s03_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 23,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 70,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 91,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 160,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 176,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 217,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 230,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 277,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C18_N17_S160_s05_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 68,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 98,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 192,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 239,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C12_N37_S200_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 70,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 156,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 201,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 284,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C6_N37_S246_s05_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 48,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 80,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 138,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 187,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 264,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C12_N27_S165_s01_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 67,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 153,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 207,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 279,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C2_N21_S2_s01_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 32,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 157,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 182,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 285,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C1_N42_S84_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 31,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 169,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 200,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 294,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C17_N74_S256_s01_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 43,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 101,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 188,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 236,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C13_N21_S136_s01_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 72,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 146,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 215,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 266,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C1_N41_S94_s01_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 18,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 81,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 96,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 149,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 164,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 220,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 243,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 293,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C6_N28_S82_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 27,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 78,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 98,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 231,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 297,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C9_N34_S349_s04_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 55,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 125,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 198,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 278,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C14_N30_S333_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 53,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 95,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 177,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 245,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 256,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 277,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C13_N32_S233_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 51,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 110,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 178,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 261,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C13_N26_S233_s01_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 62,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 119,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 190,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 274,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C13_N40_S200_s04_T4",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 55,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 130,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 192,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 265,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C8_N48_S319_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 49,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 135,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 184,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 210,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 268,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C13_N35_S233_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 57,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 124,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 206,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 276,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C1_N06_S336_s04_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 21,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 146,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 172,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 283,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C12_N28_S184_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 45,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 147,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 197,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 262,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C18_N48_S162_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 69,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 100,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 186,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 234,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C4_N38_S21_s05_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 38,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 62,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 99,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 139,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 184,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 208,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 245,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 278,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C1_N33_S83_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 40,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 171,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 195,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 288,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C8_N46_S319_s04_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 61,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 166,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 212,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 247,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 292,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C17_N74_S262_s01_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 44,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 106,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 186,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 240,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C2_N27_S13_s05_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 63,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 133,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 172,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 281,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C6_N10_S251_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 44,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 110,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 177,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 201,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 220,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 250,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C9_N23_S34_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 39,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 143,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 184,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 266,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C18_N33_S183_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 61,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 119,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 166,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 218,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 228,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 242,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 249,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 260,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C18_N21_S150_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 59,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 137,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 191,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 265,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C12_N13_S236_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 52,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 119,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 183,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 261,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C6_N03_S245_s01_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 45,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 132,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 184,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 278,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C9_N34_S35_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 40,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 157,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 187,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 287,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C4_N33_S22_s02_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 20,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 69,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 107,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 136,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 174,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 200,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 230,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 266,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C18_N19_S199_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 60,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 142,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 223,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 230,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 254,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C17_N06_S134_s05_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 63,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 100,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 206,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 264,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C1_N44_S84_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 24,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 145,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 161,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 291,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C17_N73_S256_s01_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 42,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 98,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 183,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 233,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C13_N26_S184_s01_T4",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 49,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 135,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 193,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 277,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C3_N28_S19_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 46,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 102,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 126,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 173,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 206,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 280,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C3_N44_S279_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 43,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 131,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 176,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 222,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 273,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C4_N38_S21_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 47,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 88,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 116,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 150,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 203,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 242,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 270,
+    "question": "When does the hand fourth make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 294,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C18_N11_S160_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 60,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 97,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 195,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 224,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C12_N39_S346_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 47,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 146,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 198,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 255,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C13_N44_S238_s02_T4",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 57,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 126,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 193,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 255,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C9_N18_S33_s04_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 40,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 161,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 207,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 282,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C7_N41_S57_s04_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 38,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 148,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 179,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 258,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C9_N35_S349_s04_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 47,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 109,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 181,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 263,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C1_N35_S83_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 35,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 146,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 173,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 276,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C17_N72_S256_s01_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 39,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 99,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 178,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 225,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C9_N42_S33_s05_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 35,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 170,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 205,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 281,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C3_N23_S353_s03_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 46,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 122,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 180,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 265,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C3_N03_S275_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 43,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 126,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 172,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 200,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 259,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C9_N18_S33_s04_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 39,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 147,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 201,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 288,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C11_N50_S193_s02_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 56,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 115,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 178,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 275,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C13_N32_S184_s02_T4",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 50,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 116,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 191,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 257,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C9_N32_S303_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 52,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 132,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 191,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 263,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C17_N22_S194_s01_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 44,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 142,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 183,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 270,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C9_N39_S35_s05_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 49,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 157,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 185,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 294,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C14_N30_S333_s01_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 57,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 98,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 188,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 242,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C6_N20_S245_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 46,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 116,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 163,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 199,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 221,
+    "question": "When does the hand third make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 266,
+    "question": "When does the hand third release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C17_N73_S266_s01_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 39,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 85,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 166,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 212,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C12_N28_S235_s01_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 62,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 142,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 208,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 280,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H3_C6_N19_S251_s05_T3",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 91,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 125,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 183,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 254,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H2_C17_N10_S341_s01_T1",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 60,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 120,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 199,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 268,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H4_C18_N48_S364_s03_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "untouch",
+    "frame": 107,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 209,
+    "question": "When does the hand second release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 218,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 237,
+    "question": "When does the hand third release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 243,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 264,
+    "question": "When does the hand fourth release the object?"
+   }
+  ]
+ },
+ {
+  "video_id": "H1_C9_N39_S35_s05_T2",
+  "fps": 15,
+  "num_frames": 300,
+  "width": 854,
+  "height": 480,
+  "events": [
+   {
+    "type": "touch",
+    "frame": 49,
+    "question": "When does the hand first make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 156,
+    "question": "When does the hand first release the object?"
+   },
+   {
+    "type": "touch",
+    "frame": 195,
+    "question": "When does the hand second make contact with the object?"
+   },
+   {
+    "type": "untouch",
+    "frame": 274,
+    "question": "When does the hand second release the object?"
+   }
+  ]
+ }
+]

@@ -1,0 +1,5 @@
+### MIX1_q750_adap1200 OOD start 21:21 ###
+### MIX1_q750_adap1200 OOD: [eval:ood:finediving        ] mAP@(0, 1, 2, 4, 8, 16)=[0.27, 1.79, 5.05, 15.78, 31.37, 38.35] ndet=928 ngt=1063 ###
+### MIX2_q1200_adap750 OOD start 21:52 ###
+### MIX2_q1200_adap750 OOD: [eval:ood:finediving        ] mAP@(0, 1, 2, 4, 8, 16)=[0.21, 2.85, 7.69, 27.1, 48.03, 66.99] ndet=1005 ngt=1063 ###
+=== BOTH MIX OOD DONE ===

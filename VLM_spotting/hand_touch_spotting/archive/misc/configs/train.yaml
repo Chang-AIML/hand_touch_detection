@@ -1,0 +1,56 @@
+# Multi-event detection — trainable: V-JEPA adaptor + shared [LOC] (generic per-type query).
+task_mode: detection     # 'detection' (multi-event, generic query, NMS peaks) | 'single' (ordinal)
+det_dilate: 2            # +/- frames around each event frame counted positive
+det_pos_weight: 15.0     # BCE positive weight (rare-positive imbalance)
+nms_min_gap: 15          # min frames between detected peaks (1s)
+nms_rel_thresh: 0.5      # keep peaks >= this fraction of the video's max score
+sim_layer: 12            # from Phase 0 (self-proto sharp FWHM=1, moderate anisotropy)
+use_anchor: true         # ViT anchors -> video-aware query (REQUIRED)
+anchor_max_side: 252     # cheap ViT anchors (~49 tok/anchor)
+align_target: adaptor    # LOC aligns to adaptor OUTPUT (direct gradient) — KEY finding
+
+# data
+feat_dir: /home/chang_noroot/data2/huyanh/Workspace/VLM_spotting/vjepa/feat_interleave
+fps: 15
+crop_secs: 10            # random temporal crop (10s=150f) to break event-position prior; 0=full
+
+# adaptor
+adaptor_hidden: 2048
+adaptor_layers: 2
+
+# similarity readout head (LISA-style projection; raw 4096-d cosine was un-learnable)
+sim_head: false
+sim_proj: 256
+
+# query-conditioned FiLM on the adaptor output (de-entangles motion; NOT a decode head)
+film: false
+film_hidden: 1024
+
+# optimisation
+batch_size: 24           # per-GPU; shorter cropped seqs (~650 tok) -> eff 48
+grad_accum: 1
+epochs: 25
+lr_adaptor: 1.0e-3
+lr_loc: 3.0e-3
+weight_decay: 0.01
+warmup_frac: 0.05
+grad_checkpoint: true     # needed for big batch; L12 keeps compute low
+
+# loss
+loss_mode: dist           # 'ce' (softmax-CE) | 'dist' (distance-weighted contrastive: far peaks penalised)
+dist_sigma: 4.0           # Gaussian soft-positive width (frames)
+dist_far_margin: 5.0      # far frames must sit >= far_margin*(|t-gt|/N) below the peak (scaled units)
+dist_far_weight: 1.0      # weight of the distance-weighted far-suppression term
+temp: 0.1
+neighbor_k: 4
+lambda_mae: 0.5           # soft-argmax MAE auxiliary weight
+label_smooth_frames: 1    # Gaussian soft target sigma (frames); 0 = hard one-hot
+# event presence/absence (full-video spotting): negative (event-absent) windows
+p_neg: 0.4                # fraction of training crops that exclude the event
+lambda_neg: 2.0           # weight of the (scale-free) reject loss on negative windows
+rej_peak_mult: 3.0        # negatives: keep peak softmax prob below 3x uniform (relu(pmax - 3/W))
+
+# eval / logging
+eval_every: 1            # epochs
+tolerances: [0, 1, 2, 4]
+wandb_project: vlm_touch_spotting

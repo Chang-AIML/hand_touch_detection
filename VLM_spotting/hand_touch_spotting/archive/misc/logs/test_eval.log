@@ -1,0 +1,4 @@
+=== comp_notext on TEST (424 vids) ===
+  mAP@0/1/2 = [np.float64(5.55), np.float64(38.34), np.float64(64.26)]  | ndet=1943 ngt=1945
+=== sft_lora_v2 on TEST (424 vids) ===
+  mAP@0/1/2 = [np.float64(7.77), np.float64(45.53), np.float64(72.94)]  | ndet=1980 ngt=1945

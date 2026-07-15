@@ -1,0 +1,10 @@
+### REVERSAL validate (3 windows) 18:36 ###
+### validate OK -> full 60-window run ###
+### REVERSAL DONE ###
+================ RESULTS ================
+forward sanity: start localizes @66.8f err, end @127.3f err, start<end in 37% of windows  (N=60)
+REVERSED start-query -> SWAP(=near rev_e, direction) in 87%  (N=60)
+REVERSED end-query   -> SWAP(=near rev_s, direction) in 42%  (N=60)
+reversed abs-pos: start-query mean pos=0.23, end-query mean pos=0.24 (0=clip start,1=end)
+READ: swap>>50% -> direction encoded (temporal). swap~=50% or abs-pos fixed by query -> saliency/position only.
+rows -> outputs/local_eval/reversal_rows.json

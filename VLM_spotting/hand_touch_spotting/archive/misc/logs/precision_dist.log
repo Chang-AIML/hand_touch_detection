@@ -1,0 +1,17 @@
+[precision-dist] TEST vids=424  model=SFT-LoRA (strongest)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 50231.19it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   7%|▋         | 53/750 [00:00<00:01, 529.91it/s]Loading weights:  14%|█▍        | 106/750 [00:00<00:01, 500.03it/s]Loading weights:  23%|██▎       | 169/750 [00:00<00:01, 548.98it/s]Loading weights:  30%|███       | 225/750 [00:00<00:01, 490.15it/s]Loading weights:  37%|███▋      | 278/750 [00:00<00:00, 497.98it/s]Loading weights:  45%|████▍     | 335/750 [00:00<00:00, 513.71it/s]Loading weights:  54%|█████▎    | 403/750 [00:00<00:00, 564.56it/s]Loading weights: 100%|██████████| 750/750 [00:00<00:00, 912.57it/s]
+    0/848
+    120/848
+    240/848
+    360/848
+    480/848
+    600/848
+    720/848
+    840/848
+  ndet=1980 ngt=1945 | AP@0/1/2 = [np.float64(7.77), np.float64(45.53), np.float64(72.94)]
+  @0: precision(matched)=23.5%  recall(coverage)=24.7%  AP=7.8  [check: rec*prec/100=5.8]
+  @1: precision(matched)=60.1%  recall(coverage)=63.0%  AP=45.5  [check: rec*prec/100=37.9]
+  @2: precision(matched)=79.0%  recall(coverage)=83.0%  AP=72.9  [check: rec*prec/100=65.6]
+[plot] /data/chang/data2/huyanh/Workspace/VLM_spotting/hand_touch_spotting/plot/precision_dist_test.png

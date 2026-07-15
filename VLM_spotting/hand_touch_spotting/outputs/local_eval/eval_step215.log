@@ -1,0 +1,37 @@
+[data] world=1 train windows=11604 in-val=300 ood-val=60
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  3.13it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  2.86it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  2.60it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.96it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.89it/s]
+[init] loaded base fc outputs/local_eval/bal_a600_ckpt.pt (missing 0 unexpected 0)
+/home/chang/miniconda3/lib/python3.13/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[cfg] trainable=27.55M window=600 bs=1 accum=8 eff_batch=8 balance=2500/ds
+[eval_only] evaluating connector outputs/local_eval/bal_a600_ckpt.pt @ train-step 215 (fsdp=0, world=1)
+/home/chang/miniconda3/lib/python3.13/contextlib.py:109: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  [eval in] 20/300 win  6.55s/win
+  [eval in] 40/300 win  6.51s/win
+  [eval in] 60/300 win  6.57s/win
+  [eval in] 80/300 win  6.78s/win
+  [eval in] 100/300 win  6.84s/win
+  [eval in] 120/300 win  6.77s/win
+  [eval in] 140/300 win  6.74s/win
+  [eval in] 160/300 win  6.77s/win
+  [eval in] 180/300 win  6.69s/win
+  [eval in] 200/300 win  6.75s/win
+  [eval in] 220/300 win  6.78s/win
+  [eval in] 240/300 win  6.81s/win
+  [eval in] 260/300 win  6.84s/win
+  [eval in] 280/300 win  6.85s/win
+  [eval in] 300/300 win  6.81s/win
+[eval:in:_all              ] mAP@(0, 2, 4, 8, 15)=[0.53, 1.58, 2.14, 3.6, 5.39] ndet=282 ngt=480
+[eval:in:finegym           ] mAP@(0, 2, 4, 8, 15)=[0.3, 0.3, 0.3, 1.49, 3.47] ndet=64 ngt=87
+[eval:in:fs_perf           ] mAP@(0, 2, 4, 8, 15)=[0.0, 0.0, 0.0, 0.0, 0.0] ndet=5 ngt=49
+[eval:in:soccernet_ball    ] mAP@(0, 2, 4, 8, 15)=[0.0, 0.0, 0.0, 0.0, 0.0] ndet=0 ngt=106
+[eval:in:tennis            ] mAP@(0, 2, 4, 8, 15)=[1.67, 2.68, 3.02, 7.44, 12.99] ndet=68 ngt=102
+[eval:in:touchmoment_hoi4d ] mAP@(0, 2, 4, 8, 15)=[6.14, 43.92, 65.48, 75.48, 75.59] ndet=145 ngt=136
+  [ckpt] best in-mAP@2=1.58 @step215
+  [eval ood] 20/60 win  27.95s/win
+  [eval ood] 40/60 win  27.33s/win
+  [eval ood] 60/60 win  27.10s/win
+[eval:ood:_all              ] mAP@(0, 2, 4, 8, 15)=[0.0, 0.83, 8.31, 13.83, 27.78] ndet=60 ngt=60
+[eval:ood:finediving        ] mAP@(0, 2, 4, 8, 15)=[0.0, 0.83, 8.31, 13.83, 27.78] ndet=60 ngt=60

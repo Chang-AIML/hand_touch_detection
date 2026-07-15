@@ -1,0 +1,43 @@
+[data] world=1 train windows=87871 in-val=120 ood-val=30
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  2.34it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  2.31it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  2.22it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.59it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.47it/s]
+[init] loaded base fc outputs/local_eval/conn_MIX3_qf1200_out750.pt (missing 0 unexpected 0)
+[infonce] ON lambda=0.2 temp=0.07 bank=512; trainable=4.99M (Q-Former q,in_ln,a3 + 2 proj heads), out.1/LLM/V-JEPA frozen
+/home/chang/miniconda3/lib/python3.13/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[cfg] trainable=4.99M window=64 bs=1 accum=2 eff_batch=2 balance=0/ds
+wandb: Tracking run with wandb version 0.28.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/chang/Project/VLM_spotting/hand_touch_spotting/tests/golden/runs/mixed/wandb/offline-run-20260712_130950-1bu1briw
+wandb: View this run in the terminal with `wandb leet`
+[eval @ step 0 (init / before mixing)]
+[data] synchronous frame load
+/home/chang/miniconda3/lib/python3.13/contextlib.py:109: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+  ep0 step5 loss 1.5430 (avg 1.4327) gnorm 15.54 | nce 3.856 eff_rank 22.13 mean_cos 0.350 | 0.82 samp/s eff_batch=2
+  ep0 step10 loss 3.2061 (avg 1.4981) gnorm 19.05 | nce 4.801 eff_rank 41.93 mean_cos 0.303 | 0.84 samp/s eff_batch=2
+wandb: 
+wandb: Run history:
+wandb:          train/epoch ▁▁▁▁▁▁▁▁▁▁
+wandb: train/event_eff_rank ▁▂▃▃▄▄▅▆▇█
+wandb: train/event_mean_cos █▄▃▂▂▂▁▁▁▁
+wandb:      train/grad_norm ▅▄▅▄▆▁█▆▆▇
+wandb:           train/loss ▄▃▆▄▄▁▅▄▄█
+wandb:       train/loss_avg ▃▁█▇▇▄▅▅▅█
+wandb:       train/loss_nce ▇▇▇▇▆▁██▆▇
+wandb:             train/lr ▁▂▃▃▄▅▆▆▇█
+wandb: 
+wandb: Run summary:
+wandb:          train/epoch 0
+wandb: train/event_eff_rank 41.93317
+wandb: train/event_mean_cos 0.30295
+wandb:      train/grad_norm 19.05219
+wandb:           train/loss 3.20614
+wandb:       train/loss_avg 1.49807
+wandb:       train/loss_nce 4.80105
+wandb:             train/lr 2e-05
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/chang/Project/VLM_spotting/hand_touch_spotting/tests/golden/runs/mixed/wandb/offline-run-20260712_130950-1bu1briw
+wandb: Find logs at: ./tests/golden/runs/mixed/wandb/offline-run-20260712_130950-1bu1briw/logs
+[done] nce_smoke best in-domain mAP@2 -1.00
+[W712 13:10:15.504448467 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

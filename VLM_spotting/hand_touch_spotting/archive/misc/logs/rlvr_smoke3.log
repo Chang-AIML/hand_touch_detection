@@ -1,0 +1,8 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 9636.54it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   8%|▊         | 58/750 [00:00<00:01, 567.44it/s]Loading weights:  15%|█▌        | 115/750 [00:00<00:01, 512.64it/s]Loading weights:  23%|██▎       | 171/750 [00:00<00:01, 526.15it/s]Loading weights:  30%|██▉       | 224/750 [00:00<00:01, 503.60it/s]Loading weights:  37%|███▋      | 275/750 [00:00<00:00, 490.16it/s]Loading weights:  44%|████▍     | 330/750 [00:00<00:00, 509.26it/s]Loading weights:  52%|█████▏    | 390/750 [00:00<00:00, 531.16it/s]Loading weights: 100%|██████████| 750/750 [00:00<00:00, 909.50it/s]
+[cfg] RLVR reward=tiered K=6 temp=1.0 lr=1e-05 | init_fc=best.pt init_lora=no | trainable=71.2M
+[init] mAP@0/1/2=[np.float64(10.91), np.float64(46.21), np.float64(70.24)]
+[ep0 step3/3] reward~0.183 | mAP@0/1/2=[np.float64(10.45), np.float64(47.19), np.float64(70.74)] | 0.03 step/s
+[ep0 END] reward~0.183 | mAP@0/1/2=[np.float64(10.45), np.float64(47.19), np.float64(70.74)] | 0.03 step/s
+[done] rlvr_smoke3 best mAP@2 70.74

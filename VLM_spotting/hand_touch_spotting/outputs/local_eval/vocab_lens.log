@@ -1,0 +1,27 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  2.40it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  2.35it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  2.26it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.68it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.53it/s]
+/home/chang/miniconda3/lib/python3.13/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/chang/miniconda3/lib/python3.13/contextlib.py:109: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/home/chang/Project/VLM_spotting/hand_touch_spotting/outputs/local_eval/vocab_lens.py:37: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(top.values[0]), [(tok.decode([int(i)]).strip(), round(float(c),3)) for c,i in zip(top.values,top.indices)]
+
+================ VOCABULARY LENS (centered cosine, s750) ================
+frame token  -> nearest word:  max-cos  mean=0.153  median=0.155  range=[0.145,0.159]  (n=18)
+random vector-> nearest word:  max-cos  mean=0.132  (chance FLOOR)
+Qwen-ViT anchor-> nearest word:max-cos  mean=0.080  (Qwen's own non-word input)
+real word    -> nearest OTHER: max-cos  mean=0.230  (typical inter-word, UPPER ref)
+
+nearest words for a few frame tokens (word, cos):
+   [('﹅', 0.158), ('䨺', 0.155), ('Ⰲ', 0.147)]
+   [('궨', 0.147), ('﹅', 0.147), ('�', 0.146)]
+   [('﹅', 0.157), ('䨺', 0.156), ('Ⰲ', 0.147)]
+   [('﹅', 0.157), ('䨺', 0.152), ('🖶', 0.144)]
+   [('䨺', 0.148), ('﹅', 0.145), ('�', 0.145)]
+   [('﹅', 0.156), ('䨺', 0.153), ('㎰', 0.145)]
+   [('﹅', 0.157), ('международн', 0.148), ('㏂', 0.146)]
+   [('﹅', 0.154), ('международн', 0.151), ('궨', 0.147)]
+
+READ: frame≈word-ref & semantic words -> CANDIDATE-1 (frame IS a word).
+      frame≈random-floor (<< word-ref) -> CANDIDATE-2/3 (off-manifold retrieval KEY, no word).

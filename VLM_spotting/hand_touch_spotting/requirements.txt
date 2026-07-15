@@ -1,0 +1,11 @@
+# Core (tested versions)
+torch==2.10.0            # +cu128, CUDA 12.8
+transformers==5.12.1     # needs Qwen3VLForConditionalGeneration
+numpy==2.4.4
+Pillow
+matplotlib
+# Models (NOT pip):
+#  - Qwen/Qwen3-VL-8B-Instruct  (HF auto-download)
+#  - V-JEPA 2.1 ViT-B: local repo `repos/vjepa2` + ckpt vjepa2_1_vitb_dist_vitG_384.pt
+#    (set env VJEPA_REPO / VJEPA_CKPT)
+# Eval deps: hand_touch_detection/common/score.py + methods/spot_head/eval_nms.py

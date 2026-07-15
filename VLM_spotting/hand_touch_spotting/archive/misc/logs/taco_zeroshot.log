@@ -1,0 +1,16 @@
+[zeroshot] TACO test=71 vids | HOI4D ref=71 vids
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 9570.57it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   1%|          | 5/750 [00:00<00:16, 44.95it/s]Loading weights:   7%|▋         | 49/750 [00:00<00:02, 264.80it/s]Loading weights:  12%|█▏        | 93/750 [00:00<00:01, 337.89it/s]Loading weights:  20%|█▉        | 148/750 [00:00<00:01, 414.48it/s]Loading weights:  26%|██▌       | 193/750 [00:00<00:01, 417.77it/s]Loading weights:  31%|███▏      | 236/750 [00:00<00:01, 417.30it/s]Loading weights:  37%|███▋      | 280/750 [00:00<00:01, 419.49it/s]Loading weights:  44%|████▍     | 333/750 [00:00<00:00, 445.67it/s]Loading weights:  52%|█████▏    | 390/750 [00:00<00:00, 481.73it/s]Loading weights: 100%|██████████| 750/750 [00:01<00:00, 733.66it/s]
+
+=== SFT-LoRA ===
+  HOI4D  (in-domain ref) mAP@0/1/2 = [np.float64(7.68), np.float64(44.42), np.float64(73.05)]  ndet=339 ngt=320
+  TACO   (ZERO-SHOT)     mAP@0/1/2 = [np.float64(1.28), np.float64(6.08), np.float64(14.99)]  ndet=236 ngt=196
+  -> TACO/HOI4D retention @2 = 21%
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 10958.34it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   0%|          | 1/750 [00:00<01:48,  6.87it/s]Loading weights:   7%|▋         | 50/750 [00:00<00:02, 245.32it/s]Loading weights:  14%|█▎        | 103/750 [00:00<00:01, 358.37it/s]Loading weights:  22%|██▏       | 164/750 [00:00<00:01, 449.30it/s]Loading weights:  28%|██▊       | 212/750 [00:00<00:01, 452.43it/s]Loading weights:  35%|███▍      | 259/750 [00:00<00:01, 444.61it/s]Loading weights:  42%|████▏     | 312/750 [00:00<00:00, 469.25it/s]Loading weights:  50%|█████     | 378/750 [00:00<00:00, 521.99it/s]Loading weights: 100%|██████████| 750/750 [00:00<00:00, 773.98it/s]
+
+=== M1 frozen-compress ===
+  HOI4D  (in-domain ref) mAP@0/1/2 = [np.float64(8.17), np.float64(38.01), np.float64(62.86)]  ndet=322 ngt=320
+  TACO   (ZERO-SHOT)     mAP@0/1/2 = [np.float64(0.51), np.float64(9.84), np.float64(20.28)]  ndet=250 ngt=196
+  -> TACO/HOI4D retention @2 = 32%

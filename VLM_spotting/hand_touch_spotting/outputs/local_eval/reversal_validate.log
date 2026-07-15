@@ -1,0 +1,17 @@
+[data] 3 paired start/end finegym windows (gap>=40)
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  2.28it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  2.25it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  2.20it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.64it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.47it/s]
+/home/chang/miniconda3/lib/python3.13/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/chang/miniconda3/lib/python3.13/contextlib.py:109: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  1/3 UB_fligh_same_bar      fs=199 fe=242 | fwd s->199 e->199 | rev s->83 e->216 (rev_s=400 rev_e=357)
+
+================ RESULTS ================
+forward sanity: start localizes @43.7f err, end @129.0f err, start<end in 33% of windows  (N=3)
+REVERSED start-query -> SWAP(=near rev_e, direction) in 100%  (N=3)
+REVERSED end-query   -> SWAP(=near rev_s, direction) in 33%  (N=3)
+reversed abs-pos: start-query mean pos=0.10, end-query mean pos=0.20 (0=clip start,1=end)
+READ: swap>>50% -> direction encoded (temporal). swap~=50% or abs-pos fixed by query -> saliency/position only.
+rows -> outputs/local_eval/reversal_rows.json
+[W711 18:37:58.487795006 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

@@ -1,0 +1,190 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 9152.87it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   7%|▋         | 54/750 [00:00<00:01, 530.33it/s]Loading weights:  14%|█▍        | 108/750 [00:00<00:01, 516.08it/s]Loading weights:  22%|██▏       | 168/750 [00:00<00:01, 548.81it/s]Loading weights:  30%|██▉       | 223/750 [00:00<00:01, 508.27it/s]Loading weights:  37%|███▋      | 275/750 [00:00<00:00, 497.74it/s]Loading weights:  45%|████▍     | 334/750 [00:00<00:00, 519.16it/s]Loading weights:  53%|█████▎    | 394/750 [00:00<00:00, 544.05it/s]Loading weights: 100%|██████████| 750/750 [00:00<00:00, 919.96it/s]
+[cfg] mode=compress stain=0 n_q=8 use_text=1 | trainable=35.03M | train 4576 | bs=2
+[ep-1 init] mAP@0/1/2=[np.float64(0.01), np.float64(0.04), np.float64(0.09)] ndet=277 ngt=647
+  ep0 step50/2288 loss 2.2428 | 2.1 samp/s
+  ep0 step100/2288 loss 1.7740 | 2.1 samp/s
+  ep0 step150/2288 loss 1.5920 | 2.1 samp/s
+  ep0 step200/2288 loss 1.4907 | 2.1 samp/s
+  ep0 step250/2288 loss 1.4307 | 2.1 samp/s
+  ep0 step300/2288 loss 1.3802 | 2.1 samp/s
+  ep0 step350/2288 loss 1.3425 | 2.1 samp/s
+  ep0 step400/2288 loss 1.3145 | 2.1 samp/s
+  ep0 step450/2288 loss 1.2902 | 2.1 samp/s
+  ep0 step500/2288 loss 1.2719 | 2.1 samp/s
+  ep0 step550/2288 loss 1.2583 | 2.1 samp/s
+  ep0 step600/2288 loss 1.2450 | 2.1 samp/s
+  ep0 step650/2288 loss 1.2339 | 2.1 samp/s
+  ep0 step700/2288 loss 1.2245 | 2.1 samp/s
+  ep0 step750/2288 loss 1.2145 | 2.1 samp/s
+  ep0 step800/2288 loss 1.2028 | 2.1 samp/s
+  ep0 step850/2288 loss 1.1956 | 2.1 samp/s
+  ep0 step900/2288 loss 1.1864 | 2.1 samp/s
+  ep0 step950/2288 loss 1.1819 | 2.1 samp/s
+  ep0 step1000/2288 loss 1.1771 | 2.1 samp/s
+  ep0 step1050/2288 loss 1.1720 | 2.1 samp/s
+  ep0 step1100/2288 loss 1.1676 | 2.1 samp/s
+  ep0 step1150/2288 loss 1.1627 | 2.1 samp/s
+  ep0 step1200/2288 loss 1.1579 | 2.1 samp/s
+  ep0 step1250/2288 loss 1.1530 | 2.1 samp/s
+  ep0 step1300/2288 loss 1.1504 | 2.1 samp/s
+  ep0 step1350/2288 loss 1.1466 | 2.1 samp/s
+  ep0 step1400/2288 loss 1.1424 | 2.1 samp/s
+  ep0 step1450/2288 loss 1.1380 | 2.1 samp/s
+  ep0 step1500/2288 loss 1.1354 | 2.1 samp/s
+  ep0 step1550/2288 loss 1.1317 | 2.1 samp/s
+  ep0 step1600/2288 loss 1.1300 | 2.1 samp/s
+  ep0 step1650/2288 loss 1.1269 | 2.1 samp/s
+  ep0 step1700/2288 loss 1.1239 | 2.1 samp/s
+  ep0 step1750/2288 loss 1.1212 | 2.1 samp/s
+  ep0 step1800/2288 loss 1.1198 | 2.1 samp/s
+  ep0 step1850/2288 loss 1.1178 | 2.1 samp/s
+  ep0 step1900/2288 loss 1.1153 | 2.1 samp/s
+  ep0 step1950/2288 loss 1.1128 | 2.1 samp/s
+  ep0 step2000/2288 loss 1.1100 | 2.1 samp/s
+  ep0 step2050/2288 loss 1.1076 | 2.1 samp/s
+  ep0 step2100/2288 loss 1.1050 | 2.1 samp/s
+  ep0 step2150/2288 loss 1.1035 | 2.1 samp/s
+  ep0 step2200/2288 loss 1.1011 | 2.1 samp/s
+  ep0 step2250/2288 loss 1.0989 | 2.1 samp/s
+[ep0] loss 1.0970 | mAP@0/1/2=[np.float64(0.06), np.float64(0.5), np.float64(1.23)] ndet=601 ngt=647 | 2.0 samp/s
+  ep1 step50/2288 loss 1.0301 | 2.1 samp/s
+  ep1 step100/2288 loss 1.0225 | 2.2 samp/s
+  ep1 step150/2288 loss 1.0018 | 2.2 samp/s
+  ep1 step200/2288 loss 0.9995 | 2.2 samp/s
+  ep1 step250/2288 loss 0.9981 | 2.2 samp/s
+  ep1 step300/2288 loss 0.9998 | 2.2 samp/s
+  ep1 step350/2288 loss 0.9968 | 2.2 samp/s
+  ep1 step400/2288 loss 0.9992 | 2.2 samp/s
+  ep1 step450/2288 loss 0.9965 | 2.2 samp/s
+  ep1 step500/2288 loss 0.9933 | 2.2 samp/s
+  ep1 step550/2288 loss 0.9923 | 2.2 samp/s
+  ep1 step600/2288 loss 0.9894 | 2.2 samp/s
+  ep1 step650/2288 loss 0.9868 | 2.2 samp/s
+  ep1 step700/2288 loss 0.9898 | 2.2 samp/s
+  ep1 step750/2288 loss 0.9877 | 2.2 samp/s
+  ep1 step800/2288 loss 0.9876 | 2.2 samp/s
+  ep1 step850/2288 loss 0.9875 | 2.2 samp/s
+  ep1 step900/2288 loss 0.9842 | 2.2 samp/s
+  ep1 step950/2288 loss 0.9826 | 2.2 samp/s
+  ep1 step1000/2288 loss 0.9810 | 2.2 samp/s
+  ep1 step1050/2288 loss 0.9829 | 2.2 samp/s
+  ep1 step1100/2288 loss 0.9818 | 2.2 samp/s
+  ep1 step1150/2288 loss 0.9815 | 2.2 samp/s
+  ep1 step1200/2288 loss 0.9789 | 2.2 samp/s
+  ep1 step1250/2288 loss 0.9786 | 2.2 samp/s
+  ep1 step1300/2288 loss 0.9771 | 2.2 samp/s
+  ep1 step1350/2288 loss 0.9755 | 2.2 samp/s
+  ep1 step1400/2288 loss 0.9734 | 2.2 samp/s
+  ep1 step1450/2288 loss 0.9724 | 2.2 samp/s
+  ep1 step1500/2288 loss 0.9713 | 2.2 samp/s
+  ep1 step1550/2288 loss 0.9706 | 2.2 samp/s
+  ep1 step1600/2288 loss 0.9698 | 2.2 samp/s
+  ep1 step1650/2288 loss 0.9689 | 2.2 samp/s
+  ep1 step1700/2288 loss 0.9680 | 2.2 samp/s
+  ep1 step1750/2288 loss 0.9666 | 2.2 samp/s
+  ep1 step1800/2288 loss 0.9657 | 2.2 samp/s
+  ep1 step1850/2288 loss 0.9644 | 2.2 samp/s
+  ep1 step1900/2288 loss 0.9634 | 2.2 samp/s
+  ep1 step1950/2288 loss 0.9624 | 2.2 samp/s
+  ep1 step2000/2288 loss 0.9624 | 2.2 samp/s
+  ep1 step2050/2288 loss 0.9610 | 2.2 samp/s
+  ep1 step2100/2288 loss 0.9601 | 2.2 samp/s
+  ep1 step2150/2288 loss 0.9597 | 2.2 samp/s
+  ep1 step2200/2288 loss 0.9589 | 2.2 samp/s
+  ep1 step2250/2288 loss 0.9583 | 2.2 samp/s
+[ep1] loss 0.9572 | mAP@0/1/2=[np.float64(0.03), np.float64(0.72), np.float64(1.81)] ndet=627 ngt=647 | 2.1 samp/s
+  ep2 step50/2288 loss 0.9340 | 2.2 samp/s
+  ep2 step100/2288 loss 0.9149 | 2.2 samp/s
+  ep2 step150/2288 loss 0.9272 | 2.2 samp/s
+  ep2 step200/2288 loss 0.9287 | 2.2 samp/s
+  ep2 step250/2288 loss 0.9243 | 2.2 samp/s
+  ep2 step300/2288 loss 0.9231 | 2.2 samp/s
+  ep2 step350/2288 loss 0.9236 | 2.2 samp/s
+  ep2 step400/2288 loss 0.9184 | 2.2 samp/s
+  ep2 step450/2288 loss 0.9200 | 2.2 samp/s
+  ep2 step500/2288 loss 0.9209 | 2.2 samp/s
+  ep2 step550/2288 loss 0.9194 | 2.2 samp/s
+  ep2 step600/2288 loss 0.9199 | 2.2 samp/s
+  ep2 step650/2288 loss 0.9185 | 2.2 samp/s
+  ep2 step700/2288 loss 0.9176 | 2.2 samp/s
+  ep2 step750/2288 loss 0.9170 | 2.2 samp/s
+  ep2 step800/2288 loss 0.9187 | 2.2 samp/s
+  ep2 step850/2288 loss 0.9167 | 2.2 samp/s
+  ep2 step900/2288 loss 0.9180 | 2.2 samp/s
+  ep2 step950/2288 loss 0.9194 | 2.2 samp/s
+  ep2 step1000/2288 loss 0.9198 | 2.2 samp/s
+  ep2 step1050/2288 loss 0.9189 | 2.2 samp/s
+  ep2 step1100/2288 loss 0.9203 | 2.2 samp/s
+  ep2 step1150/2288 loss 0.9191 | 2.2 samp/s
+  ep2 step1200/2288 loss 0.9178 | 2.2 samp/s
+  ep2 step1250/2288 loss 0.9171 | 2.2 samp/s
+  ep2 step1300/2288 loss 0.9158 | 2.2 samp/s
+  ep2 step1350/2288 loss 0.9158 | 2.2 samp/s
+  ep2 step1400/2288 loss 0.9141 | 2.2 samp/s
+  ep2 step1450/2288 loss 0.9114 | 2.2 samp/s
+  ep2 step1500/2288 loss 0.9119 | 2.2 samp/s
+  ep2 step1550/2288 loss 0.9106 | 2.2 samp/s
+  ep2 step1600/2288 loss 0.9095 | 2.2 samp/s
+  ep2 step1650/2288 loss 0.9077 | 2.2 samp/s
+  ep2 step1700/2288 loss 0.9065 | 2.2 samp/s
+  ep2 step1750/2288 loss 0.9048 | 2.2 samp/s
+  ep2 step1800/2288 loss 0.9034 | 2.2 samp/s
+  ep2 step1850/2288 loss 0.9014 | 2.2 samp/s
+  ep2 step1900/2288 loss 0.9003 | 2.2 samp/s
+  ep2 step1950/2288 loss 0.8979 | 2.2 samp/s
+  ep2 step2000/2288 loss 0.8961 | 2.2 samp/s
+  ep2 step2050/2288 loss 0.8946 | 2.2 samp/s
+  ep2 step2100/2288 loss 0.8927 | 2.2 samp/s
+  ep2 step2150/2288 loss 0.8915 | 2.2 samp/s
+  ep2 step2200/2288 loss 0.8900 | 2.2 samp/s
+  ep2 step2250/2288 loss 0.8892 | 2.2 samp/s
+[ep2] loss 0.8873 | mAP@0/1/2=[np.float64(0.56), np.float64(3.26), np.float64(8.55)] ndet=624 ngt=647 | 2.1 samp/s
+  ep3 step50/2288 loss 0.7868 | 2.2 samp/s
+  ep3 step100/2288 loss 0.7882 | 2.2 samp/s
+  ep3 step150/2288 loss 0.7909 | 2.2 samp/s
+  ep3 step200/2288 loss 0.8011 | 2.2 samp/s
+  ep3 step250/2288 loss 0.7955 | 2.2 samp/s
+  ep3 step300/2288 loss 0.7977 | 2.2 samp/s
+  ep3 step350/2288 loss 0.8013 | 2.2 samp/s
+  ep3 step400/2288 loss 0.8041 | 2.2 samp/s
+  ep3 step450/2288 loss 0.7993 | 2.2 samp/s
+  ep3 step500/2288 loss 0.7971 | 2.2 samp/s
+  ep3 step550/2288 loss 0.7947 | 2.2 samp/s
+  ep3 step600/2288 loss 0.7934 | 2.2 samp/s
+  ep3 step650/2288 loss 0.7929 | 2.2 samp/s
+  ep3 step700/2288 loss 0.7918 | 2.2 samp/s
+  ep3 step750/2288 loss 0.7957 | 2.2 samp/s
+  ep3 step800/2288 loss 0.7947 | 2.2 samp/s
+  ep3 step850/2288 loss 0.7954 | 2.2 samp/s
+  ep3 step900/2288 loss 0.7958 | 2.2 samp/s
+  ep3 step950/2288 loss 0.7935 | 2.2 samp/s
+  ep3 step1000/2288 loss 0.7908 | 2.2 samp/s
+  ep3 step1050/2288 loss 0.7881 | 2.2 samp/s
+  ep3 step1100/2288 loss 0.7849 | 2.2 samp/s
+  ep3 step1150/2288 loss 0.7846 | 2.2 samp/s
+  ep3 step1200/2288 loss 0.7851 | 2.2 samp/s
+  ep3 step1250/2288 loss 0.7841 | 2.2 samp/s
+  ep3 step1300/2288 loss 0.7849 | 2.2 samp/s
+  ep3 step1350/2288 loss 0.7841 | 2.2 samp/s
+  ep3 step1400/2288 loss 0.7837 | 2.2 samp/s
+  ep3 step1450/2288 loss 0.7840 | 2.2 samp/s
+  ep3 step1500/2288 loss 0.7817 | 2.1 samp/s
+  ep3 step1550/2288 loss 0.7804 | 2.1 samp/s
+  ep3 step1600/2288 loss 0.7790 | 2.1 samp/s
+  ep3 step1650/2288 loss 0.7774 | 2.1 samp/s
+  ep3 step1700/2288 loss 0.7757 | 2.1 samp/s
+  ep3 step1750/2288 loss 0.7751 | 2.1 samp/s
+  ep3 step1800/2288 loss 0.7748 | 2.1 samp/s
+  ep3 step1850/2288 loss 0.7740 | 2.1 samp/s
+  ep3 step1900/2288 loss 0.7734 | 2.1 samp/s
+  ep3 step1950/2288 loss 0.7733 | 2.1 samp/s
+  ep3 step2000/2288 loss 0.7721 | 2.1 samp/s
+  ep3 step2050/2288 loss 0.7724 | 2.1 samp/s
+  ep3 step2100/2288 loss 0.7718 | 2.1 samp/s
+  ep3 step2150/2288 loss 0.7726 | 2.1 samp/s
+  ep3 step2200/2288 loss 0.7723 | 2.2 samp/s
+  ep3 step2250/2288 loss 0.7720 | 2.2 samp/s
+[ep3] loss 0.7717 | mAP@0/1/2=[np.float64(0.62), np.float64(3.53), np.float64(11.48)] ndet=623 ngt=647 | 2.1 samp/s
+[done] comp_nostain best mAP@2 11.48

@@ -1,0 +1,27 @@
+[error-dist] TEST vids=424
+  running frozen-compress (M1) ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 10672.53it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   5%|▍         | 37/750 [00:00<00:01, 362.52it/s]Loading weights:  10%|█         | 75/750 [00:00<00:01, 372.53it/s]Loading weights:  15%|█▌        | 113/750 [00:00<00:01, 370.00it/s]Loading weights:  20%|██        | 151/750 [00:00<00:01, 363.92it/s]Loading weights:  25%|██▌       | 188/750 [00:00<00:01, 359.71it/s]Loading weights:  30%|██▉       | 224/750 [00:00<00:01, 348.98it/s]Loading weights:  35%|███▍      | 259/750 [00:00<00:01, 345.66it/s]Loading weights:  39%|███▉      | 294/750 [00:00<00:01, 343.63it/s]Loading weights:  45%|████▍     | 335/750 [00:00<00:01, 358.16it/s]Loading weights:  51%|█████     | 379/750 [00:01<00:01, 369.37it/s]Loading weights:  94%|█████████▍| 707/750 [00:01<00:00, 1218.73it/s]Loading weights: 100%|██████████| 750/750 [00:01<00:00, 638.01it/s] 
+    0/848
+    120/848
+    240/848
+    360/848
+    480/848
+    600/848
+    720/848
+    840/848
+  running + SFT-LoRA (strongest) ...
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 19021.79it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   2%|▏         | 15/750 [00:00<00:04, 149.82it/s]Loading weights:   9%|▉         | 71/750 [00:00<00:01, 386.74it/s]Loading weights:  17%|█▋        | 127/750 [00:00<00:01, 459.11it/s]Loading weights:  24%|██▍       | 181/750 [00:00<00:01, 484.76it/s]Loading weights:  31%|███       | 230/750 [00:00<00:01, 483.88it/s]Loading weights:  37%|███▋      | 281/750 [00:00<00:00, 490.00it/s]Loading weights:  46%|████▌     | 345/750 [00:00<00:00, 532.79it/s]Loading weights:  55%|█████▍    | 412/750 [00:00<00:00, 574.96it/s]Loading weights:  74%|███████▎  | 552/750 [00:00<00:00, 826.78it/s]Loading weights:  97%|█████████▋| 728/750 [00:01<00:00, 1111.75it/s]Loading weights: 100%|██████████| 750/750 [00:01<00:00, 727.68it/s] 
+    0/848
+    120/848
+    240/848
+    360/848
+    480/848
+    600/848
+    720/848
+    840/848
+  frozen-compress (M1): {'n': 1945, 'miss': np.float64(0.0), 'median': np.float64(1.0), 'w0': np.float64(21.4), 'w1': np.float64(57.6), 'w2': np.float64(76.8), 'w4': np.float64(89.2), 'w8': np.float64(93.6)}
+  + SFT-LoRA (strongest): {'n': 1945, 'miss': np.float64(0.0), 'median': np.float64(1.0), 'w0': np.float64(24.7), 'w1': np.float64(63.0), 'w2': np.float64(83.0), 'w4': np.float64(93.6), 'w8': np.float64(96.9)}
+[plot] /data/chang/data2/huyanh/Workspace/VLM_spotting/hand_touch_spotting/plot/compress_error_dist_test.png

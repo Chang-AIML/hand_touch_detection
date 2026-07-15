@@ -1,0 +1,26 @@
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+  [20/424] H3_C2_N30_S217_s02_T1 nframes=199 | 3.34s/vid
+  [40/424] H2_C12_N46_S346_s03_T2 nframes=201 | 3.56s/vid
+  [60/424] H4_C1_N47_S240_s02_T2 nframes=221 | 3.60s/vid
+  [80/424] H2_C7_N25_S81_s01_T1 nframes=201 | 3.61s/vid
+  [100/424] H2_C3_N22_S353_s03_T1 nframes=202 | 3.69s/vid
+  [120/424] H2_C3_N17_S353_s02_T1 nframes=206 | 3.74s/vid
+  [140/424] H4_C13_N23_S234_s03_T1 nframes=208 | 3.78s/vid
+  [160/424] H3_C9_N49_S306_s01_T2 nframes=198 | 3.77s/vid
+  [180/424] H2_C17_N61_S253_s03_T1 nframes=203 | 3.78s/vid
+  [200/424] H1_C9_N35_S35_s03_T2 nframes=185 | 3.79s/vid
+  [220/424] H1_C3_N01_S54_s05_T2 nframes=269 | 3.78s/vid
+  [240/424] H3_C2_N16_S215_s04_T6 nframes=204 | 3.78s/vid
+  [260/424] H1_C2_N33_S213_s04_T5 nframes=201 | 3.78s/vid
+  [280/424] H3_C18_N46_S197_s01_T1 nframes=205 | 3.78s/vid
+  [300/424] H3_C12_N36_S176_s03_T1 nframes=204 | 3.77s/vid
+  [320/424] H3_C2_N33_S217_s03_T1 nframes=200 | 3.78s/vid
+  [340/424] H2_C6_N04_S245_s01_T1 nframes=188 | 3.79s/vid
+  [360/424] H2_C7_N35_S57_s01_T1 nframes=179 | 3.81s/vid
+  [380/424] H2_C1_N03_S336_s02_T1 nframes=163 | 3.82s/vid
+  [400/424] H2_C9_N40_S344_s01_T2 nframes=211 | 3.82s/vid
+  [420/424] H1_C6_N09_S247_s03_T1 nframes=200 | 3.83s/vid
+[done] split=test shard=0 extracted 424 videos in 27.1 min

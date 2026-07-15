@@ -1,0 +1,626 @@
+{
+ "finegym|UB_transition_flight_start": {
+  "general": "The moment the gymnast begins a flight element on the uneven bars, releasing from the bar to enter an airborne phase.",
+  "paraphrases": [
+   "The instant the gymnast starts a flight skill on the uneven bars, letting go of the bar to go airborne.",
+   "The onset frame of a flight action on the uneven bars, when the gymnast initiates release from the bar.",
+   "The start of an airborne transition on the uneven bars, marked by the gymnast leaving the bar.",
+   "The beginning of a flight element on the uneven bars, with the gymnast releasing grip to enter the air.",
+   "The moment the gymnast commences a flight move on the uneven bars, releasing from the bar to start the aerial phase.",
+   "The starting point of a flight transition on the uneven bars, as the gymnast lets go to become airborne.",
+   "The initial frame of a flight action on the uneven bars, when the gymnast releases the bar to begin the airborne segment.",
+   "The onset of a flight element on the uneven bars, defined by the gymnast releasing from the bar to start the aerial movement."
+  ]
+ },
+ "finegym|FX_front_salto_start": {
+  "general": "A forward somersault on the floor exercise begins as the gymnast initiates the airborne rotation by pushing off the ground.",
+  "paraphrases": [
+   "The moment a forward somersault starts on the floor exercise is when the gymnast begins to rotate forward after takeoff.",
+   "A forward salto on floor begins at the instant the gymnast leaves the ground to start the forward rotation.",
+   "The start of a forward somersault on the floor exercise is marked by the gymnast's push-off that initiates the forward flip.",
+   "On the floor, a forward somersault begins when the gymnast's feet leave the mat to start the forward rotation.",
+   "The onset of a forward somersault on floor occurs as the gymnast launches upward and forward into the flip.",
+   "A forward salto on floor exercise starts at the point where the gymnast's body begins the forward rotating motion after takeoff.",
+   "The beginning of a forward somersault on floor is the instant the gymnast's feet push off to start the forward aerial rotation.",
+   "On floor exercise, a forward somersault begins when the gymnast initiates the forward rotation by driving off the ground."
+  ]
+ },
+ "finegym|UB_fligh_same_bar_end": {
+  "general": "A movement where a gymnast travels from one part of the uneven bars to another without releasing the bar, ending when the hands or body stop moving along the bar or land on the same bar.",
+  "paraphrases": [
+   "The moment a flight-like action on the same bar concludes, marked by the gymnast's final contact or stabilization on the bar.",
+   "The end of a bar-to-bar transfer on the uneven bars where the gymnast does not release, finishing with a landing or stop on the same bar.",
+   "This describes the termination of a flight element on the uneven bars that occurs without a release, ending when the gymnast's motion along the bar ceases.",
+   "The instant a same-bar flight action ends, typically when the gymnast's hands or body settle on the bar after a dynamic movement.",
+   "A general class of actions on uneven bars where the gymnast moves along the same bar without releasing, and the end frame captures the completion of that movement.",
+   "The finishing point of a flight-like maneuver on the uneven bars that stays on the same bar, with the end marked by a landing or halt.",
+   "This label covers the end of a flight action on the uneven bars where the gymnast does not change bars, concluding when the action is fully executed.",
+   "The moment a same-bar flight action on uneven bars finishes, defined by the gymnast's final position or landing on the bar."
+  ]
+ },
+ "finegym|BB_flight_salto_end": {
+  "general": "The moment when a salto on the balance beam finishes, typically the instant the gymnast's feet contact the beam upon landing.",
+  "paraphrases": [
+   "The instant a balance-beam somersault concludes, usually when the gymnast lands on the beam.",
+   "The frame marking the end of a salto on the balance beam, commonly the landing touchdown.",
+   "The moment a backward or forward somersault on the beam ends, as the feet strike the beam.",
+   "The finishing point of a salto on the balance beam, captured when the gymnast regains contact with the apparatus.",
+   "The conclusion of a beam salto, signaled by the gymnast's feet meeting the beam after rotation.",
+   "The precise moment a balance-beam salto is completed, typically at the landing.",
+   "The end of a somersault on the balance beam, often the split second the feet touch down.",
+   "The termination of a salto action on the beam, defined by the landing contact."
+  ]
+ },
+ "finegym|FX_turns_start": {
+  "general": "The moment a turn on the floor exercise begins, marking the start of a rotation on one foot or body part before turning.",
+  "paraphrases": [
+   "The instant a rotational turn on the floor exercise starts.",
+   "The beginning frame of a turn element on the floor exercise.",
+   "The onset of a turning motion on the floor exercise.",
+   "The start of a full-body rotation on the floor exercise.",
+   "The moment the gymnast initiates a turn on the floor.",
+   "The point at which a turn on the floor exercise commences.",
+   "The initial frame of a turning action on the floor exercise.",
+   "The beginning of a turning movement on the floor exercise."
+  ]
+ },
+ "finegym|FX_side_salto_end": {
+  "general": "The moment a sideways somersault on the floor exercise lands and ends.",
+  "paraphrases": [
+   "The instant a sideways salto on the floor exercise finishes with the landing.",
+   "The point when a side somersault on the floor exercise concludes upon landing.",
+   "The moment a sideways aerial somersault on the floor exercise terminates at the landing.",
+   "The frame where a side salto on the floor exercise ends as the performer lands.",
+   "The instant a sideways somersault on the floor exercise completes with the feet contacting the mat.",
+   "The time when a side somersault on the floor exercise finishes, marked by the landing.",
+   "The moment a sideways salto on the floor exercise reaches its end through the landing.",
+   "The point at which a side somersault on the floor exercise concludes on the ground."
+  ]
+ },
+ "finegym|UB_dismounts_start": {
+  "general": "The moment a gymnast begins a dismount from the uneven bars, typically releasing the bar or initiating the airborne phase of the dismount element.",
+  "paraphrases": [
+   "The start of the dismount action on the uneven bars, marking the transition from bar support to the air.",
+   "The onset of the dismount from the uneven bars, when the gymnast first leaves the bar or begins the release.",
+   "The beginning of the dismount movement on the uneven bars, the instant the dismount element commences.",
+   "The frame where the dismount from the uneven bars starts, often the release or takeoff from the bar.",
+   "The initiation of the dismount phase on the uneven bars, signaling the end of bar work.",
+   "The start of the dismount sequence on the uneven bars, when the gymnast begins to leave the apparatus.",
+   "The beginning of the dismount action from the uneven bars, the moment the gymnast starts the airborne exit.",
+   "The onset of the dismount from the uneven bars, marking the start of the final element off the apparatus."
+  ]
+ },
+ "finegym|UB_dismounts_end": {
+  "general": "The moment a gymnast's dismount from the uneven bars ends, typically marked by the feet making contact with the landing mat.",
+  "paraphrases": [
+   "The instant the gymnast finishes the dismount from the uneven bars, usually when the feet touch the mat.",
+   "The point at which the uneven bars dismount concludes, characterized by the landing.",
+   "The moment the dismount off the uneven bars is completed, signaled by the feet striking the mat.",
+   "The end of the uneven bars dismount, defined by the feet contacting the landing surface.",
+   "The final frame of the uneven bars dismount, where the gymnast lands on the mat.",
+   "The instant the dismount from the uneven bars reaches its conclusion, with the feet hitting the mat.",
+   "The moment the uneven bars dismount terminates, indicated by the feet making contact with the floor.",
+   "The point when the uneven bars dismount finishes, typically at the landing."
+  ]
+ },
+ "finegym|BB_flight_handspring_end": {
+  "general": "The moment a handspring on the balance beam ends with the gymnast's feet contacting the beam.",
+  "paraphrases": [
+   "The instant the gymnast lands from a handspring on the balance beam.",
+   "The point when a handspring on the balance beam finishes with a landing.",
+   "The moment the feet touch the beam to complete a handspring on balance beam.",
+   "The end of a handspring on the balance beam, marked by the landing.",
+   "The frame where the handspring on the balance beam concludes with the gymnast's feet on the beam.",
+   "The instant the landing occurs after a handspring on the balance beam.",
+   "The moment the handspring on the balance beam is completed as the feet make contact with the beam.",
+   "The point at which the handspring on the balance beam ends with the gymnast arriving on the beam."
+  ]
+ },
+ "finegym|UB_circles_start": {
+  "general": "The moment a circling motion around the uneven bar begins, as the gymnast initiates the swing phase of a circle element.",
+  "paraphrases": [
+   "The instant the gymnast starts the circular swing around the bar.",
+   "The frame when the circling action on the uneven bars is initiated.",
+   "The beginning of the swing phase for a circle element on the uneven bars.",
+   "The moment the gymnast commences the continuous rotation around the bar.",
+   "The start of the circling motion as the gymnast moves into the swing.",
+   "The onset of the circular swing around the uneven bar.",
+   "The first frame where the gymnast begins the circle on the apparatus.",
+   "The point when the gymnast transitions into the circling movement around the bar."
+  ]
+ },
+ "finegym|BB_leap_jump_hop_end": {
+  "general": "The moment a leap, jump, or hop on the balance beam concludes, marked by the gymnast's final foot contact with the beam after the airborne phase.",
+  "paraphrases": [
+   "The instant when a leap, jump, or hop on the balance beam ends, typically as the gymnast lands on the beam.",
+   "The finishing point of a leap, jump, or hop on the balance beam, characterized by the completion of the airborne movement.",
+   "The moment the airborne phase of a leap, jump, or hop on the balance beam ceases and the gymnast makes contact with the beam.",
+   "The end frame of a leap, jump, or hop on the balance beam, when the gymnast's feet touch the beam after the flight.",
+   "The conclusion of a leap, jump, or hop on the balance beam, signaled by the landing onto the apparatus.",
+   "The point at which a leap, jump, or hop on the balance beam terminates, with the gymnast's body stabilizing upon the beam.",
+   "The final instant of a leap, jump, or hop on the balance beam, often involving the gymnast's feet returning to the beam surface.",
+   "The moment the gymnast completes a leap, jump, or hop on the balance beam, as the action transitions to a stable position on the apparatus."
+  ]
+ },
+ "fs_comp|jump_landing": {
+  "general": "The moment a gymnast's feet make contact with the ground after a jump, marking the end of airborne movement.",
+  "paraphrases": [
+   "The instant the athlete's feet touch the floor following a jump, concluding the aerial phase.",
+   "The landing frame occurs when the gymnast returns to the ground after a jump.",
+   "The moment the feet strike the ground after a jump, signaling the completion of the jump.",
+   "The point at which the gymnast's feet make contact with the surface after jumping.",
+   "The landing instant is when the athlete's feet hit the ground after being airborne.",
+   "The frame where the gymnast's feet land on the floor after a jump.",
+   "The moment the jump ends as the gymnast's feet touch down on the ground.",
+   "The landing of a jump, captured as the feet first contact the ground."
+  ]
+ },
+ "finegym|FX_back_salto_end": {
+  "general": "The moment a backward salto on floor exercise ends, typically characterized by the feet contacting the mat and the body stabilizing from the somersault rotation.",
+  "paraphrases": [
+   "The instant a backward somersault on floor exercise finishes, usually when the gymnast lands on the mat.",
+   "The end of a backward salto on floor exercise, marked by the feet touching the floor after the somersault.",
+   "The frame where a backward somersault on floor exercise is completed, with the gymnast's feet making contact with the mat.",
+   "The moment a backward salto on floor exercise concludes, defined by the landing after the rotational movement.",
+   "The termination point of a backward somersault on floor exercise, when the gymnast's feet strike the mat.",
+   "The instant the feet touch down from a backward salto on floor exercise, ending the somersault.",
+   "The final moment of a backward salto on floor exercise, captured as the gymnast lands on the mat.",
+   "The conclusion of a backward somersault on floor exercise, occurring as the feet hit the ground."
+  ]
+ },
+ "finegym|FX_turns_end": {
+  "general": "The moment a turn on the floor exercise ends, typically when the gymnast's feet contact the floor after completing a rotation.",
+  "paraphrases": [
+   "The instant a floor exercise turn finishes, usually as the gymnast's feet land on the mat.",
+   "The end of a turning action on the floor, marked by the feet touching down after the rotation.",
+   "The completion of a floor turn, captured at the moment the gymnast lands from the spin.",
+   "The final frame of a floor turn, often when the gymnast's feet strike the floor after the rotation.",
+   "The point at which a floor exercise turn concludes, with the gymnast's feet making contact with the ground.",
+   "The termination of a turning element on the floor, typically at the landing after the spin.",
+   "The moment a floor turn is completed, indicated by the feet contacting the floor after the rotational movement.",
+   "The ending of a floor exercise turn, usually when the gymnast's feet touch down after the turn."
+  ]
+ },
+ "finegym|UB_circles_end": {
+  "general": "The moment the gymnast completes the circular swing around the uneven bar, ending the circle action.",
+  "paraphrases": [
+   "The instant the circular swing around the bar finishes.",
+   "The frame when the gymnast finishes the circle on the uneven bars.",
+   "The moment the circle action around the bar concludes.",
+   "The end point of the gymnast's swing circle on the uneven bars.",
+   "The time when the circular motion around the bar ends.",
+   "The instant the gymnast's body completes the full circle around the bar.",
+   "The frame marking the completion of the bar circle.",
+   "The moment the swing around the uneven bar reaches its conclusion."
+  ]
+ },
+ "finegym|BB_leap_jump_hop_start": {
+  "general": "The moment the gymnast begins a leap, jump, or hop on the balance beam, corresponding to the instant the foot loses contact with the beam to start the airborne phase.",
+  "paraphrases": [
+   "The instant when a gymnast initiates a leap, jump, or hop on the balance beam, marked by the foot leaving the beam.",
+   "The start of an airborne travelling step (leap, jump, or hop) on the balance beam, defined by the takeoff from the beam.",
+   "The moment the gymnast starts a leap, jump, or hop on the balance beam, characterized by the foot pushing off the beam.",
+   "The onset of a leap, jump, or hop on the balance beam, occurring exactly when the foot breaks contact with the beam.",
+   "The frame where the gymnast commences a leap, jump, or hop on the balance beam, with the foot lifting off the surface.",
+   "The beginning of a leap, jump, or hop on the balance beam, signaled by the foot leaving the beam to enter the air.",
+   "The takeoff moment for a leap, jump, or hop on the balance beam, when the foot first loses contact with the beam.",
+   "The start of a leap, jump, or hop on the balance beam, captured at the instant the foot departs from the beam."
+  ]
+ },
+ "finegym|FX_leap_jump_hop_end": {
+  "general": "The moment a gymnast lands from a leap, jump, or hop on the floor exercise.",
+  "paraphrases": [
+   "The instant a gymnast finishes a leap, jump, or hop by landing on the floor.",
+   "The end frame of a floor exercise leap, jump, or hop, marked by the landing.",
+   "The point at which a gymnast completes an airborne traveling step (leap, jump, or hop) on floor.",
+   "The landing moment that concludes a leap, jump, or hop on the floor exercise.",
+   "The final frame of a floor exercise leap, jump, or hop, when the feet contact the mat.",
+   "The instant a gymnast returns to the floor after a leap, jump, or hop.",
+   "The ending boundary of a leap, jump, or hop on floor, defined by the landing.",
+   "The moment the gymnast's feet strike the floor to finish a leap, jump, or hop."
+  ]
+ },
+ "finegym|UB_transition_flight_end": {
+  "general": "The moment the gymnast completes a flight transition on uneven bars, typically landing on one or both bars or on the ground, ending the airborne movement.",
+  "paraphrases": [
+   "The instant the flight transition on uneven bars concludes, with the gymnast finishing the airborne phase.",
+   "The frame marking the end of a flight element between the uneven bars, where the gymnast makes contact after release.",
+   "The conclusion of a flight transition on uneven bars, signaled by the gymnast landing or catching the bar.",
+   "The moment the gymnast finishes a flight move on uneven bars, ending the action with a landing or regrasp.",
+   "The end point of a flight transition on uneven bars, when the aerial motion stops and contact is made.",
+   "The final moment of a flight transition on uneven bars, where the gymnast completes the airborne sequence.",
+   "The instant the gymnast lands or catches after a flight transition on uneven bars, marking the action's finish.",
+   "The completion of a flight transition on uneven bars, captured at the moment the airborne element ends."
+  ]
+ },
+ "finediving|Twist(s)": {
+  "general": "The moment the diver initiates a long-axis rotation (twist) during the aerial phase of the dive.",
+  "paraphrases": [
+   "The instant when the diver begins a twist in the air.",
+   "The onset of the twist component of the dive's aerial motion.",
+   "The point at which the diver starts rotating around the vertical axis.",
+   "The moment the diver commences the twisting motion while airborne.",
+   "The start of the long-axis rotation in the dive's flight phase.",
+   "The initiation of the twist during the somersault or aerial phase.",
+   "The precise time when the diver's body begins to twist.",
+   "The beginning of the twist element in the dive."
+  ]
+ },
+ "finegym|BB_dismounts_end": {
+  "general": "The moment a gymnast's dismount from the balance beam ends with the landing.",
+  "paraphrases": [
+   "The instant the dismount off the balance beam finishes on the landing.",
+   "The frame when the gymnast completes the dismount from the balance beam by landing.",
+   "The end of a dismount action on the balance beam, marked by the moment of landing.",
+   "The point at which the balance beam dismount concludes with the gymnast touching down.",
+   "The final moment of a dismount from the balance beam, when the landing occurs.",
+   "The conclusion of a balance beam dismount, captured at the instant of the landing.",
+   "The moment the gymnast's dismount off the beam reaches its termination with the landing.",
+   "The end frame of a balance beam dismount, defined by the landing completion."
+  ]
+ },
+ "finegym|BB_turns_start": {
+  "general": "The moment a turn on the balance beam begins, marked by the initiation of rotation from a supported position.",
+  "paraphrases": [
+   "The start of a turn on the balance beam, when the gymnast first initiates rotation.",
+   "The beginning of a rotation on the beam, captured at the first movement of the turn.",
+   "The onset of a turning action on the balance beam, from the point of rotation initiation.",
+   "The instant a turn commences on the balance beam, as rotation starts from a stable support.",
+   "The first frame of a turn on the beam, where the gymnast begins the rotational motion.",
+   "The start of a turning element on the balance beam, marked by the initial rotation impulse.",
+   "The beginning of a beam turn, as the gymnast starts to rotate around the vertical axis.",
+   "The moment the gymnast initiates a turn on the balance beam, starting the rotational action."
+  ]
+ },
+ "finegym|FX_side_salto_start": {
+  "general": "The moment a sideways somersault on the floor exercise begins, when the gymnast pushes off the ground and initiates the sideways rotation.",
+  "paraphrases": [
+   "The instant a side salto on floor exercise starts, marked by the gymnast's takeoff into a sideways somersault.",
+   "The onset of a sideways somersault on the floor, where the gymnast leaves the ground and begins the lateral rotation.",
+   "The beginning of a side salto on floor exercise, characterized by the push-off that initiates the sideways tumbling.",
+   "The frame when a sideways somersault on floor exercise commences, as the gymnast's feet lose contact with the mat.",
+   "The start of a side salto on floor, defined by the moment the gymnast's body begins to rotate sideways after takeoff.",
+   "The initial moment of a sideways somersault on floor exercise, when the gymnast drives upward and into the lateral spin.",
+   "The takeoff point of a side salto on floor, where the gymnast launches into a sideways somersault rotation.",
+   "The onset of a sideways somersault on floor exercise, captured at the instant the gymnast's feet leave the ground and the rotation begins."
+  ]
+ },
+ "fs_comp|jump_takeoff": {
+  "general": "The moment when a figure skater pushes off the ice to become airborne, initiating a jump.",
+  "paraphrases": [
+   "The instant that a skater leaves the ice surface to start an airborne jump.",
+   "The point at which a figure skater takes off from the ice into the air for a jump.",
+   "The frame when the athlete's skates lose contact with the ice to begin a jump.",
+   "The exact moment of liftoff from the ice as a figure skater initiates a jump.",
+   "The takeoff phase where the skater propels upward and off the ice for a jump.",
+   "The moment the figure skater springs off the ice to enter an airborne jump.",
+   "The instant the skater's blades leave the ice to commence a jump.",
+   "The point in time when the skater becomes fully airborne after pushing off the ice surface for a jump."
+  ]
+ },
+ "touchmoment|untouch": {
+  "general": "The moment a gymnast's hand loses contact with the apparatus, ending a grip or support.",
+  "paraphrases": [
+   "The instant the hand separates from the equipment, marking the end of a hold.",
+   "The point when the gymnast's hand releases its grasp on the apparatus.",
+   "The moment the hand exits contact with the object, initiating a free phase.",
+   "The split second the hand leaves the apparatus, concluding a supported action.",
+   "The time when the hand stops touching the object, transitioning to a non-contact state.",
+   "The instant the hand detaches from the apparatus, signaling the end of a grip.",
+   "The moment the hand breaks contact with the equipment, starting an unsupported movement.",
+   "The point when the hand releases its hold on the object, completing a support phase."
+  ]
+ },
+ "finegym|FX_front_salto_end": {
+  "general": "The moment a forward somersault on the floor exercise lands and the action ends.",
+  "paraphrases": [
+   "The instant the forward somersault completes and the feet touch the floor.",
+   "The end of a forward salto travel on the floor as the gymnast lands.",
+   "The point when the forward somersault on floor exercise finishes with a landing.",
+   "The termination of a forward somersault on the floor mat.",
+   "The moment the forward somersault ceases and the gymnast's feet make contact with the ground.",
+   "The conclusion of a forward salto on the floor exercise, marked by the landing.",
+   "The final frame of a forward somersault where the gymnast touches down on the floor.",
+   "The end boundary of a forward salto on floor, indicated by the landing contact."
+  ]
+ },
+ "tennis|far_court_serve": {
+  "general": "The moment a player on the far side of the court strikes the ball with their racket to initiate a serve.",
+  "paraphrases": [
+   "The instant a server located on the far court makes contact with the ball using their racket to begin a serve.",
+   "The frame when a player on the far side hits the ball with the racket to start a serve.",
+   "The moment a far-court server's racket contacts the ball to execute a serve.",
+   "The impact point where a player on the far side of the court meets the ball with the racket to serve.",
+   "The precise time a far-court server's racket strikes the ball to launch the serve.",
+   "The contact event of a serve from the far side, when the racket hits the ball.",
+   "The instant of ball-racket impact during a serve performed by a player on the far court.",
+   "The moment a server on the far side of the court makes racket-to-ball contact to begin the serve."
+  ]
+ },
+ "tennis|near_court_swing": {
+  "general": "The moment a player's racket makes contact with the ball during a groundstroke executed from the near side of the tennis court.",
+  "paraphrases": [
+   "The instant the racket hits the ball on a groundstroke performed from the near side of the court.",
+   "The frame when the racket strikes the ball during a near-court groundstroke.",
+   "The point of impact between racket and ball for a groundstroke originating from the near side.",
+   "The exact time the racket meets the ball in a groundstroke hit from the near side of the court.",
+   "The moment of ball-racket contact during a groundstroke played from the near court area.",
+   "The contact point of a groundstroke where the racket hits the ball, taken from the near side.",
+   "The instant of racket-ball collision on a groundstroke executed near the court's near side.",
+   "The impact event of a groundstroke occurring on the near side of the tennis court."
+  ]
+ },
+ "finediving|Entry": {
+  "general": "The moment the diver's body makes contact with the water surface, marking the end of the dive.",
+  "paraphrases": [
+   "The instant the diver hits the water, concluding the dive.",
+   "The point when the diver's body enters the water, ending the performance.",
+   "The frame where the diver's body first touches the water surface.",
+   "The moment of water entry that finishes the dive.",
+   "The exact time the diver's body breaches the water, signaling the dive's conclusion.",
+   "The instant the diver makes contact with the water, completing the dive.",
+   "The point at which the diver's body submerges, ending the dive.",
+   "The frame capturing the diver's initial water contact at the dive's end."
+  ]
+ },
+ "finegym|BB_flight_handspring_start": {
+  "general": "The moment a gymnast's hands contact the balance beam to initiate a handspring, signaling the beginning of the flight element.",
+  "paraphrases": [
+   "The instant the gymnast's hands touch the beam to start a handspring, marking the onset of the flight action.",
+   "The onset of a handspring on the balance beam, defined by the gymnast's hands making contact with the apparatus to begin the flight.",
+   "The beginning of a handspring on the beam, occurring when the gymnast's hands first strike the surface to launch the body into flight.",
+   "The start of a handspring flight element on the balance beam, characterized by the hands contacting the beam to initiate the push-off.",
+   "The moment the handspring commences on the beam, as the gymnast's hands land on the apparatus to start the airborne movement.",
+   "The initiation of a handspring on the balance beam, captured at the point where the gymnast's hands make contact to begin the flight phase.",
+   "The first instant of a handspring on the beam, when the gymnast's hands come into contact with the apparatus to start the element.",
+   "The commencement of a handspring flight on the balance beam, marked by the gymnast's hands touching the beam to begin the dynamic action."
+  ]
+ },
+ "finegym|BB_dismounts_start": {
+  "general": "The moment a gymnast begins a dismount from the balance beam, initiating the airborne element that concludes the routine.",
+  "paraphrases": [
+   "The start of a dismount from the balance beam, marking the beginning of the final aerial action.",
+   "The instant a gymnast initiates the dismount off the balance beam, commencing the concluding flight phase.",
+   "The onset of a beam dismount, when the gymnast first pushes off or leaves the apparatus.",
+   "The beginning of the dismount sequence from the balance beam, the first motion toward the landing.",
+   "The frame where a gymnast starts the dismount from the beam, initiating the airborne skill.",
+   "The start of the final element on balance beam, when the dismount movement begins.",
+   "The moment a gymnast commences the dismount from the balance beam, the initial impulse off the beam.",
+   "The onset of the dismount from balance beam, the earliest part of the concluding aerial maneuver."
+  ]
+ },
+ "finegym|VT_1": {
+  "general": "The approach run phase of a vault, where the gymnast sprints down the runway toward the springboard.",
+  "paraphrases": [
+   "The run-up phase in a vault, during which the gymnast accelerates along the runway.",
+   "The initial sprint on the vault runway before reaching the springboard.",
+   "The first phase of a vault, consisting of a fast run toward the takeoff board.",
+   "The running approach in vault, where the gymnast builds speed for the subsequent flight.",
+   "The pre-takeoff run on the vault runway, preparing for the springboard contact.",
+   "The vault's opening phase: a sprint down the runway to gain momentum.",
+   "The run segment of a vault, from the start of the approach to the springboard.",
+   "The approach run in vault, characterized by a rapid acceleration toward the board."
+  ]
+ },
+ "tennis|far_court_swing": {
+  "general": "The moment the racket strikes the ball during a groundstroke performed from the far side of the court.",
+  "paraphrases": [
+   "The instant the racket contacts the ball on a groundstroke hit from the far side of the court.",
+   "The impact frame of a groundstroke executed from the far court side.",
+   "The precise moment the racket meets the ball in a groundstroke from the far side of the court.",
+   "The point of contact between racket and ball during a groundstroke on the far side of the court.",
+   "The frame when the racket hits the ball on a groundstroke originating from the far court side.",
+   "The instant of ball-racket contact in a groundstroke played from the far side of the court.",
+   "The moment of impact on a groundstroke taken from the far side of the court.",
+   "The exact time when the racket strikes the ball for a groundstroke from the far side of the court."
+  ]
+ },
+ "finegym|VT_0": {
+  "general": "The moment the gymnast begins the run-up phase of the vault, initiating the sprint towards the springboard.",
+  "paraphrases": [
+   "The instant the gymnast starts the vault run, commencing the acceleration to the springboard.",
+   "The start of the vault run, when the gymnast takes the first steps toward the apparatus.",
+   "The beginning of the vault approach, where the gymnast initiates the running motion.",
+   "The moment the gymnast launches into the run for the vault, starting the sprint.",
+   "The initiation of the vault run-up, as the gymnast starts moving forward.",
+   "The first phase of the vault, when the gymnast begins the run to the springboard.",
+   "The point at which the gymnast starts the running sequence for the vault.",
+   "The start of the vault approach run, where the gymnast begins accelerating."
+  ]
+ },
+ "fs_comp|spin_landing": {
+  "general": "The moment a figure skater completes a spin and places their foot back on the ice to end the rotation.",
+  "paraphrases": [
+   "The instant a skater finishes a spin and their blade touches the ice.",
+   "The moment the spinning motion ends as the skater's foot makes contact with the ice.",
+   "The frame when the skater's rotation concludes and they land on the ice.",
+   "The point at which the skater exits a spin by placing their foot on the ice.",
+   "The instant the skater transitions from a spin to a standing position on the ice.",
+   "The moment the spin is terminated with the skater's skate contacting the ice surface.",
+   "The frame capturing the conclusion of a spin as the skater's foot returns to the ice.",
+   "The instant when the skater's rotation stops and the blade lands on the ice."
+  ]
+ },
+ "fs_comp|spin_takeoff": {
+  "general": "The moment the athlete begins a rotation in the air after leaving the ground, typically during a spin or twisting element on floor exercise or balance beam.",
+  "paraphrases": [
+   "The instant the athlete launches off the surface to initiate a spinning motion in the air.",
+   "The takeoff point where the athlete starts a rotational movement after pushing off the floor.",
+   "When the athlete's feet leave the ground to commence a spin or twist in the air.",
+   "The immediate moment the athlete becomes airborne to begin a rotational element.",
+   "The start of an airborne spinning action, marked by the athlete's departure from the ground.",
+   "The transition from ground to air as the athlete initiates a rotational turn.",
+   "The exact time the athlete lifts off to perform a spin or twisting movement.",
+   "The beginning of a twisting or rotating airborne phase, signaled by the takeoff from the surface."
+  ]
+ },
+ "tennis|near_court_serve": {
+  "general": "The moment the racket strikes the ball on a serve performed from the near side of the court.",
+  "paraphrases": [
+   "The instant the racket makes contact with the ball during a serve from the near court.",
+   "The frame where the racket hits the ball on a serve originating from the near side.",
+   "The moment of impact between racket and ball for a serve executed on the near half of the court.",
+   "The precise point when the racket contacts the ball in a near-court serve.",
+   "The impact frame of a serve delivered from the near side of the court.",
+   "The moment the ball is struck by the racket on a serve from the near court area.",
+   "The instant of racket-ball collision during a serve performed near the camera.",
+   "The frame capturing the racket hitting the ball on a serve from the near side."
+  ]
+ },
+ "finegym|UB_fligh_same_bar_start": {
+  "general": "The moment a flight element that begins and ends on the same bar starts, specifically the instant the gymnast releases the bar to initiate the airborne phase.",
+  "paraphrases": [
+   "The start of a same-bar flight action on uneven bars, marked by the gymnast letting go of the bar to begin the aerial movement.",
+   "The beginning of a flight element where the gymnast releases the same bar to go airborne, captured at the release instant.",
+   "The onset frame of a same-bar flight skill on uneven bars, when the gymnast’s hands leave the bar to commence the air phase.",
+   "The instant a same-bar flight on uneven bars begins, defined by the gymnast's release from the bar.",
+   "The start of an airborne skill on uneven bars that returns to the same bar, timed at the moment of release.",
+   "The beginning of a same-bar flight on uneven bars, characterized by the gymnast's release initiating the aerial segment.",
+   "The release moment that marks the start of a same-bar flight action on uneven bars.",
+   "The initial frame of a same-bar flight on uneven bars, when the gymnast pushes off and lets go of the bar to start the flight."
+  ]
+ },
+ "tennis|far_court_bounce": {
+  "general": "The moment the ball makes contact with the ground on the far side of the tennis court, indicating the start of its bounce.",
+  "paraphrases": [
+   "The instant the ball hits the court surface on the far side, marking the bounce.",
+   "When the ball strikes the ground on the distant half of the court, beginning the bounce.",
+   "The frame where the ball touches down on the far side of the court, initiating the bounce.",
+   "The point at which the ball contacts the tennis court on the far side, signaling the bounce event.",
+   "The moment the ball impacts the court floor on the opposite side from the camera, starting its bounce.",
+   "The exact time when the ball meets the court surface on the far half, defining the bounce.",
+   "The bounce is captured as the ball makes contact with the ground on the far side of the court.",
+   "The bounce occurs at the instant the ball hits the far side of the tennis court."
+  ]
+ },
+ "finediving|Som(s).Tuck": {
+  "general": "The moment a diver begins a tucked somersault, initiating the aerial rotation with the body in a tucked position.",
+  "paraphrases": [
+   "The instant the diver starts a tucked somersault, marking the onset of the aerial phase.",
+   "The point at which a tucked somersault is initiated, with the body folding into a tuck.",
+   "The moment the diver launches into a tucked somersault, beginning the rotation.",
+   "The start of a tucked somersault, where the diver enters the aerial phase in a tucked body shape.",
+   "The onset of a tucked somersault, characterized by the diver pulling into a tuck as rotation begins.",
+   "The instant the aerial phase of a tucked somersault begins, with the diver's body in a tucked position.",
+   "The moment the diver initiates a tucked somersault, marking the beginning of the rotation.",
+   "The start of the tucked somersault, where the diver leaves the platform or board and begins the aerial rotation."
+  ]
+ },
+ "tennis|near_court_bounce": {
+  "general": "The instant the tennis ball strikes the court surface on the near side of the court.",
+  "paraphrases": [
+   "The moment when the tennis ball contacts the court on the near side.",
+   "The frame at which the ball bounces on the near half of the court.",
+   "The point in time when the ball hits the court surface near the camera.",
+   "The instant the ball makes contact with the ground on the court's near side.",
+   "The moment the tennis ball lands and bounces on the near side of the court.",
+   "The frame capturing the ball striking the court surface on the near side.",
+   "The instant the ball touches the court floor on the side closest to the camera.",
+   "The moment the ball bounces off the court surface on the near side."
+  ]
+ },
+ "finegym|FX_leap_jump_hop_start": {
+  "general": "On the floor exercise, the moment a leap, jump, or hop begins is the instant the gymnast initiates the takeoff from the ground, transitioning from support to airborne flight.",
+  "paraphrases": [
+   "In floor exercise, the start of a leap, jump, or hop occurs when the gymnast first leaves the floor to become airborne.",
+   "The beginning of a floor exercise leap, jump, or hop is marked by the gymnast's initial push-off from the mat.",
+   "For a leap, jump, or hop on floor, the onset is the exact point when the gymnast's feet lose contact with the ground.",
+   "The start of a floor exercise airborne step—leap, jump, or hop—is the takeoff moment when the gymnast propels upward.",
+   "In floor routine, the initiation of a leap, jump, or hop is the instant the gymnast's foot leaves the floor.",
+   "The beginning frame of a floor exercise leap, jump, or hop captures the gymnast starting the upward motion from the ground.",
+   "A floor exercise leap, jump, or hop starts when the gymnast begins the takeoff, ending ground contact.",
+   "The onset of a leap, jump, or hop on floor is the moment the gymnast pushes off the mat to enter the air."
+  ]
+ },
+ "touchmoment|touch": {
+  "general": "The moment a gymnast's hand first makes contact with an apparatus, such as the beam, bars, or floor, during a routine.",
+  "paraphrases": [
+   "The instant a gymnast's hand touches the apparatus for the first time.",
+   "The moment when the hand initially contacts the beam, bars, or floor.",
+   "The point at which the gymnast's hand first makes contact with the equipment.",
+   "The moment the hand reaches and touches the apparatus during a skill.",
+   "The instant of initial hand contact with the beam, bars, or floor surface.",
+   "The moment when the gymnast's hand first makes physical contact with the apparatus.",
+   "The point in time when the hand first touches the equipment in a routine.",
+   "The instant of first hand contact with the apparatus, marking the beginning of a support or grip."
+  ]
+ },
+ "finediving|Som(s).Pike": {
+  "general": "The moment a diver initiates the aerial phase of a somersault in pike position, marking the start of the rotation around the transverse axis as they leave the board or platform.",
+  "paraphrases": [
+   "The instant a diver starts a piked somersault in the air, beginning the rotation from the takeoff.",
+   "The onset of the aerial phase of a somersault with the body folded at the hips (pike), as the dive begins.",
+   "The moment the diver launches into a pike-position somersault, initiating the rotational motion.",
+   "The start of the airborne somersault in pike position, immediately after the diver pushes off the board or platform.",
+   "The beginning of a piked somersault, where the diver first leaves the board and starts the forward or backward rotation.",
+   "The point at which the diver transitions from takeoff to the piked somersault, commencing the aerial rotation.",
+   "The instant the diver's body assumes the pike shape and the somersault rotation begins in midair.",
+   "The onset of the dive's somersault phase, with the body in pike position, as the diver becomes airborne."
+  ]
+ },
+ "finegym|FX_back_salto_start": {
+  "general": "A floor exercise backward salto begins when the gymnast initiates the backward rotation by pushing off the floor and driving the arms upward.",
+  "paraphrases": [
+   "The start of a backward salto on floor occurs at the instant the gymnast presses off the mat and starts the backward somersault.",
+   "On floor exercise, a backward salto commences as the gymnast pushes from the floor and begins rotating backward.",
+   "The onset of a floor backward salto is marked by the gymnast's takeoff from the floor and the initiation of the backward flip.",
+   "A backward salto on floor exercise starts when the gymnast jumps upward and backward, starting the somersault motion.",
+   "The beginning of a backward salto on floor is the moment the gymnast's feet leave the floor and the backward rotation begins.",
+   "On floor exercise, the initial frame of a backward salto shows the gymnast pushing off the floor and starting the backward somersault.",
+   "A floor backward salto begins at the takeoff, when the gymnast drives off the floor and rotates backward.",
+   "The start of a backward salto on the floor exercise is the instant the gymnast leaves the ground and begins the backward aerial rotation."
+  ]
+ },
+ "finegym|BB_turns_end": {
+  "general": "The moment a turn on the balance beam finishes, when the gymnast ceases rotation and stabilizes in the final position, typically with the supporting foot on the beam.",
+  "paraphrases": [
+   "The instant a turn on the balance beam ends, as the gymnast stops spinning and holds the concluding stance, usually with one foot on the beam.",
+   "The frame marking the completion of a balance beam turn, where the rotation halts and the body settles into the ending posture, often with the standing foot on the apparatus.",
+   "When a turn on the balance beam concludes: the rotation stops and the gymnast achieves a controlled final alignment, generally with the supporting foot contacting the beam.",
+   "The endpoint of a balance beam turn, characterized by the cessation of rotational motion and the assumption of a stable final shape, typically with the foot planted on the beam.",
+   "The moment a turn on the balance beam is finished, as the gymnast ends the rotation and freezes in the final pose, usually with the standing foot on the beam.",
+   "The conclusion of a balance beam turn, where the gymnast completes the spin and holds the ending position, often with the foot placed on the beam.",
+   "The instant a turn on the balance beam terminates, marked by the end of rotation and the establishment of a static final position, typically with the supporting foot on the beam.",
+   "The frame when a balance beam turn ends: the rotation finishes and the gymnast stabilizes in the final stance, usually with one foot on the beam."
+  ]
+ },
+ "finegym|BB_flight_salto_start": {
+  "general": "The moment a somersault begins on the balance beam.",
+  "paraphrases": [
+   "The instant a somersault is initiated on the balance beam.",
+   "The onset of a somersault on the balance beam.",
+   "The start of a salto on the balance beam.",
+   "The frame where a somersault commences on the balance beam.",
+   "The beginning of a somersault on the balance beam.",
+   "The moment the gymnast starts a somersault on the balance beam.",
+   "The initiation of a somersault on the balance beam.",
+   "The point at which a somersault starts on the balance beam."
+  ]
+ },
+ "finegym|VT_2": {
+  "general": "The moment the gymnast pushes off the vaulting table during the first flight phase of a vault.",
+  "paraphrases": [
+   "The instant when the gymnast's hands contact and push against the vault table after the initial airborne phase.",
+   "The moment of forceful hand contact with the vault table following the run and first flight.",
+   "The phase-instant where the gymnast drives off the vaulting table with both hands.",
+   "The point in the vault when the gymnast executes the table push after the first flight.",
+   "The moment the gymnast's hands strike the vault table and propel the body into the second flight.",
+   "The instant of hand-to-table contact that marks the transition from first flight to second flight.",
+   "The moment the gymnast pushes off the vault table, generating upward and rotational momentum.",
+   "The phase-instant of the vault where the gymnast's hands leave the table after the push."
+  ]
+ },
+ "finegym|VT_3": {
+  "general": "The moment a gymnast pushes off the vaulting table, transitioning from the first flight to the second flight.",
+  "paraphrases": [
+   "The instant when the gymnast's hands leave the vaulting table after the block.",
+   "The point at which the gymnast exerts force on the table to launch into the post-flight phase.",
+   "The moment of repulsion from the vaulting table, ending the table contact.",
+   "The split second the gymnast pushes away from the table, beginning the airborne second flight.",
+   "The phase-instant of the table push, where the gymnast transfers momentum from the first flight to the second flight.",
+   "The moment the gymnast's body is propelled upward and forward off the vaulting table.",
+   "The instant of the block, marking the transition from the table support to free flight.",
+   "The point in the vault when the gymnast's hands separate from the table, initiating the second flight."
+  ]
+ }
+}

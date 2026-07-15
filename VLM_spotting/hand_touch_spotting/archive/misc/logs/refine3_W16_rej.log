@@ -1,0 +1,32 @@
+[cfg] refine3 W=16 n_lang=2 reject=True | pairs 3498 (pos 3308 / neg 190)
+[ep0] loss 0.596 | REFINED @0/1/2=[np.float64(3.04), np.float64(17.84), np.float64(36.42)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 2014 it/s
+[ep1] loss 0.424 | REFINED @0/1/2=[np.float64(3.63), np.float64(21.04), np.float64(42.01)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 3952 it/s
+[ep2] loss 0.375 | REFINED @0/1/2=[np.float64(3.81), np.float64(21.71), np.float64(42.69)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 3579 it/s
+[ep3] loss 0.365 | REFINED @0/1/2=[np.float64(4.08), np.float64(22.49), np.float64(41.96)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4010 it/s
+[ep4] loss 0.360 | REFINED @0/1/2=[np.float64(4.25), np.float64(23.06), np.float64(42.3)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4100 it/s
+[ep5] loss 0.350 | REFINED @0/1/2=[np.float64(4.15), np.float64(23.11), np.float64(43.01)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 3969 it/s
+[ep6] loss 0.345 | REFINED @0/1/2=[np.float64(4.31), np.float64(23.27), np.float64(42.83)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 3926 it/s
+[ep7] loss 0.340 | REFINED @0/1/2=[np.float64(4.02), np.float64(23.95), np.float64(43.43)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 3956 it/s
+[ep8] loss 0.337 | REFINED @0/1/2=[np.float64(4.61), np.float64(23.43), np.float64(43.79)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4125 it/s
+[ep9] loss 0.328 | REFINED @0/1/2=[np.float64(3.37), np.float64(24.79), np.float64(44.4)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 3996 it/s
+[ep10] loss 0.321 | REFINED @0/1/2=[np.float64(4.06), np.float64(22.73), np.float64(44.04)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 3975 it/s
+[ep11] loss 0.314 | REFINED @0/1/2=[np.float64(4.54), np.float64(23.56), np.float64(43.88)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4085 it/s
+[ep12] loss 0.306 | REFINED @0/1/2=[np.float64(4.03), np.float64(24.55), np.float64(43.31)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4146 it/s
+[ep13] loss 0.300 | REFINED @0/1/2=[np.float64(3.53), np.float64(25.86), np.float64(44.52)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4108 it/s
+[ep14] loss 0.295 | REFINED @0/1/2=[np.float64(4.35), np.float64(24.81), np.float64(42.76)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4118 it/s
+[ep15] loss 0.284 | REFINED @0/1/2=[np.float64(4.2), np.float64(25.18), np.float64(43.01)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4090 it/s
+[ep16] loss 0.278 | REFINED @0/1/2=[np.float64(4.56), np.float64(25.45), np.float64(44.51)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 3966 it/s
+[ep17] loss 0.272 | REFINED @0/1/2=[np.float64(4.62), np.float64(25.3), np.float64(44.14)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4013 it/s
+[ep18] loss 0.268 | REFINED @0/1/2=[np.float64(4.61), np.float64(25.77), np.float64(45.11)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4108 it/s
+[ep19] loss 0.262 | REFINED @0/1/2=[np.float64(4.49), np.float64(26.33), np.float64(44.9)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4228 it/s
+[ep20] loss 0.256 | REFINED @0/1/2=[np.float64(4.72), np.float64(26.01), np.float64(45.71)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4159 it/s
+[ep21] loss 0.254 | REFINED @0/1/2=[np.float64(4.95), np.float64(25.84), np.float64(45.94)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4192 it/s
+[ep22] loss 0.251 | REFINED @0/1/2=[np.float64(4.72), np.float64(26.0), np.float64(45.68)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4156 it/s
+[ep23] loss 0.248 | REFINED @0/1/2=[np.float64(4.92), np.float64(26.51), np.float64(45.88)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4129 it/s
+[ep24] loss 0.248 | REFINED @0/1/2=[np.float64(4.74), np.float64(25.99), np.float64(46.23)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4110 it/s
+[ep25] loss 0.246 | REFINED @0/1/2=[np.float64(4.65), np.float64(26.21), np.float64(45.96)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4162 it/s
+[ep26] loss 0.244 | REFINED @0/1/2=[np.float64(4.64), np.float64(26.21), np.float64(46.03)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4002 it/s
+[ep27] loss 0.244 | REFINED @0/1/2=[np.float64(4.64), np.float64(26.22), np.float64(46.02)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4133 it/s
+[ep28] loss 0.244 | REFINED @0/1/2=[np.float64(4.66), np.float64(26.35), np.float64(46.02)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 3912 it/s
+[ep29] loss 0.244 | REFINED @0/1/2=[np.float64(4.82), np.float64(26.3), np.float64(46.05)] | base [np.float64(4.28), np.float64(22.88), np.float64(44.9)] | 4161 it/s
+[done] refine3_W16_rej best REFINED @2 46.23 (stage-1 base @2 44.90)

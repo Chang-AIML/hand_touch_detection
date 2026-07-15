@@ -1,0 +1,35 @@
+[cfg] refine4 W=128 mode=film n_lang=2 stages=3 reject=False multi_gt=True | pairs 3481 (pos 3481 / neg 0 / multi 1691)
+[ep0] loss 1.405 | sNMS @0/1/2=[np.float64(0.75), np.float64(2.83), np.float64(4.83)] (mean 2.80) | noNMS@2=1.7 nms@2=3.1 | 397 it/s
+[ep1] loss 1.190 | sNMS @0/1/2=[np.float64(0.75), np.float64(2.75), np.float64(4.62)] (mean 2.71) | noNMS@2=1.7 nms@2=3.0 | 426 it/s
+[ep2] loss 1.148 | sNMS @0/1/2=[np.float64(0.75), np.float64(2.92), np.float64(4.72)] (mean 2.80) | noNMS@2=1.9 nms@2=3.0 | 429 it/s
+[ep3] loss 1.056 | sNMS @0/1/2=[np.float64(3.12), np.float64(15.1), np.float64(24.03)] (mean 14.08) | noNMS@2=5.6 nms@2=14.3 | 434 it/s
+[ep4] loss 0.897 | sNMS @0/1/2=[np.float64(5.3), np.float64(25.4), np.float64(42.08)] (mean 24.26) | noNMS@2=13.5 nms@2=30.0 | 649 it/s
+[ep5] loss 0.770 | sNMS @0/1/2=[np.float64(7.78), np.float64(36.14), np.float64(55.88)] (mean 33.27) | noNMS@2=25.7 nms@2=48.0 | 701 it/s
+[ep6] loss 0.691 | sNMS @0/1/2=[np.float64(9.0), np.float64(39.47), np.float64(57.42)] (mean 35.30) | noNMS@2=32.9 nms@2=52.5 | 732 it/s
+[ep7] loss 0.656 | sNMS @0/1/2=[np.float64(10.42), np.float64(45.22), np.float64(65.78)] (mean 40.48) | noNMS@2=40.4 nms@2=61.5 | 746 it/s
+[ep8] loss 0.626 | sNMS @0/1/2=[np.float64(10.99), np.float64(46.2), np.float64(65.7)] (mean 40.96) | noNMS@2=42.2 nms@2=62.8 | 748 it/s
+[ep9] loss 0.612 | sNMS @0/1/2=[np.float64(13.14), np.float64(49.14), np.float64(69.33)] (mean 43.87) | noNMS@2=42.7 nms@2=66.6 | 749 it/s
+[ep10] loss 0.595 | sNMS @0/1/2=[np.float64(12.24), np.float64(48.93), np.float64(68.42)] (mean 43.20) | noNMS@2=41.7 nms@2=65.6 | 733 it/s
+[ep11] loss 0.581 | sNMS @0/1/2=[np.float64(13.23), np.float64(47.96), np.float64(68.75)] (mean 43.31) | noNMS@2=41.9 nms@2=66.2 | 750 it/s
+[ep12] loss 0.565 | sNMS @0/1/2=[np.float64(11.96), np.float64(48.54), np.float64(67.98)] (mean 42.83) | noNMS@2=42.1 nms@2=65.4 | 743 it/s
+[ep13] loss 0.556 | sNMS @0/1/2=[np.float64(13.13), np.float64(48.06), np.float64(69.19)] (mean 43.46) | noNMS@2=42.2 nms@2=66.5 | 751 it/s
+[ep14] loss 0.549 | sNMS @0/1/2=[np.float64(13.12), np.float64(47.44), np.float64(66.1)] (mean 42.22) | noNMS@2=40.5 nms@2=64.3 | 755 it/s
+[ep15] loss 0.541 | sNMS @0/1/2=[np.float64(12.94), np.float64(47.4), np.float64(67.76)] (mean 42.70) | noNMS@2=39.8 nms@2=65.3 | 756 it/s
+[ep16] loss 0.533 | sNMS @0/1/2=[np.float64(13.25), np.float64(47.63), np.float64(67.13)] (mean 42.67) | noNMS@2=40.3 nms@2=65.4 | 748 it/s
+[ep17] loss 0.524 | sNMS @0/1/2=[np.float64(12.79), np.float64(44.71), np.float64(64.61)] (mean 40.70) | noNMS@2=39.0 nms@2=62.9 | 763 it/s
+[ep18] loss 0.517 | sNMS @0/1/2=[np.float64(13.35), np.float64(45.57), np.float64(65.37)] (mean 41.43) | noNMS@2=39.1 nms@2=63.6 | 763 it/s
+[ep19] loss 0.511 | sNMS @0/1/2=[np.float64(13.53), np.float64(43.62), np.float64(62.43)] (mean 39.86) | noNMS@2=38.8 nms@2=61.1 | 743 it/s
+[ep20] loss 0.506 | sNMS @0/1/2=[np.float64(12.28), np.float64(43.86), np.float64(62.55)] (mean 39.56) | noNMS@2=38.7 nms@2=61.2 | 728 it/s
+[ep21] loss 0.501 | sNMS @0/1/2=[np.float64(13.06), np.float64(42.84), np.float64(62.62)] (mean 39.51) | noNMS@2=37.2 nms@2=61.3 | 753 it/s
+[ep22] loss 0.499 | sNMS @0/1/2=[np.float64(13.24), np.float64(42.06), np.float64(61.9)] (mean 39.07) | noNMS@2=37.6 nms@2=60.9 | 750 it/s
+[ep23] loss 0.498 | sNMS @0/1/2=[np.float64(13.36), np.float64(43.33), np.float64(61.95)] (mean 39.54) | noNMS@2=38.8 nms@2=61.1 | 754 it/s
+[ep24] loss 0.497 | sNMS @0/1/2=[np.float64(12.91), np.float64(43.09), np.float64(62.1)] (mean 39.37) | noNMS@2=39.1 nms@2=61.0 | 751 it/s
+[ep25] loss 0.494 | sNMS @0/1/2=[np.float64(13.29), np.float64(42.97), np.float64(62.45)] (mean 39.57) | noNMS@2=38.8 nms@2=61.4 | 742 it/s
+[ep26] loss 0.493 | sNMS @0/1/2=[np.float64(13.15), np.float64(42.76), np.float64(62.34)] (mean 39.42) | noNMS@2=38.7 nms@2=61.2 | 757 it/s
+[ep27] loss 0.493 | sNMS @0/1/2=[np.float64(13.14), np.float64(42.69), np.float64(62.23)] (mean 39.36) | noNMS@2=38.7 nms@2=61.2 | 757 it/s
+[ep28] loss 0.493 | sNMS @0/1/2=[np.float64(13.14), np.float64(42.64), np.float64(62.41)] (mean 39.40) | noNMS@2=38.6 nms@2=61.3 | 764 it/s
+[ep29] loss 0.493 | sNMS @0/1/2=[np.float64(13.35), np.float64(42.76), np.float64(62.49)] (mean 39.53) | noNMS@2=38.9 nms@2=61.4 | 762 it/s
+[done] r10_w128_mg best(val,sNMS) @0/1/2=[np.float64(13.14), np.float64(49.14), np.float64(69.33)]
+[TEST] r10_w128_mg without NMS  @0/1/2=[np.float64(12.1), np.float64(27.3), np.float64(39.53)]
+[TEST] r10_w128_mg NMS (w=1)    @0/1/2=[np.float64(8.5), np.float64(44.53), np.float64(65.21)]
+[TEST] r10_w128_mg soft-NMS     @0/1/2=[np.float64(11.16), np.float64(44.74), np.float64(67.5)]

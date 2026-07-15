@@ -1,0 +1,30 @@
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/chang_noroot/data2/myconda/envs_dirs/vlm_spot/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+  [320/800] H1_C3_N08_S28_s05_T2 nframes=261 | 3.34s/vid
+  [340/800] H3_C3_N34_S279_s03_T2 nframes=238 | 3.30s/vid
+  [360/800] H4_C3_N54_S373_s04_T2 nframes=225 | 3.29s/vid
+  [380/800] H4_C3_N61_S379_s05_T2 nframes=204 | 3.28s/vid
+  [400/800] H1_C9_N16_S33_s03_T2 nframes=195 | 3.28s/vid
+  [420/800] H2_C9_N23_S350_s04_T2 nframes=204 | 3.26s/vid
+  [440/800] H3_C9_N23_S306_s04_T2 nframes=202 | 3.25s/vid
+  [460/800] H3_C9_N39_S309_s01_T2 nframes=200 | 3.24s/vid
+  [480/800] H1_C2_N31_S213_s03_T4 nframes=200 | 3.24s/vid
+  [500/800] H2_C13_N13_S189_s04_T4 nframes=199 | 3.24s/vid
+  [520/800] H4_C13_N36_S184_s03_T4 nframes=229 | 3.24s/vid
+  [540/800] H2_C5_N48_S265_s05_T5 nframes=199 | 3.23s/vid
+  [560/800] H1_C4_N71_S386_s01_T1 nframes=211 | 3.24s/vid
+  [580/800] H4_C4_N33_S257_s04_T1 nframes=216 | 3.24s/vid
+  [600/800] H2_C11_N18_S201_s05_T4 nframes=200 | 3.24s/vid
+  [620/800] H4_C1_N20_S194_s05_T4 nframes=199 | 3.24s/vid
+  [640/800] H2_C5_N20_S56_s03_T2 nframes=171 | 3.25s/vid
+  [660/800] H2_C5_N34_S41_s04_T2 nframes=173 | 3.25s/vid
+  [680/800] H2_C5_N48_S37_s01_T2 nframes=171 | 3.25s/vid
+  [700/800] H1_C7_N43_S278_s04_T4 nframes=188 | 3.26s/vid
+  [720/800] H2_C5_N21_S56_s03_T1 nframes=181 | 3.26s/vid
+  [740/800] H1_C6_N16_S247_s04_T2 nframes=243 | 3.26s/vid
+  [760/800] H3_C6_N05_S251_s02_T2 nframes=234 | 3.28s/vid
+  [780/800] H4_C6_N11_S249_s03_T2 nframes=232 | 3.29s/vid
+  [800/800] H3_C17_N12_S167_s03_T2 nframes=201 | 3.31s/vid
+[done] split=train shard=0 extracted 500 videos in 27.6 min

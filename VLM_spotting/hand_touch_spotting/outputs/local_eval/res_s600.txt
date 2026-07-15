@@ -1,0 +1,9 @@
+[data] world=1 train windows=9507 in-val=1240 ood-val=1018
+[eval:in:_all              ] mAP@(0, 1, 2, 4)=[6.84, 21.12, 27.59, 35.2] ndet=1666 ngt=1772
+[eval:in:finegym           ] mAP@(0, 1, 2, 4)=[7.19, 20.11, 25.75, 32.38] ndet=802 ngt=786
+[eval:in:fs_perf           ] mAP@(0, 1, 2, 4)=[6.87, 20.96, 27.96, 42.06] ndet=134 ngt=182
+[eval:in:tennis            ] mAP@(0, 1, 2, 4)=[5.6, 22.4, 29.82, 35.32] ndet=281 ngt=336
+[eval:in:touchmoment       ] mAP@(0, 1, 2, 4)=[5.18, 33.19, 48.59, 64.82] ndet=449 ngt=468
+  [ckpt] best in-mAP@2=27.59 @step600
+[eval:ood:_all              ] mAP@(0, 1, 2, 4)=[0.53, 2.01, 5.23, 24.08] ndet=964 ngt=1063
+[eval:ood:finediving        ] mAP@(0, 1, 2, 4)=[0.53, 2.01, 5.23, 24.08] ndet=964 ngt=1063

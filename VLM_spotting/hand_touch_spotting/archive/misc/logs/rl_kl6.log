@@ -1,0 +1,37 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 23205.00it/s]
+Loading weights:   0%|          | 0/750 [00:00<?, ?it/s]Loading weights:   6%|▌         | 45/750 [00:00<00:01, 442.90it/s]Loading weights:  12%|█▏        | 90/750 [00:00<00:01, 426.35it/s]Loading weights:  18%|█▊        | 136/750 [00:00<00:01, 431.33it/s]Loading weights:  24%|██▍       | 180/750 [00:00<00:01, 433.12it/s]Loading weights:  30%|██▉       | 224/750 [00:00<00:01, 409.22it/s]Loading weights:  36%|███▌      | 268/750 [00:00<00:01, 414.84it/s]Loading weights:  42%|████▏     | 312/750 [00:00<00:01, 416.70it/s]Loading weights:  48%|████▊     | 358/750 [00:00<00:00, 425.58it/s]Loading weights:  73%|███████▎  | 549/750 [00:00<00:00, 873.17it/s]Loading weights: 100%|██████████| 750/750 [00:00<00:00, 751.53it/s]
+[cfg] RLVR reward=graded K=6 temp=1.0 lr=4e-06 | init_fc=best.pt init_lora=yes | trainable=71.2M
+[init] mAP@0/1/2=[np.float64(9.42), np.float64(46.97), np.float64(72.52)]
+  [hb ep0 step10/100] rmean=0.764 0.03 step/s
+  [hb ep0 step20/100] rmean=1.250 0.03 step/s
+[ep0 step25/100] reward~1.400 | mAP@0/1/2=[np.float64(9.22), np.float64(47.5), np.float64(71.49)] | 0.02 step/s
+  [hb ep0 step30/100] rmean=1.528 0.02 step/s
+  [hb ep0 step40/100] rmean=1.658 0.02 step/s
+  [hb ep0 step50/100] rmean=1.716 0.02 step/s
+[ep0 step50/100] reward~1.716 | mAP@0/1/2=[np.float64(9.4), np.float64(46.37), np.float64(70.99)] | 0.02 step/s
+  [hb ep0 step60/100] rmean=1.776 0.02 step/s
+  [hb ep0 step70/100] rmean=1.721 0.02 step/s
+[ep0 step75/100] reward~1.717 | mAP@0/1/2=[np.float64(8.99), np.float64(47.08), np.float64(71.15)] | 0.02 step/s
+  [hb ep0 step80/100] rmean=1.770 0.02 step/s
+  [hb ep0 step90/100] rmean=1.876 0.02 step/s
+  [hb ep0 step100/100] rmean=1.944 0.02 step/s
+[ep0 step100/100] reward~1.944 | mAP@0/1/2=[np.float64(9.53), np.float64(47.06), np.float64(70.83)] | 0.02 step/s
+[ep0 END] reward~1.944 | mAP@0/1/2=[np.float64(9.53), np.float64(47.06), np.float64(70.83)] | 0.02 step/s
+  [hb ep1 step10/100] rmean=1.964 0.02 step/s
+  [hb ep1 step20/100] rmean=1.930 0.02 step/s
+[ep1 step25/100] reward~1.911 | mAP@0/1/2=[np.float64(9.02), np.float64(46.72), np.float64(71.13)] | 0.02 step/s
+  [hb ep1 step30/100] rmean=1.893 0.02 step/s
+  [hb ep1 step40/100] rmean=1.905 0.02 step/s
+  [hb ep1 step50/100] rmean=1.889 0.02 step/s
+[ep1 step50/100] reward~1.889 | mAP@0/1/2=[np.float64(9.43), np.float64(47.9), np.float64(71.22)] | 0.02 step/s
+  [hb ep1 step60/100] rmean=1.875 0.02 step/s
+  [hb ep1 step70/100] rmean=1.925 0.02 step/s
+[ep1 step75/100] reward~1.929 | mAP@0/1/2=[np.float64(9.51), np.float64(46.87), np.float64(70.75)] | 0.02 step/s
+  [hb ep1 step80/100] rmean=1.925 0.02 step/s
+  [hb ep1 step90/100] rmean=1.915 0.02 step/s
+  [hb ep1 step100/100] rmean=1.929 0.02 step/s
+[ep1 step100/100] reward~1.929 | mAP@0/1/2=[np.float64(9.54), np.float64(47.16), np.float64(71.32)] | 0.02 step/s
+[ep1 END] reward~1.929 | mAP@0/1/2=[np.float64(9.54), np.float64(47.16), np.float64(71.32)] | 0.02 step/s
+  [hb ep2 step10/100] rmean=1.925 0.02 step/s
+  [hb ep2 step20/100] rmean=1.926 0.02 step/s
